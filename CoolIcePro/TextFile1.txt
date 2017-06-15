@@ -1,0 +1,4206 @@
+﻿Zipcode, City, AreaCode
+92274, 100 Palms,  760 
+92276, 1000 Palms,  760 
+92277, 29 Palms,  760 
+92278, 29 Palms,  760 
+90848, A A R P,  562 
+90848, A A R P Pharmacy,  562 
+95191, A M O R C,  408 
+90847, AARP,  562 
+93526, Aberdeen,  760 
+95220, Acampo,  209 
+93510, Acton,  661 
+93446, Adelaide,  805 
+92301, Adelanto,  760 
+96006, Adin,  530 
+93523 Aerial Acres  661 
+93765 Aetna Life and Casualty  559 
+95920 Afton  530 
+96140 Agate Bay  530 
+91301 Agoura  818 
+91376 Agoura  818 
+91301 Agoura Hills  818 
+91376 Agoura Hills  818 
+91377 Agoura Hills  805 
+95476 Agua Caliente  707 
+91350 Agua Dulce  661 
+91390 Agua Dulce  661 
+92536 Aguanga  951 
+93601 Ahwahnee  559 
+93545 Alabama Hills  760 
+94501 Alameda  510 
+94502 Alameda  510 
+94501 Alameda Point  510 
+94507 Alamo  925 
+94706 Albany  510 
+94707 Albany  510 
+94710 Albany  510 
+95410 Albion  707 
+95511 Alderpoint  707 
+91801 Alhambra  626 
+91802 Alhambra  626 
+91803 Alhambra  626 
+91804 Alhambra  626 
+91896 Alhambra  626 
+91899 Alhambra  626 
+93905 Alisal  831 
+92653 Aliso Viejo  949 
+92656 Aliso Viejo  949 
+92698 Aliso Viejo  949 
+95910 Alleghany  530 
+95688 Allendale  707 
+93219 Allensworth  661 
+95947 Almanor  530 
+93201 Alpaugh  559 
+91901 Alpine  619 
+91903 Alpine  619 
+93561 Alpine Forest  661 
+96145 Alpine Meadows  530 
+96146 Alpine Meadows  530 
+95701 Alta  530 
+95715 Alta  530 
+95945 Alta Hill  530 
+91701 Alta Loma  909 
+91737 Alta Loma  909 
+95945 Alta Sierra  530 
+91001 Altadena  626 
+91003 Altadena  626 
+95221 Altaville  209 
+96101 Alturas  530 
+96101 Alturas Rancheria  530 
+95002 Alviso  408 
+95601 Amador City  209 
+95646 Amador Station  209 
+91123 Ambassador College  626 
+91129 Ambassador I C Foundation  626 
+92304 Amboy  760 
+94503 American Canyon  707 
+94589 American Canyon  707 
+94503 American Cyn  707 
+94589 American Cyn  707 
+92801 Anaheim  714 
+92802 Anaheim  714 
+92803 Anaheim  714 
+92804 Anaheim  714 
+92805 Anaheim  714 
+92806 Anaheim  714 
+92807 Anaheim  714 
+92808 Anaheim  714 
+92809 Anaheim  714 
+92812 Anaheim  714 
+92814 Anaheim  714 
+92815 Anaheim  714 
+92816 Anaheim  714 
+92817 Anaheim  714 
+92825 Anaheim  714 
+92850 Anaheim  714 
+92899 Anaheim  714 
+92807 Anaheim Hills  714 
+92808 Anaheim Hills  714 
+92809 Anaheim Hills  714 
+92817 Anaheim Hills  714 
+95445 Anchor Bay  707 
+96007 Anderson  530 
+95461 Anderson Springs  707 
+95641 Andrus Island  916 
+95221 Angels Camp  209 
+95222 Angels Camp  209 
+92305 Angelus Oaks  909 
+94508 Angwin  707 
+94576 Angwin  707 
+95412 Annapolis  707 
+95843 Antelope  916 
+94509 Antioch  925 
+94531 Antioch  925 
+92539 Anza  951 
+92307 Apple Valley  760 
+92308 Apple Valley  760 
+95703 Applegate  530 
+95001 Aptos  831 
+95003 Aptos  831 
+95961 Arboga  530 
+95912 Arbuckle  530 
+91006 Arcadia  626 
+91007 Arcadia  626 
+91066 Arcadia  626 
+91077 Arcadia  626 
+95518 Arcata  707 
+95521 Arcata  707 
+90071 Arco  213 
+90071 Arco-Plaza  213 
+93562 Argus  760 
+91331 Arleta  818 
+91334 Arleta  818 
+92503 Arlington  951 
+93202 Armona  559 
+95223 Arnold  209 
+95004 Aromas  831 
+92382 Arrowbear Lake  909 
+92407 Arrowhead Farms  909 
+92407 Arrowhed Farm  909 
+93420 Arroyo Grande  805 
+93421 Arroyo Grande  805 
+90701 Artesia  562 
+90702 Artesia  562 
+90703 Artesia  562 
+95913 Artois  530 
+93203 Arvin  661 
+95425 Asti  707 
+92147 ASW Training Center  619 
+94171 AT & T  415 
+95887 AT&T  916 
+93422 Atascadero  805 
+93423 Atascadero  805 
+94027 Atherton  650 
+95301 Atwater  209 
+92811 Atwood  714 
+93602 Auberry  559 
+95602 Auburn  530 
+95603 Auburn  530 
+95604 Auburn  916 
+95614 Auburn Lake Trails  530 
+90002 August F. Haw  323 
+90044 August F. Haw  323 
+90051 August F. Haw  213 
+90059 August F. Haw  323 
+90061 August F. Haw  323 
+90704 Avalon  310/424 
+93204 Avenal  559 
+95224 Avery  209 
+93424 Avila Beach  805 
+91121 Avon Products  626 
+91702 Azusa  626 
+95416 B H Springs  707 
+93603 Badger  559 
+92309 Baker  760 
+92364 Baker  760 
+95631 Baker Ranch  530 
+93263 Bakersfield  661 
+93301 Bakersfield  661 
+93302 Bakersfield  661 
+93303 Bakersfield  661 
+93304 Bakersfield  661 
+93305 Bakersfield  661 
+93306 Bakersfield  661 
+93307 Bakersfield  661 
+93308 Bakersfield  661 
+93309 Bakersfield  661 
+93311 Bakersfield  661 
+93312 Bakersfield  661 
+93313 Bakersfield  661 
+93314 Bakersfield  661 
+93380 Bakersfield  661 
+93383 Bakersfield  661 
+93384 Bakersfield  661 
+93385 Bakersfield  661 
+93386 Bakersfield  661 
+93387 Bakersfield  661 
+93388 Bakersfield  661 
+93389 Bakersfield  661 
+93390 Bakersfield  661 
+93260 Balance Rock  661 
+92662 Balboa  949 
+92662 Balboa Island  949 
+90008 Baldwin Hills  323 
+90056 Baldwin Hills  310/424 
+91706 Baldwin Park  626 
+93562 Ballarat  760 
+93463 Ballard  805 
+95303 Ballico  209 
+95914 Bangor  530 
+90074 Bank of America  213 
+92725 Bank of America  714 
+94137 Bank of America  415 
+94154 Bank of America  415 
+94160 Bank of America  415 
+94161 Bank of America  415 
+92220 Banning  951 
+95304 Banta  209 
+90099 Bar Code Term Annex  213 
+92222 Bard  760 
+92262 Barona Rancheria  760 
+90049 Barrington  310/424 
+90077 Barrington  310/424 
+92310 Barstow  760 
+92311 Barstow  760 
+92312 Barstow  760 
+92410 Base Line  909 
+93604 Bass Lake  559 
+93669 Bass Lake  559 
+91746 Bassett  626 
+96125 Bassetts  530 
+94565 Bay Point  925 
+95943 Bayliss  530 
+95524 Bayside  707 
+93402 Baywood Park  805 
+92648 Beach Center  714 
+95903 Beale AFB  530 
+95945 Bear River Pines  530 
+95223 Bear Valley  209 
+93561 Bear Valley Springs  661 
+93561 Bear Vly Springs  661 
+92223 Beaumont  951 
+96129 Beckwourth  530 
+94949 Bel Marin Keyes  415 
+94920 Bel Tiburon  415 
+95915 Belden  530 
+90201 Bell  323 
+90202 Bell  323 
+90270 Bell  323 
+91307 Bell Canyon  818 
+90201 Bell Gardens  323 
+90202 Bell Gardens  323 
+96008 Bella Vista  530 
+90706 Bellflower  562 
+90707 Bellflower  562 
+94002 Belmont  650 
+90803 Belmont Shore  562 
+94920 Belvedere  415 
+94920 Belvedere Tiburon  415 
+95005 Ben Lomond  831 
+94510 Benicia  707 
+93512 Benton  760 
+93637 Berenda  559 
+94701 Berkeley  510 
+94702 Berkeley  510 
+94703 Berkeley  510 
+94704 Berkeley  510 
+94705 Berkeley  510 
+94706 Berkeley  510 
+94707 Berkeley  510 
+94708 Berkeley  510 
+94709 Berkeley  510 
+94710 Berkeley  510 
+94712 Berkeley  510 
+94720 Berkeley  510 
+92203 Bermuda Dunes  760 
+95916 Berry Creek  530 
+94511 Bethel Island  925 
+90209 Beverly Hills  310/424 
+90210 Beverly Hills  310/424 
+90211 Beverly Hills  310/424 
+90212 Beverly Hills  310/424 
+90213 Beverly Hills  310/424 
+90048 Bicentennial  323 
+96009 Bieber  530 
+96010 Big Bar  530 
+95006 Big Basin  831 
+92315 Big Bear  909 
+92314 Big Bear City  909 
+92386 Big Bear City  909 
+92315 Big Bear Lake  909 
+96011 Big Bend  530 
+93605 Big Creek  559 
+95305 Big Oak Flat  209 
+95977 Big Oak Valley  530 
+93513 Big Pine  760 
+92242 Big River  760 
+93920 Big Sur  831 
+95917 Biggs  530 
+96156 Bijou  530 
+93606 Biola  559 
+90639 Biola University  714 
+94512 Birds Landing  707 
+94585 Birds Lndg  707 
+93512 Bishop  760 
+93514 Bishop  760 
+93515 Bishop  760 
+90807 Bixby Knolls  562 
+92267 Black Meadow Landing  760 
+94945 Black Point  415 
+95646 Black Station  209 
+94506 Blackhawk  925 
+96103 Blairsden  530 
+96103 Blairsden-Graeagle  530 
+95514 Blocksburg  707 
+94952 Bloomfield  707 
+92316 Bloomington  909 
+94040 Blossom Valley  650 
+96103 Blrsdn-Greagl  530 
+95715 Blue Canyon  530 
+94659 Blue Cross  510 
+91470 Blue Cross of South California  818 
+92317 Blue Jay  909 
+95525 Blue Lake  707 
+95976 Blue Shield of Cal  530 
+92225 Blythe  760 
+92226 Blythe  760 
+92280 Blythe  760 
+96161 Boca  530 
+94922 Bodega  707 
+94923 Bodega Bay  707 
+93205 Bodfish  760 
+90846 Boeing  562 
+94924 Bolinas  415 
+92257 Bombay Beach  760 
+92250 Bonds Corner  760 
+91902 Bonita  619 
+91908 Bonita  619 
+95060 Bonny Doon  831 
+92003 Bonsall  760 
+95415 Boonville  707 
+93516 Boron  760 
+93596 Boron  760 
+92004 Borrego Springs  760 
+95945 Boston Ravine  530 
+92021 Bostonia  619 
+95006 Boulder Creek  831 
+95641 Bouldin Island  916 
+91905 Boulevard  619 
+91350 Bouquet Canyon  661 
+95604 Bowman  916 
+91304 Box Canyon  818 
+92507 Box Springs  951 
+95416 Boyes Hot Springs  707 
+95416 Boyes Springs  707 
+90033 Boyle Heights  323 
+91008 Bradbury  626 
+91010 Bradbury  626 
+93426 Bradley  805 
+90045 Bradley International  310/424 
+93064 Brandeis  805 
+95641 Brannan Island  916 
+95417 Branscomb  707 
+92227 Brawley  760 
+92821 Brea  714 
+92822 Brea  714 
+92823 Brea  714 
+90049 Brentwood  310/424 
+94513 Brentwood  925 
+93517 Bridgeport  760 
+95526 Bridgeville  707 
+90048 Briggs  323 
+94553 Briones  925 
+94005 Brisbane  650 
+92703 Bristol  714 
+94015 Broadmoor Village  650 
+90003 Broadway Manchester  323 
+96143 Brockway  530 
+95605 Broderick  916 
+95007 Brookdale  831 
+92804 Brookhurst Center  714 
+95606 Brooks  530 
+95918 Browns Valley  530 
+95919 Brownsville  530 
+95916 Brush Creek  530 
+92318 Bryn Mawr  909 
+95605 Bryte  916 
+95646 Buckhorn  209 
+95667 Bucks Bar  530 
+95971 Bucks Lake  530 
+93427 Buellton  805 
+90620 Buena Park  714 
+90621 Buena Park  714 
+90622 Buena Park  714 
+90623 Buena Park  714 
+90624 Buena Park  714 
+95634 Buffalo Hill  530 
+90101 Bulk Mail Center  213 
+91501 Burbank  818 
+91502 Burbank  818 
+91503 Burbank  818 
+91504 Burbank  818 
+91505 Burbank  818 
+91506 Burbank  818 
+91507 Burbank  818 
+91508 Burbank  818 
+91510 Burbank  818 
+91521 Burbank  818 
+91522 Burbank  818 
+91523 Burbank  818 
+91526 Burbank  818 
+91522 Burbank Studios  818 
+91797 Bureau of the Census  626 
+94010 Burlingame  650 
+94011 Burlingame  650 
+96013 Burney  530 
+95527 Burnt Ranch  530 
+93607 Burrel  559 
+95225 Burson  209 
+91499 Business Reply  818 
+95920 Butte City  530 
+95928 Butte Creek  530 
+95942 Butte Meadows  530 
+95965 Butte Valley  530 
+93206 Buttonwillow  661 
+94505 Byron  510 
+94514 Byron  925 
+90747 C S U Dom Hls  310/424 
+90840 C S U Long Beach  562 
+94299 CA Brm Zip  916 
+95894 CA State DMV  916 
+93740 CA State University Fresno  559 
+92230 Cabazon  951 
+92282 Cabazon  760 
+90810 Cabrillo  562 
+92304 Cadiz  760 
+93247 Cairns Corner  559 
+92407 Cajon Junction  909 
+93407 Cal Poly SLO  805 
+93410 Cal Poly SLO  805 
+93410 Cal Poly Student Dorms  805 
+93407 Cal Poly University  805 
+90747 Cal State University Dom Hills  310/424 
+91125 Cal Tech  626 
+91126 Cal Tech  626 
+91301 Calabasas  818 
+91302 Calabasas  818 
+91372 Calabasas  818 
+91301 Calabasas Hills  818 
+91301 calabasas hls  818 
+92231 Calexico  760 
+92232 Calexico  760 
+93518 Caliente  661 
+93504 California City  760 
+93505 California City  760 
+96130 California Conservation Cent  530 
+93561 California Correctional Inst  661 
+93207 California Hot Springs  661 
+93409 California Mens Colony SLO  805 
+96101 California Pines  530 
+92096 California State San Marcos  760 
+91330 California State University  818 
+95929 California State University Chico  530 
+90840 California State University Long Beach  562 
+93453 California Valley  805 
+95194 California Water Service  408 
+92320 Calimesa  909 
+92233 Calipatria  760 
+94515 Calistoga  707 
+96014 Callahan  530 
+95418 Calpella  707 
+96124 Calpine  530 
+93725 Calwa  559 
+93745 Calwa  559 
+95640 Camanche Lake  209 
+93010 Camarillo  805 
+93011 Camarillo  805 
+93012 Camarillo  805 
+93428 Cambria  805 
+95682 Cameron Park  530 
+95709 Camino  530 
+95223 Camp Connell  209 
+95419 Camp Meeker  707 
+93208 Camp Nelson  559 
+92054 Camp Pendleton  760 
+92055 Camp Pendleton  760 
+96156 Camp Richardson  530 
+93451 Camp Roberts  805 
+95008 Campbell  408 
+95009 Campbell  408 
+95011 Campbell  408 
+91906 Campo  619 
+91987 Campo  619 
+95226 Campo Seco  209 
+95922 Camptonville  530 
+92414 Campus Crusade for Christ  909 
+92424 Campus Crusade for Christ  909 
+96015 Canby  530 
+91303 Canoga Park  818 
+91304 Canoga Park  818 
+91305 Canoga Park  818 
+91306 Canoga Park  818 
+91307 Canoga Park  818 
+91308 Canoga Park  818 
+91309 Canoga Park  818 
+91396 Canoga Park  818 
+93519 Cantil  760 
+93608 Cantua Creek  559 
+94516 Canyon  925 
+91351 Canyon Cntry  661 
+91386 Canyon Cntry  661 
+91387 Canyon Cntry  661 
+91390 Canyon Cntry  661 
+91351 Canyon Country  661 
+91386 Canyon Country  661 
+91387 Canyon Country  661 
+91390 Canyon Country  661 
+92507 Canyon Crest  951 
+95923 Canyon Dam  530 
+92587 Canyon Lake  951 
+95923 Canyondam  530 
+95607 Capay  530 
+95713 Cape Horn  530 
+92624 Capistrano Beach  949 
+95010 Capitola  831 
+92624 Capo Beach  949 
+95640 Carbondale  209 
+92007 Cardiff  760 
+92007 Cardiff by the Sea  760 
+95915 Caribou  530 
+95528 Carlotta  707 
+92008 Carlsbad  760 
+92009 Carlsbad  760 
+92010 Carlsbad  760 
+92011 Carlsbad  760 
+92013 Carlsbad  760 
+92018 Carlsbad  760 
+93921 Carmel  831 
+93922 Carmel  831 
+93923 Carmel  831 
+93921 Carmel by the  831 
+93921 Carmel by the Sea  831 
+93923 Carmel Highlands  831 
+93924 Carmel Valley  831 
+93924 Carmel Valley Village  831 
+95608 Carmichael  916 
+95609 Carmichael  916 
+96140 Carnelian Bay  530 
+93013 Carpinteria  805 
+93014 Carpinteria  805 
+90745 Carson  310/424 
+90746 Carson  310/424 
+90747 Carson  310/424 
+90749 Carson  310/424 
+90810 Carson  562 
+90895 Carson  562 
+93549 Cartago  760 
+93609 Caruthers  559 
+92504 Casa Blanca  951 
+93001 Casitas Springs  805 
+93429 Casmalia  805 
+95420 Caspar  707 
+96016 Cassel  530 
+91310 Castaic  661 
+91384 Castaic  661 
+96017 Castella  530 
+94546 Castro Valley  510 
+94552 Castro Valley  510 
+95012 Castroville  831 
+90704 Catalina  310/424 
+92234 Cathedral City  760 
+92235 Cathedral City  760 
+95306 Catheys Valley  209 
+93430 Cayucos  805 
+95421 Cazadero  707 
+96140 Cedar Flat  530 
+92321 Cedar Glen  909 
+95709 Cedar Grove  530 
+92322 Cedar Pines Park  909 
+95667 Cedar Ravine  530 
+95924 Cedar Ridge  530 
+92322 Cedarpines Park  909 
+96104 Cedarville  530 
+93657 Centerville  559 
+96019 Central Valley  530 
+96079 Central Valley  530 
+90067 Century City  310/424 
+95307 Ceres  209 
+90701 Cerritos  562 
+90703 Cerritos  562 
+93514 Chalfant  760 
+93514 Chalfant Valley  760 
+95925 Challenge  530 
+95928 Chapmantown  530 
+91724 Charter Oak  626 
+91311 Chatsworth  818 
+91313 Chatsworth  818 
+92363 Chemehuevi  760 
+92363 Chemehuevi Valley  760 
+95959 Cherokee  530 
+95965 Cherokee  530 
+92223 Cherry Valley  951 
+96020 Chester  530 
+94529 Chevron  925 
+94529 Chevron USA Inc  925 
+95712 Chicago Park  530 
+95926 Chico  530 
+95927 Chico  530 
+95928 Chico  530 
+95929 Chico  530 
+95973 Chico  530 
+95976 Chico  530 
+96105 Chilcoot  530 
+93555 China Lake  760 
+93555 China Lake Nwc  760 
+95309 Chinese Camp  209 
+91708 Chino  909 
+91710 Chino  909 
+91709 Chino Hills  909 
+92201 Chiriaco Smt  760 
+92201 Chiriaco Summit  760 
+93461 Cholame  805 
+93610 Chowchilla  559 
+95603 Christian Valley  530 
+93925 Chualar  831 
+91909 Chula Vista  619 
+91910 Chula Vista  619 
+91911 Chula Vista  619 
+91912 Chula Vista  619 
+91913 Chula Vista  619 
+91914 Chula Vista  619 
+91915 Chula Vista  619 
+91921 Chula Vista  619 
+92323 Cima  760 
+90018 Cimarron  323 
+95728 Cisco  530 
+90189 Citibank  213 
+95610 Citrus Heights  916 
+95611 Citrus Heights  916 
+95621 Citrus Heights  916 
+95662 Citrus Heights  916 
+92418 City Hall  909 
+90601 City Industry  562 
+91714 City Industry  626 
+91715 City Industry  626 
+91716 City Industry  626 
+91732 City Industry  626 
+91744 City Industry  626 
+91745 City Industry  626 
+91746 City Industry  626 
+91748 City Industry  626 
+91789 City Industry  909 
+91199 City National Bank  626 
+90040 City of Cmmrce  323 
+90091 City of Cmmrce  323 
+90601 City of Industry  562 
+91714 City of Industry  626 
+91715 City of Industry  626 
+91716 City of Industry  626 
+91732 City of Industry  626 
+91744 City of Industry  626 
+91745 City of Industry  626 
+91746 City of Industry  626 
+91748 City of Industry  626 
+91789 City of Industry  909 
+91899 City of Industry  626 
+92522 City of Riverside  951 
+93551 City Ranch  661 
+91711 Claremont  909 
+95612 Clarksburg  916 
+95638 Clay  209 
+94517 Clayton  925 
+96137 Clear Creek  530 
+95422 Clearlake  707 
+95423 Clearlake Oaks  707 
+95423 Clearlake Oks  707 
+95424 Clearlake Park  707 
+95227 Clements  209 
+95437 Cleone  707 
+95642 Clinton  209 
+96106 Clio  530 
+95603 Clipper Gap  530 
+95930 Clipper Mills  530 
+95425 Cloverdale  707 
+93611 Clovis  559 
+93612 Clovis  559 
+93613 Clovis  559 
+93619 Clovis  559 
+94520 Clyde  925 
+92054 Cmp Pendleton  760 
+92055 Cmp Pendleton  760 
+92236 Coachella  760 
+93210 Coalinga  559 
+93614 Coarsegold  559 
+95426 Cobb  707 
+95970 Codora  530 
+95973 Cohasset  530 
+95335 Cold Springs  209 
+96107 Coleville  760 
+95713 Colfax  530 
+95912 College City  530 
+94014 Colma  650 
+95613 Coloma  530 
+92313 Colton  760 
+92324 Colton  909 
+95310 Columbia  209 
+95932 Colusa  530 
+90022 Commerce  323 
+90023 Commerce  323 
+90040 Commerce  323 
+90091 Commerce  323 
+95427 Comptche  707 
+90220 Compton  310/424 
+90221 Compton  310/424 
+90222 Compton  310/424 
+90223 Compton  310/424 
+90224 Compton  310/424 
+94518 Concord  925 
+94519 Concord  925 
+94520 Concord  925 
+94521 Concord  925 
+94522 Concord  925 
+94523 Concord  925 
+94524 Concord  925 
+94527 Concord  925 
+94529 Concord  925 
+93662 Conejo  559 
+95614 Cool  530 
+95228 Copperopolis  209 
+93212 Corcoran  559 
+93282 Corcoran  559 
+91301 Cornell  818 
+96021 Corning  530 
+96029 Corning  530 
+92877 Corona  951 
+92878 Corona  951 
+92879 Corona  951 
+92880 Corona  951 
+92881 Corona  951 
+92882 Corona  951 
+92883 Corona  951 
+92625 Corona del Mar  949 
+92625 Corona dl Mar  949 
+92118 Coronado  619 
+92178 Coronado  619 
+93908 Corral de Tie  831 
+93908 Corral de Tierra  831 
+95076 Corralitos  831 
+94925 Corte Madera  415 
+94976 Corte Madera  415 
+92626 Costa Mesa  949 
+92627 Costa Mesa  949 
+92628 Costa Mesa  949 
+94926 Cotati  707 
+94927 Cotati  707 
+94928 Cotati  707 
+94931 Cotati  707 
+92679 Coto de Caza  949 
+96022 Cottonwood  530 
+95311 Coulterville  209 
+95615 Courtland  916 
+95428 Covelo  707 
+91722 Covina  626 
+91723 Covina  626 
+91724 Covina  626 
+92705 Cowan Heights  714 
+95013 Coyote  408 
+90008 Crenshaw  323 
+90056 Crenshaw  310/424 
+95531 Crescent City  707 
+95532 Crescent City  707 
+95538 Crescent City  707 
+95934 Crescent Mills  530 
+95934 Crescent Mls  530 
+95312 Cressey  209 
+92021 Crest  619 
+92326 Crest Park  909 
+92325 Crestline  909 
+92316 Crestmore  909 
+93432 Creston  805 
+94525 Crockett  510 
+96103 Cromberg  530 
+93546 Crowley Lake  760 
+95313 Crows Landing  209 
+90220 Crystal City  310/424 
+96120 Crystal Springs  530 
+93544 Crystalaire  661 
+91729 Cucamonga  909 
+91730 Cucamonga  909 
+90201 Cudahy  323 
+90066 Culver City  310/424 
+90230 Culver City  310/424 
+90231 Culver City  310/424 
+90232 Culver City  310/424 
+90233 Culver City  310/424 
+95014 Cupertino  408 
+95015 Cupertino  408 
+93615 Cutler  559 
+95501 Cutten  707 
+95534 Cutten  707 
+93254 Cuyama  661 
+90630 Cypress  714 
+90720 Cypress  562 
+92327 Daggett  760 
+96080 Dairyville  530 
+94013 Daly City  650 
+94014 Daly City  650 
+94015 Daly City  650 
+94016 Daly City  650 
+94017 Daly City  650 
+92624 Dana Point  949 
+92629 Dana Point  949 
+94506 Danville  925 
+94526 Danville  925 
+95314 Dardanelle  209 
+93522 Darwin  760 
+95017 Davenport  831 
+95616 Davis  530 
+95617 Davis  530 
+95618 Davis  530 
+96108 Davis Creek  530 
+95928 Dayton  530 
+92328 Death Valley  760 
+92328 Death Valley Jct  760 
+92328 Death Valley Junction  760 
+94576 Deer Park  707 
+95296 Defense Dist Region  209 
+93307 Del Kern  661 
+92014 Del Mar  858 
+93950 Del Monte Park  831 
+93616 Del Rey  559 
+93940 Del Rey Oaks  831 
+92404 Del Rosa  909 
+92413 Del Rosa  909 
+93534 Del Sur  661 
+93536 Del Sur  661 
+90015 Del Valle Finance  213 
+93215 Delano  661 
+93216 Delano  661 
+95315 Delhi  209 
+96122 Delleker  530 
+91482 Deluxe Check  818 
+95316 Denair  209 
+90842 Department of Gas & Water  562 
+91916 Descanso  619 
+92239 Desert Center  760 
+92241 Desert Edge  760 
+92240 Desert Hot Springs  760 
+92241 Desert Hot Springs  760 
+93516 Desert Lake  760 
+92274 Desert Shores  760 
+92407 Devore Heights  909 
+92407 Devore Hghts  909 
+93203 Di Giorgio  661 
+94528 Diablo  925 
+92704 Diamond  714 
+91765 Diamond Bar  909 
+95619 Diamond Springs  530 
+94929 Dillon Beach  707 
+93618 Dinuba  559 
+94505 Discovery Bay  510 
+94514 Discovery Bay  925 
+91521 Disney Productions  818 
+95620 Dixon  707 
+95935 Dobbins  530 
+90007 Dockweiler  213 
+90018 Dockweiler  323 
+90090 Dodgertown  323 
+93545 Dolomite  760 
+90810 Dominguez  562 
+96162 Donner  530 
+96161 Donner Lake  530 
+95223 Dorrington  209 
+96023 Dorris  530 
+93620 Dos Palos  209 
+95429 Dos Rios  707 
+91320 Dos Vientos Ranch  805 
+96024 Douglas City  530 
+95229 Douglas Flat  209 
+92679 Dove Canyon  949 
+90239 Downey  562 
+90240 Downey  562 
+90241 Downey  562 
+90242 Downey  562 
+95936 Downieville  530 
+90015 Dowtown Carrier Annex  213 
+96109 Doyle  530 
+95699 Drytown  209 
+92240 Dsrt Hot Springs  760 
+92241 Dsrt Hot Springs  760 
+91008 Duarte  626 
+91009 Duarte  626 
+91010 Duarte  626 
+94568 Dublin  925 
+93218 Ducor  559 
+91917 Dulzura  619 
+95430 Duncans Mills  707 
+93621 Dunlap  559 
+95937 Dunnigan  530 
+96025 Dunsmuir  530 
+95938 Durham  530 
+95958 Durham  530 
+95714 Dutch Flat  530 
+96130 Eagle Lake Resort  530 
+92239 Eagle Mountain  760 
+90041 Eagle Rock  323 
+95690 Eagle Tree  916 
+96110 Eagleville  530 
+93219 Earlimart  661 
+92242 Earp  760 
+95948 East Gridley  530 
+92650 East Irvine  949 
+90804 East Long Beach  562 
+90022 East Los Angeles  323 
+95659 East Nicolaus  530 
+93647 East Orosi  559 
+94303 East Palo Alto  650 
+95971 East Quincy  530 
+90221 East Rancho Dominguez  310/424 
+90221 East Rncho Dmngz  310/424 
+94649 Ebmud  510 
+95721 Echo Lake  530 
+90026 Echo Park  213 
+95713 Eden Valley  530 
+90026 Edendale  213 
+96094 Edgewood  530 
+93220 Edison  661 
+93523 Edward  661 
+93524 Edward  661 
+93523 Edwards  661 
+93524 Edwards  661 
+93524 Edwards AFB  661 
+93523 Edwards Air Force Base  661 
+93524 Edwards Air Force Base  661 
+95709 Eight Mile House  530 
+92019 El Cajon  619 
+92020 El Cajon  619 
+92021 El Cajon  619 
+92022 El Cajon  760 
+92090 El Cajon  619 
+92243 El Centro  760 
+92244 El Centro  760 
+94530 El Cerrito  510 
+95623 El Dorado  530 
+95762 El Dorado Hills  530 
+95762 El Dorado Hls  530 
+94018 El Granada  650 
+95618 El Macero  530 
+92301 El Mirage  760 
+91731 El Monte  626 
+91732 El Monte  626 
+91733 El Monte  626 
+91734 El Monte  626 
+91735 El Monte  626 
+95317 El Nido  209 
+95318 El Portal  209 
+90245 El Segundo  310/424 
+90032 El Sereno Car  323 
+94803 El Sobrante  510 
+94820 El Sobrante  510 
+92609 El Toro  949 
+92610 El Toro  949 
+92630 El Toro  949 
+95433 El Verano  707 
+93286 Elderwood  559 
+95431 Eldridge  707 
+93532 Elizabeth Lake  661 
+95432 Elk  707 
+95939 Elk Creek  530 
+95624 Elk Grove  916 
+95757 Elk Grove  916 
+95758 Elk Grove  916 
+95759 Elk Grove  916 
+95625 Elmira  707 
+95626 Elverta  916 
+94062 Emerald Hills  650 
+94608 Emeryville  510 
+94662 Emeryville  510 
+95715 Emigrant Gap  530 
+96120 Emigrant Trail  530 
+95319 Empire  209 
+92023 Encinitas  760 
+92024 Encinitas  760 
+91316 Encino  818 
+91335 Encino  818 
+91416 Encino  818 
+91426 Encino  818 
+91436 Encino  818 
+95320 Escalon  209 
+92025 Escondido  760 
+92026 Escondido  760 
+92027 Escondido  760 
+92029 Escondido  760 
+92030 Escondido  760 
+92033 Escondido  760 
+92046 Escondido  760 
+95607 Esparto  530 
+95627 Esparto  530 
+92332 Essex  760 
+90022 Est Ls Angls  323 
+91739 Etiwanda  909 
+96027 Etna  530 
+95501 Eureka  707 
+95502 Eureka  707 
+95503 Eureka  707 
+95534 Eureka  707 
+93221 Exeter  559 
+95628 Fair Oaks  916 
+91387 Fair Oaks Ranch  661 
+95684 Fair Play  530 
+94930 Fairfax  415 
+94978 Fairfax  415 
+94533 Fairfield  707 
+94534 Fairfield  707 
+94535 Fairfield  707 
+93610 Fairmead  559 
+93534 Fairmont  661 
+93536 Fairmont  661 
+96028 Fall River Mills  530 
+92028 Fallbrook  760 
+92088 Fallbrook  760 
+96151 Fallen Leaf  530 
+94952 Fallon  707 
+92339 Fallsvale  909 
+90036 Farmer Market  323 
+93099 Farmers Ins  805 
+93223 Farmersville  559 
+95230 Farmington  209 
+92333 Fawnskin  909 
+95940 Feather Falls  530 
+90012 Federal  213 
+90013 Federal  213 
+92805 Federal  714 
+91795 Federal Home Loan Bank  909 
+92283 Felicity  760 
+93224 Fellows  661 
+95018 Felton  831 
+95536 Ferndale  707 
+95416 Fetters Hot Springs  707 
+95629 Fiddletown  209 
+95537 Fields Landing  707 
+95537 Fields Lodge  707 
+93015 Fillmore  805 
+93016 Fillmore  805 
+95435 Finley  707 
+93622 Firebaugh  559 
+94998 Firemans Fund Ins  415 
+90001 Firestone Park  323 
+94139 First Interstate Bank  415 
+93623 Fish Camp  209 
+95667 Five Mile Terrace  530 
+93624 Five Points  559 
+96028 Fl River Mls  530 
+96140 Flick Point  530 
+90057 Flint  213 
+91011 Flintridge  818 
+96111 Floriston  530 
+96029 Flournoy  530 
+92698 Fluor Corp  949 
+95630 Folsom  916 
+95671 Folsom  916 
+95762 Folsom  530 
+95763 Folsom  916 
+95671 Folsom Prison  916 
+92331 Fontana  909 
+92334 Fontana  909 
+92335 Fontana  909 
+92336 Fontana  909 
+92337 Fontana  909 
+92610 Foothill Ranch  949 
+92610 Foothill Rnch  949 
+95941 Forbestown  530 
+95910 Forest City  530 
+92339 Forest Falls  909 
+94933 Forest Knolls  415 
+95942 Forest Ranch  530 
+95631 Foresthill  530 
+95436 Forestville  707 
+96031 Forks of Salmon  530 
+96112 Fort Bidwell  530 
+95437 Fort Bragg  707 
+95488 Fort Bragg  707 
+95538 Fort Dick  707 
+93928 Fort H Liggett  831 
+93928 Fort Hunter Liggett  831 
+92310 Fort Irwin  760 
+96032 Fort Jones  530 
+90731 Fort Macarthur  310/424 
+95450 Fort Ross  707 
+95540 Fortuna  707 
+94404 Foster City  650 
+92708 Fountain Valley  714 
+92728 Fountain Valley  714 
+93516 Four Corners  760 
+95979 Fouts Springs  530 
+93625 Fowler  559 
+90017 Foy  213 
+95840 Franchise Tax Board  916 
+95867 Franchise Tax Brd Refunds  916 
+93222 Frazier Park  661 
+93225 Frazier Park  661 
+96120 Fredricksburg  530 
+95019 Freedom  831 
+95472 Freestone  707 
+94536 Fremont  510 
+94537 Fremont  510 
+94538 Fremont  510 
+94539 Fremont  510 
+94555 Fremont  510 
+93501 Fremont Valley  661 
+95231 French Camp  209 
+95977 French Corral  530 
+96033 French Gulch  530 
+95726 Fresh Pond  530 
+93650 Fresno  559 
+93701 Fresno  559 
+93702 Fresno  559 
+93703 Fresno  559 
+93704 Fresno  559 
+93705 Fresno  559 
+93706 Fresno  559 
+93707 Fresno  559 
+93708 Fresno  559 
+93709 Fresno  559 
+93710 Fresno  559 
+93711 Fresno  559 
+93712 Fresno  559 
+93714 Fresno  559 
+93715 Fresno  559 
+93716 Fresno  559 
+93717 Fresno  559 
+93718 Fresno  559 
+93720 Fresno  559 
+93721 Fresno  559 
+93722 Fresno  559 
+93723 Fresno  559 
+93724 Fresno  559 
+93725 Fresno  559 
+93726 Fresno  559 
+93727 Fresno  559 
+93728 Fresno  559 
+93729 Fresno  559 
+93730 Fresno  559 
+93740 Fresno  559 
+93741 Fresno  559 
+93744 Fresno  559 
+93745 Fresno  559 
+93747 Fresno  559 
+93750 Fresno  559 
+93755 Fresno  559 
+93760 Fresno  559 
+93761 Fresno  559 
+93764 Fresno  559 
+93765 Fresno  559 
+93771 Fresno  559 
+93772 Fresno  559 
+93773 Fresno  559 
+93774 Fresno  559 
+93775 Fresno  559 
+93776 Fresno  559 
+93777 Fresno  559 
+93778 Fresno  559 
+93779 Fresno  559 
+93780 Fresno  559 
+93784 Fresno  559 
+93786 Fresno  559 
+93790 Fresno  559 
+93791 Fresno  559 
+93792 Fresno  559 
+93793 Fresno  559 
+93794 Fresno  559 
+93844 Fresno  559 
+93888 Fresno  559 
+93786 Fresno Bee  559 
+93741 Fresno City College  559 
+93764 Fresno City Utilities  559 
+93750 Fresno County Social Svc Dept  559 
+93740 Fresno State University  559 
+93724 Fresno Superior Court  559 
+93626 Friant  559 
+91321 Friendly Valley  661 
+96031 Frk of Salmon  530 
+93650 FRS  559 
+95820 Fruitridge  916 
+95988 Fruto  530 
+91182 Fuller Theological Seminary  626 
+92831 Fullerton  714 
+92832 Fullerton  714 
+92833 Fullerton  714 
+92834 Fullerton  714 
+92835 Fullerton  714 
+92836 Fullerton  714 
+92837 Fullerton  714 
+92838 Fullerton  714 
+95439 Fulton  707 
+96140 Fulton Acres  530 
+95632 Galt  209 
+95915 Ganser Bar  530 
+95542 Garberville  707 
+92840 Garden Grove  714 
+92841 Garden Grove  714 
+92842 Garden Grove  714 
+92843 Garden Grove  714 
+92844 Garden Grove  714 
+92845 Garden Grove  714 
+92846 Garden Grove  714 
+95633 Garden Valley  530 
+90247 Gardena  310/424 
+90248 Gardena  310/424 
+90249 Gardena  310/424 
+93454 Garey  805 
+93554 Garlock  760 
+95543 Gasquet  707 
+93117 Gaviota  805 
+96034 Gazelle  530 
+95983 Genesee  530 
+92394 George AFB  760 
+95634 Georgetown  530 
+96035 Gerber  530 
+95441 Geyserville  707 
+92583 Gilman Hot Springs  951 
+95020 Gilroy  408 
+95021 Gilroy  408 
+90065 Glassell  323 
+90065 Glassell Park  323 
+95442 Glen Ellen  707 
+95945 Glenbrook Heights  530 
+95232 Glencoe  209 
+91201 Glendale  818 
+91202 Glendale  818 
+91203 Glendale  818 
+91204 Glendale  818 
+91205 Glendale  818 
+91206 Glendale  818 
+91207 Glendale  818 
+91208 Glendale  818 
+91209 Glendale  818 
+91210 Glendale  818 
+91214 Glendale  818 
+91221 Glendale  818 
+91222 Glendale  818 
+91224 Glendale  818 
+91225 Glendale  818 
+91226 Glendale  818 
+91210 Glendale Galleria  818 
+91740 Glendora  626 
+91741 Glendora  626 
+95443 Glenhaven  707 
+95943 Glenn  530 
+93226 Glennville  661 
+96161 Glenshire  530 
+92583 Glmn Hot Springs  951 
+92332 Goffs  760 
+95667 Gold Hill  530 
+95670 Gold River  916 
+95717 Gold Run  530 
+93561 Golden Hills  661 
+93110 Goleta  805 
+93111 Goleta  805 
+93116 Goleta  805 
+93117 Goleta  805 
+93118 Goleta  805 
+93160 Goleta  805 
+93199 Goleta  805 
+93926 Gonzales  831 
+95944 Goodyears Bar  530 
+93920 Gorda  831 
+93243 Gorman  661 
+93227 Goshen  559 
+93780 Gottschalks  559 
+96103 Graeagle  530 
+91344 Granada Hills  818 
+91394 Granada Hills  818 
+95690 Grand Island  916 
+92313 Grand Terrace  760 
+92324 Grand Terrace  909 
+95746 Granite Bay  916 
+95959 Graniteville  530 
+93633 Grant Grove  559 
+95945 Grass Valley  530 
+95949 Grass Valley  530 
+95444 Graton  707 
+95363 Grayson  209 
+90037 Green  323 
+91350 Green Valley  661 
+91390 Green Valley  661 
+92341 Green Valley Lake  909 
+92341 Green Vly Lake  909 
+94904 Greenbrae  415 
+94914 Greenbrae  415 
+93927 Greenfield  831 
+90059 Greenmead  323 
+96037 Greenview  530 
+95947 Greenville  530 
+95635 Greenwood  530 
+96038 Grenada  530 
+95948 Gridley  530 
+90039 Griffith  323 
+95950 Grimes  530 
+95939 Grindstone Creek Rancheria  530 
+95636 Grizzly Flats  530 
+95321 Groveland  209 
+93433 Grover Beach  805 
+93483 Grover Beach  805 
+93434 Guadalupe  805 
+95445 Gualala  707 
+91743 Guasti  909 
+91931 Guatay  619 
+95446 Guerneville  707 
+95446 Guernewood  707 
+95637 Guinda  530 
+95322 Gustine  209 
+91745 Hacienda Heights  626 
+93420 Halcyon  805 
+93421 Halcyon  805 
+94019 Half Moon Bay  650 
+95901 Hallwood  530 
+95951 Hamilton City  530 
+93514 Hammil Valley  760 
+95901 Hammonton  530 
+95646 Hams Station  209 
+90044 Hancock  323 
+93230 Hanford  559 
+93232 Hanford  559 
+91331 Hansen Hills  818 
+96039 Happy Camp  530 
+90710 Harbor City  310/424 
+93435 Harmony  805 
+96040 Hat Creek  530 
+95233 Hathaway Pines  209 
+95233 Hathaway Pnes  209 
+92363 Havasu Lake  760 
+93518 Havilah  661 
+90716 Hawaiian Gardens  562 
+90716 Hawaiian Gdns  562 
+90250 Hawthorne  310/424 
+90251 Hawthorne  310/424 
+96041 Hayfork  530 
+94540 Hayward  510 
+94541 Hayward  510 
+94542 Hayward  510 
+94543 Hayward  510 
+94544 Hayward  510 
+94545 Hayward  510 
+94546 Hayward  510 
+94552 Hayward  510 
+94557 Hayward  510 
+90063 Hazard  323 
+95448 Healdsburg  707 
+95703 Heather Glen  530 
+92249 Heber  760 
+96048 Helena  530 
+92342 Helendale  760 
+93627 Helm  559 
+92543 Hemet  951 
+92544 Hemet  951 
+92545 Hemet  951 
+92546 Hemet  951 
+95638 Herald  209 
+94547 Hercules  510 
+93446 Heritage Ranch  805 
+93446 Heritage Rnch  805 
+96113 Herlong  530 
+90254 Hermosa Beach  310/424 
+92340 Hesperia  760 
+92344 Hesperia  760 
+92345 Hesperia  760 
+93534 Hi Vista  661 
+93535 Hi Vista  661 
+95323 Hickman  209 
+91302 Hidden Hills  818 
+91361 Hidden Valley  805 
+95467 Hidden Valley Lake  707 
+95467 Hidden Vl Lake  707 
+92346 Highland  909 
+90042 Highland Park  323 
+95945 Hills Flat  530 
+94010 Hillsborough  650 
+94806 Hilltop Mall  510 
+95324 Hilmar  209 
+96044 Hilt  530 
+92347 Hinkley  760 
+96161 Hobart Mills  530 
+92311 Hodge  760 
+92536 Holcomb Village  951 
+92802 Holiday  714 
+95023 Hollister  831 
+95024 Hollister  831 
+90250 Holly Park  310/424 
+90250 Hollyglen  310/424 
+90027 Hollywood  323 
+90028 Hollywood  323 
+90038 Hollywood  323 
+90068 Hollywood  323 
+90078 Hollywood  323 
+95234 Holt  209 
+92250 Holtville  760 
+95026 Holy City  408 
+95044 Holy City  408 
+92548 Homeland  951 
+96141 Homewood  530 
+95965 Honcut  530 
+95545 Honeydew  707 
+95639 Hood  916 
+95546 Hoopa  530 
+95546 Hoopa Valley Indian Reservat  530 
+96120 Hope Valley  530 
+95449 Hopland  707 
+96044 Hornbrook  530 
+95325 Hornitos  209 
+96050 Horse Creek  530 
+92850 Household Finance  714 
+95690 Howard Landing  916 
+95326 Hughson  209 
+93628 Hume  559 
+92605 Huntingtn Bch  714 
+92615 Huntingtn Bch  714 
+92646 Huntingtn Bch  714 
+92647 Huntingtn Bch  714 
+92648 Huntingtn Bch  714 
+92649 Huntingtn Bch  714 
+92646 Huntington  714 
+92605 Huntington Beach  714 
+92615 Huntington Beach  714 
+92646 Huntington Beach  714 
+92647 Huntington Beach  714 
+92648 Huntington Beach  714 
+92649 Huntington Beach  714 
+90255 Huntington Park  323 
+95965 Hurleton  530 
+93234 Huron  559 
+96046 Hyampom  530 
+95547 Hydesville  707 
+95193 I B M  408 
+93888 I R S  559 
+92549 Idyllwild  951 
+94949 Ignacio  415 
+96047 Igo  530 
+92251 Imperial  760 
+91932 Imperial Bch  619 
+91933 Imperial Bch  619 
+91932 Imperial Beach  619 
+91933 Imperial Beach  619 
+93526 Independence  760 
+92210 Indian Wells  760 
+92201 Indio  760 
+92202 Indio  760 
+92203 Indio  760 
+95437 Inglenook  707 
+90301 Inglewood  310/424 
+90302 Inglewood  310/424 
+90303 Inglewood  310/424 
+90304 Inglewood  310/424 
+90305 Inglewood  310/424 
+90306 Inglewood  310/424 
+90307 Inglewood  310/424 
+90308 Inglewood  310/424 
+90309 Inglewood  310/424 
+90310 Inglewood  310/424 
+90311 Inglewood  310/424 
+90312 Inglewood  310/424 
+94937 Inverness  415 
+93527 Inyokern  760 
+95640 Ione  209 
+95713 Iowa Hill  530 
+95646 Iron Mountain  209 
+93844 IRS  559 
+94151 IRS  415 
+94151 IRS Remittance  415 
+92602 Irvine  949 
+92603 Irvine  949 
+92604 Irvine  949 
+92606 Irvine  949 
+92612 Irvine  949 
+92614 Irvine  949 
+92616 Irvine  949 
+92617 Irvine  949 
+92618 Irvine  949 
+92619 Irvine  949 
+92620 Irvine  949 
+92623 Irvine  949 
+92650 Irvine  949 
+92697 Irvine  949 
+91010 Irwindale  626 
+91702 Irwindale  626 
+91706 Irwindale  626 
+93117 Isla Vista  805 
+95641 Isleton  916 
+93235 Ivanhoe  559 
+91329 J B Lansing Co  818 
+91189 J P Morgan  626 
+95642 Jackson  209 
+95654 Jackson  209 
+91934 Jacumba  619 
+95327 Jamestown  209 
+91935 Jamul  619 
+96114 Janesville  530 
+95965 Jarbo  530 
+95450 Jenner  707 
+92308 Jess Ranch  760 
+93528 Johannesburg  760 
+93554 Johannesburg  760 
+93558 Johannesburg  760 
+96013 Johnson Park  530 
+92285 Johnson Valley  760 
+96130 Johnstonville  530 
+96103 Johnsville  530 
+93928 Jolon  831 
+92252 Joshua Tree  760 
+92036 Julian  760 
+96048 Junction City  530 
+93529 June Lake  760 
+93529 June Lake Junction  760 
+93543 Juniper Hills  661 
+93553 Juniper Hills  661 
+92509 Jurupa  951 
+91342 Kagel Canyon  818 
+91188 Kaiser Foundation Health  626 
+94666 Kaiser Services  510 
+93237 Kaweah  559 
+93633 KCNP  559 
+93530 Keeler  760 
+93531 Keene  661 
+95427 Keene Summit  707 
+95667 Kelsey  530 
+95451 Kelseyville  707 
+92309 Kelso  760 
+94706 Kensington  510 
+94707 Kensington  510 
+94708 Kensington  510 
+94904 Kent Woodlands  415 
+94904 Kentfield  415 
+94914 Kentfield  415 
+95409 Kenwood  707 
+95452 Kenwood  707 
+93630 Kerman  559 
+93238 Kernville  760 
+96001 Keswick  530 
+93239 Kettleman City  559 
+95328 Keyes  209 
+92706 King  714 
+93930 King City  831 
+96143 Kings Beach  530 
+93633 Kings Canyon  559 
+93633 Kings Canyon National Park  559 
+93631 Kingsburg  559 
+95728 Kingvale  530 
+95646 Kirkwood  209 
+95644 Kit Carson  209 
+95548 Klamath  707 
+95548 Klamath Air Force Station  707 
+96050 Klamath River  530 
+95549 Kneeland  707 
+95361 Knights Ferry  209 
+95645 Knights Landing  530 
+95645 Knights Lndg  530 
+94548 Knightsen  510 
+95550 Korbel  707 
+93516 Kramer Junction  760 
+95720 Kyburz  530 
+90101 LA  213 
+95945 La Barr Meadows  530 
+91011 La Canada  818 
+91012 La Canada  818 
+91011 La Canada Flintridge  818 
+91012 La Canada Flintridge  818 
+91011 La Canada Flt  818 
+91012 La Canada Flt  818 
+93001 La Conchita  805 
+91214 La Crescenta  818 
+91224 La Crescenta  818 
+95329 La Grange  209 
+90631 La Habra  562 
+90632 La Habra  562 
+90633 La Habra  562 
+90631 La Habra Heights  562 
+90631 La Habra Hgts  562 
+94020 La Honda  650 
+90899 La International Service Center  562 
+92037 La Jolla  858 
+92038 La Jolla  858 
+92039 La Jolla  858 
+92092 La Jolla  858 
+92093 La Jolla  858 
+91941 La Mesa  619 
+91942 La Mesa  619 
+91943 La Mesa  619 
+91944 La Mesa  619 
+90637 La Mirada  714 
+90638 La Mirada  714 
+90639 La Mirada  714 
+90623 La Palma  714 
+95981 La Porte  530 
+91744 La Puente  626 
+91745 La Puente  626 
+91746 La Puente  626 
+91747 La Puente  626 
+91748 La Puente  626 
+91749 La Puente  626 
+92247 La Quinta  760 
+92248 La Quinta  760 
+92253 La Quinta  760 
+95076 La Selva Bch  831 
+95076 La Selva Beach  831 
+92505 La Sierra  951 
+90043 La Tijera  323 
+91352 La Tuna Canyon  818 
+91750 La Verne  909 
+92694 Ladera Ranch  949 
+94549 Lafayette  925 
+94596 Lafayette  925 
+92607 Laguna Beach  949 
+92637 Laguna Beach  949 
+92651 Laguna Beach  949 
+92652 Laguna Beach  949 
+92653 Laguna Beach  949 
+92654 Laguna Beach  949 
+92656 Laguna Beach  949 
+92677 Laguna Beach  949 
+92698 Laguna Beach  949 
+92637 Laguna Hills  949 
+92653 Laguna Hills  949 
+92654 Laguna Hills  949 
+92656 Laguna Hills  949 
+92607 Laguna Niguel  949 
+92677 Laguna Niguel  949 
+92637 Laguna Woods  949 
+92653 Laguna Woods  949 
+92654 Laguna Woods  949 
+94938 Lagunitas  415 
+96137 Lake Almanor  530 
+96137 Lake Almanor Sports & Spirit  530 
+92352 Lake Arrowhead  760 
+91406 Lake Balboa  818 
+96115 Lake City  530 
+93532 Lake Elizabeth  661 
+92530 Lake Elsinore  951 
+92531 Lake Elsinore  951 
+92532 Lake Elsinore  951 
+92609 Lake Forest  949 
+92610 Lake Forest  949 
+92630 Lake Forest  949 
+92325 Lake Gregory  909 
+93532 Lake Hughes  661 
+93240 Lake Isabella  760 
+93535 Lake La  661 
+93550 Lake La  661 
+93591 Lake La  661 
+93535 Lake Los Angeles  661 
+93550 Lake Los Angeles  661 
+93591 Lake Los Angeles  661 
+93546 Lake Mary  760 
+93426 Lake Nacimiento  805 
+93446 Lake Nacimiento  805 
+95630 Lake Natoma  916 
+95603 Lake of the Pines  530 
+92069 Lake San Marcos  760 
+91361 Lake Sherwood  805 
+91342 Lake View Ter  818 
+91342 Lake View Terrace  818 
+95946 Lake Wildwood  530 
+96051 Lakehead  530 
+96070 Lakehead  530 
+95453 Lakeport  707 
+93634 Lakeshore  559 
+90895 Lakeshore Learning  562 
+92040 Lakeside  619 
+92567 Lakeview  951 
+91331 Lakeview Terrace  818 
+94952 Lakeville  707 
+90711 Lakewood  562 
+90712 Lakewood  562 
+90713 Lakewood  562 
+90714 Lakewood  562 
+90715 Lakewood  562 
+90716 Lakewood  562 
+90805 Lakewood  562 
+90638 Lamirada  714 
+93241 Lamont  661 
+93534 Lancaster  661 
+93535 Lancaster  661 
+93536 Lancaster  661 
+93539 Lancaster  661 
+93551 Lancaster  661 
+93584 Lancaster  661 
+93586 Lancaster  661 
+92285 Landers  760 
+93534 Lane  661 
+95403 Larkfield  707 
+94939 Larkspur  415 
+94977 Larkspur  415 
+95965 Las Plumas  530 
+96063 Lassen Volcanic National Par  530 
+95330 Lathrop  209 
+93242 Laton  559 
+95682 Latrobe  530 
+96134 Lava Beds National Monument  530 
+90260 Lawndale  310/424 
+90261 Lawndale  310/424 
+93514 Laws  760 
+95417 Laytonville  707 
+95454 Laytonville  707 
+95454 Laytonville Rancheria  707 
+90809 LB  562 
+95333 Le Grand  209 
+93243 Lebec  661 
+93541 Lee Vining  760 
+95987 Leesville  530 
+95585 Leggett  707 
+90008 Leimert Park  323 
+93244 Lemon Cove  559 
+91945 Lemon Grove  619 
+91946 Lemon Grove  619 
+93245 Lemoore  559 
+93246 Lemoore  559 
+93245 Lemoore Nas  559 
+93246 Lemoore Nas  559 
+93246 Lemoore Naval Air Station  559 
+90304 Lennox  310/424 
+93532 Leona Valley  661 
+93551 Leona Valley  661 
+92024 Leucadia  760 
+96052 Lewiston  530 
+95620 Liberty Farms  707 
+93784 Liberty Mutual  559 
+96116 Likely  530 
+95648 Lincoln  916 
+91947 Lincoln Acres  619 
+90031 Lincoln Heights  323 
+95901 Linda  530 
+95236 Linden  209 
+93247 Lindsay  559 
+96117 Litchfield  530 
+93542 Little Lake  760 
+95456 Little River  707 
+96056 Little Valley  530 
+95456 Littleriver  707 
+93543 Littlerock  661 
+95953 Live Oak  530 
+94550 Livermore  925 
+94551 Livermore  925 
+95334 Livingston  209 
+93544 Llano  661 
+95461 Loch Lomond  707 
+95690 Locke  916 
+95237 Lockeford  209 
+92347 Lockhart  760 
+93599 Lockheed Advanced Dev Co  661 
+93932 Lockwood  831 
+95240 Lodi  209 
+95241 Lodi  209 
+95242 Lodi  209 
+95979 Lodoga  530 
+95551 Loleta  707 
+92350 Loma Linda  909 
+92354 Loma Linda  909 
+92357 Loma Linda  909 
+92350 Loma Linda University  909 
+94021 Loma Mar  650 
+95901 Loma Rica  530 
+90717 Lomita  310/424 
+95018 Lompico  831 
+93436 Lompoc  805 
+93437 Lompoc  805 
+93438 Lompoc  805 
+93618 London  559 
+93545 Lone Pine  760 
+95335 Long Barn  209 
+90745 Long Beach  310/424 
+90746 Long Beach  310/424 
+90747 Long Beach  310/424 
+90749 Long Beach  310/424 
+90755 Long Beach  562 
+90801 Long Beach  562 
+90802 Long Beach  562 
+90803 Long Beach  562 
+90804 Long Beach  562 
+90805 Long Beach  562 
+90806 Long Beach  562 
+90807 Long Beach  562 
+90808 Long Beach  562 
+90809 Long Beach  562 
+90810 Long Beach  562 
+90813 Long Beach  562 
+90814 Long Beach  562 
+90815 Long Beach  562 
+90822 Long Beach  562 
+90831 Long Beach  562 
+90832 Long Beach  562 
+90833 Long Beach  562 
+90834 Long Beach  562 
+90835 Long Beach  562 
+90840 Long Beach  562 
+90842 Long Beach  562 
+90844 Long Beach  562 
+90846 Long Beach  562 
+90847 Long Beach  562 
+90848 Long Beach  562 
+90853 Long Beach  562 
+90895 Long Beach  562 
+90899 Long Beach  562 
+90822 Long Beach Shared Firm  562 
+95690 Long Island  916 
+96054 Lookout  530 
+95650 Loomis  916 
+93518 Loraine  661 
+90720 Los Alamitos  562 
+90721 Los Alamitos  562 
+93440 Los Alamos  805 
+94022 Los Altos  650 
+94023 Los Altos  650 
+94024 Los Altos  650 
+94022 Los Altos Hills  650 
+94024 Los Altos Hills  650 
+90001 Los Angeles  323 
+90002 Los Angeles  323 
+90003 Los Angeles  323 
+90004 Los Angeles  323 
+90005 Los Angeles  323 
+90006 Los Angeles  323 
+90007 Los Angeles  213 
+90008 Los Angeles  323 
+90009 Los Angeles  310/424 
+90010 Los Angeles  213 
+90011 Los Angeles  213 
+90012 Los Angeles  213 
+90013 Los Angeles  213 
+90014 Los Angeles  213 
+90015 Los Angeles  213 
+90016 Los Angeles  323 
+90017 Los Angeles  213 
+90018 Los Angeles  323 
+90019 Los Angeles  323 
+90020 Los Angeles  323 
+90021 Los Angeles  213 
+90022 Los Angeles  323 
+90023 Los Angeles  323 
+90024 Los Angeles  310/424 
+90025 Los Angeles  310/424 
+90026 Los Angeles  213 
+90027 Los Angeles  323 
+90028 Los Angeles  323 
+90029 Los Angeles  323 
+90030 Los Angeles  213 
+90031 Los Angeles  323 
+90032 Los Angeles  323 
+90033 Los Angeles  323 
+90034 Los Angeles  310/424 
+90035 Los Angeles  310/424 
+90036 Los Angeles  323 
+90037 Los Angeles  323 
+90038 Los Angeles  323 
+90039 Los Angeles  323 
+90040 Los Angeles  323 
+90041 Los Angeles  323 
+90042 Los Angeles  323 
+90043 Los Angeles  323 
+90044 Los Angeles  323 
+90045 Los Angeles  310/424 
+90046 Los Angeles  323 
+90047 Los Angeles  323 
+90048 Los Angeles  323 
+90049 Los Angeles  310/424 
+90050 Los Angeles  213 
+90051 Los Angeles  213 
+90052 Los Angeles  213 
+90053 Los Angeles  213 
+90054 Los Angeles  213 
+90055 Los Angeles  213 
+90056 Los Angeles  310/424 
+90057 Los Angeles  213 
+90058 Los Angeles  323 
+90059 Los Angeles  323 
+90060 Los Angeles  213 
+90061 Los Angeles  323 
+90062 Los Angeles  323 
+90063 Los Angeles  323 
+90064 Los Angeles  310/424 
+90065 Los Angeles  323 
+90066 Los Angeles  310/424 
+90067 Los Angeles  310/424 
+90068 Los Angeles  323 
+90069 Los Angeles  323 
+90070 Los Angeles  213 
+90071 Los Angeles  213 
+90072 Los Angeles  213 
+90073 Los Angeles  310/424 
+90074 Los Angeles  213 
+90075 Los Angeles  213 
+90076 Los Angeles  213 
+90077 Los Angeles  310/424 
+90078 Los Angeles  323 
+90079 Los Angeles  213 
+90080 Los Angeles  213 
+90081 Los Angeles  213 
+90082 Los Angeles  213 
+90083 Los Angeles  213 
+90084 Los Angeles  213 
+90086 Los Angeles  213 
+90087 Los Angeles  213 
+90088 Los Angeles  213 
+90089 Los Angeles  213 
+90090 Los Angeles  323 
+90091 Los Angeles  323 
+90093 Los Angeles  213 
+90094 Los Angeles  310/424 
+90095 Los Angeles  213 
+90096 Los Angeles  323 
+90099 Los Angeles  213 
+90101 Los Angeles  213 
+90103 Los Angeles  213 
+90189 Los Angeles  213 
+90230 Los Angeles  310/424 
+91331 Los Angeles  818 
+91335 Los Angeles  818 
+90009 Los Angeles AFB  310/424 
+90090 Los Angeles Dodgers  323 
+90009 Los Angeles International Airport  310/424 
+90009 Los Angls AFB  310/424 
+93635 Los Banos  209 
+90027 Los Feliz  323 
+95030 Los Gatos  408 
+95031 Los Gatos  408 
+95032 Los Gatos  408 
+95033 Los Gatos  408 
+96055 Los Molinos  530 
+90606 Los Nietos  562 
+90610 Los Nietos  562 
+93441 Los Olivos  805 
+93402 Los Osos  805 
+93412 Los Osos  805 
+93249 Lost Hills  661 
+95651 Lotus  530 
+95457 Lower Lake  707 
+96118 Loyalton  530 
+95458 Lucerne  707 
+92356 Lucerne Valley  760 
+93920 Lucia  831 
+92338 Ludlow  760 
+90023 Lugo  323 
+90262 Lynwood  310/424 
+95296 Lyoth  209 
+92358 Lytle Creek  909 
+96058 Macdoel  530 
+95552 Mad River  707 
+96119 Madeline  530 
+93636 Madera  559 
+93637 Madera  559 
+93638 Madera  559 
+93639 Madera  559 
+95653 Madison  530 
+95954 Magalia  530 
+95717 Magra  530 
+93725 Malaga  559 
+90263 Malibu  310/424 
+90264 Malibu  310/424 
+90265 Malibu  310/424 
+93546 Mammoth Lakes  760 
+95459 Manchester  707 
+95459 Manchester Rancheria  707 
+90266 Manhattan Bch  310/424 
+90267 Manhattan Bch  310/424 
+90266 Manhattan Beach  310/424 
+90267 Manhattan Beach  310/424 
+95521 Manila  707 
+95336 Manteca  209 
+95337 Manteca  209 
+96059 Manton  530 
+95948 Manzanita  530 
+90066 Mar Vista  310/424 
+92518 March Air Reserve Base  951 
+92518 March Arb  951 
+94592 Mare Island  707 
+93252 Maricopa  661 
+92373 Marigold  909 
+94965 Marin City  415 
+93933 Marina  831 
+90291 Marina del Rey  310/424 
+90292 Marina del Rey  310/424 
+90295 Marina del Rey  310/424 
+90292 Marina dl Rey  310/424 
+90295 Marina dl Rey  310/424 
+92055 Marine Corp Base  760 
+94903 Marinwood  415 
+95338 Mariposa  209 
+90021 Market  213 
+96120 Markleeville  530 
+94940 Marshall  415 
+95654 Martell  209 
+94553 Martinez  925 
+95901 Marysville  530 
+95903 Marysville  530 
+95971 Massack  530 
+95655 Mather  916 
+95955 Maxwell  530 
+90270 Maywood  323 
+93250 Mc Farland  661 
+95521 Mc Kinleyville  707 
+93251 Mc Kittrick  661 
+96056 McArthur  530 
+95652 McClellan  916 
+96057 McCloud  530 
+95519 McKinleyville  707 
+95521 McKinleyville  707 
+95956 Meadow Valley  530 
+95722 Meadow Vista  530 
+92254 Mecca  760 
+96134 Medicine Lake Lodge  530 
+96142 Meeks Bay  530 
+93023 Meiners Oaks  805 
+91185 Mellon Regional Lockbox Netw  626 
+95460 Mendocino  707 
+93640 Mendota  559 
+92584 Menifee  951 
+94025 Menlo Park  650 
+94026 Menlo Park  650 
+94027 Menlo Park  650 
+94028 Menlo Park  650 
+92359 Mentone  909 
+95340 Merced  209 
+95341 Merced  209 
+95343 Merced  209 
+95344 Merced  209 
+95348 Merced  209 
+95957 Meridian  530 
+92225 Mesa Verde  760 
+96120 Mesa Vista  530 
+93536 Metler Valley  661 
+93313 Mettler  661 
+96155 Meyers  530 
+95346 Mi Wuk Village  209 
+95631 Michigan Bluff  530 
+95461 Middletown  707 
+95345 Midpines  209 
+92655 Midway City  714 
+96121 Milford  530 
+96061 Mill Creek  530 
+94941 Mill Valley  415 
+94942 Mill Valley  415 
+94030 Millbrae  650 
+95951 Mills Orchard  530 
+96062 Millville  530 
+95035 Milpitas  408 
+95036 Milpitas  408 
+96061 Mineral  530 
+96063 Mineral  530 
+93657 Minkler  559 
+91350 Mint Canyon  661 
+91752 Mira Loma  951 
+90036 Miracle Mile  323 
+90638 Mirada  714 
+93603 Miramonte  559 
+93628 Miramonte  559 
+93633 Miramonte  559 
+93641 Miramonte  559 
+95553 Miranda  707 
+91345 Mission Hills  818 
+91346 Mission Hills  818 
+91395 Mission Hills  818 
+94915 Mission Rafael  415 
+92675 Mission Viejo  949 
+92690 Mission Viejo  949 
+92691 Mission Viejo  949 
+92692 Mission Viejo  949 
+92694 Mission Viejo  949 
+95347 Moccasin  209 
+95350 Modesto  209 
+95351 Modesto  209 
+95352 Modesto  209 
+95353 Modesto  209 
+95354 Modesto  209 
+95355 Modesto  209 
+95356 Modesto  209 
+95357 Modesto  209 
+95358 Modesto  209 
+95397 Modesto  209 
+95397 Modesto Brm Zip  209 
+92676 Modjeska  714 
+92676 Modjeska Canyon  714 
+94035 Moffett Field  650 
+94035 Moffett Field NAS  650 
+93501 Mojave  661 
+93502 Mojave  661 
+93519 Mojave  760 
+95245 Mokelumne Hill  209 
+95245 Mokelumne Hl  209 
+92629 Monarch Bay  949 
+92629 Monarch Beach  949 
+93541 Mono City  760 
+93642 Mono Hot Springs  559 
+93541 Mono Lake  760 
+93561 Monolith  661 
+91016 Monrovia  626 
+91017 Monrovia  626 
+91756 Mont Park  626 
+96064 Montague  530 
+94037 Montara  650 
+91710 Montclair  909 
+91762 Montclair  909 
+91763 Montclair  909 
+91302 Monte Nido  818 
+95462 Monte Rio  707 
+95030 Monte Sereno  408 
+95014 Monte Vista  408 
+90640 Montebello  323 
+93108 Montecito  805 
+93150 Montecito  805 
+93940 Monterey  831 
+93942 Monterey  831 
+93943 Monterey  831 
+93944 Monterey  831 
+91754 Monterey Park  626 
+91755 Monterey Park  626 
+91756 Monterey Park  626 
+96065 Montgomery Creek  530 
+96065 Montgomry Crk  530 
+91020 Montrose  626 
+91021 Montrose  626 
+93020 Moorpark  805 
+93021 Moorpark  805 
+95212 Morada  209 
+94556 Moraga  925 
+94570 Moraga  925 
+94575 Moraga  925 
+92551 Moreno Valley  951 
+92552 Moreno Valley  951 
+92553 Moreno Valley  951 
+92554 Moreno Valley  951 
+92555 Moreno Valley  951 
+92556 Moreno Valley  951 
+92557 Moreno Valley  951 
+95037 Morgan Hill  408 
+95038 Morgan Hill  408 
+95630 Mormon Island  916 
+92256 Morongo Valley  760 
+93442 Morro Bay  805 
+93443 Morro Bay  805 
+94038 Moss Beach  650 
+95039 Moss Landing  831 
+95656 Mount Aukum  209 
+95675 Mount Aukum  209 
+91759 Mount Baldy  909 
+94557 Mount Eden  510 
+95140 Mount Hamilton  408 
+95041 Mount Hermon  831 
+91948 Mount Laguna  619 
+96067 Mount Shasta  530 
+92231 Mount Signal  760 
+94040 Mount View  650 
+91023 Mount Wilson  626 
+92561 Mountain Center  951 
+92359 Mountain Home Village  909 
+95391 Mountain House  209 
+93240 Mountain Mesa  760 
+92366 Mountain Pass  760 
+95246 Mountain Ranch  209 
+94035 Mountain View  650 
+94039 Mountain View  650 
+94040 Mountain View  650 
+94041 Mountain View  650 
+94042 Mountain View  650 
+94043 Mountain View  650 
+95391 Mtn House  209 
+95246 Mtn Ranch  209 
+94965 Muir Beach  415 
+94941 Muir Woods  415 
+95229 Murphys  209 
+95247 Murphys  209 
+92562 Murrieta  951 
+92563 Murrieta  951 
+92564 Murrieta  951 
+92562 Murrieta Hot Springs  951 
+92563 Murrieta Hot Springs  951 
+92564 Murrieta Hot Springs  951 
+92407 Muscoy  909 
+95554 Myers Flat  707 
+93426 Nacimiento Lake  805 
+93446 Nacimiento Lake  805 
+94558 Napa  707 
+94559 Napa  707 
+94581 Napa  707 
+90803 Naples  562 
+93246 NAS Lemoore  559 
+92145 Nas Miramar  858 
+95623 Nashville  530 
+91950 National City  619 
+91951 National City  619 
+93042 Naval Air Warfare Center  805 
+92155 Naval Amphibious Base  619 
+93041 Naval Base Ventura County  805 
+93042 Naval Base Ventura County  805 
+93043 Naval Base Ventura County  805 
+93044 Naval Base Ventura County  805 
+92134 Naval Hospital  619 
+92136 Naval Station 32nd St  619 
+92132 Naval Supply Center  619 
+95463 Navarro  707 
+93654 Navelencia  559 
+92363 Needles  760 
+93536 Neenach  661 
+95958 Nelson  530 
+92153 Nestor  619 
+95959 Nevada City  530 
+95042 New Almaden  408 
+93254 New Cuyama  661 
+95043 New Idria  831 
+94560 Newark  510 
+92338 Newberry Springs  760 
+92365 Newberry Springs  760 
+91319 Newbury Park  805 
+91320 Newbury Park  805 
+95658 Newcastle  916 
+96134 Newell  530 
+91321 Newhall  661 
+91322 Newhall  661 
+91381 Newhall  661 
+91382 Newhall  661 
+95360 Newman  209 
+92657 Newport Beach  949 
+92658 Newport Beach  949 
+92659 Newport Beach  949 
+92660 Newport Beach  949 
+92661 Newport Beach  949 
+92662 Newport Beach  949 
+92663 Newport Beach  949 
+92657 Newport Coast  949 
+95667 Newtown  530 
+95963 Newville  530 
+94946 Nicasio  415 
+95464 Nice  707 
+95659 Nicolaus  530 
+92257 Niland  760 
+95670 Nimbus  916 
+95954 Nimshew  530 
+93601 Nipinnawassee  559 
+93444 Nipomo  805 
+92364 Nipton  760 
+92258 No Palm Springs  760 
+92860 Norco  951 
+95973 Nord  530 
+95724 Norden  530 
+91523 North B C  818 
+95959 North Bloomfield  530 
+95959 North Columbia  530 
+93523 North Edwards  661 
+93643 North Fork  559 
+95660 North Highlands  916 
+95821 North Highlands  916 
+91343 North Hills  818 
+91393 North Hills  818 
+91601 North Hollywood  818 
+91602 North Hollywood  818 
+91603 North Hollywood  818 
+91604 North Hollywood  818 
+91605 North Hollywood  818 
+91606 North Hollywood  818 
+91607 North Hollywood  818 
+91608 North Hollywood  818 
+91609 North Hollywood  818 
+91610 North Hollywood  818 
+91611 North Hollywood  818 
+91612 North Hollywood  818 
+91614 North Hollywood  818 
+91615 North Hollywood  818 
+91616 North Hollywood  818 
+91617 North Hollywood  818 
+91618 North Hollywood  818 
+92354 North Loma Linda  909 
+90805 North Long Beach  562 
+92258 North Palm Springs  760 
+94801 North Richmond  510 
+95815 North Sacramento  916 
+95960 North San Juan  530 
+92254 North Shore  760 
+92705 North Tustin  714 
+95531 Northcrest  707 
+91324 Northridge  818 
+91325 Northridge  818 
+91326 Northridge  818 
+91327 Northridge  818 
+91328 Northridge  818 
+91329 Northridge  818 
+91330 Northridge  818 
+91343 Northridge  818 
+96161 Northstar  530 
+90650 Norwalk  562 
+90651 Norwalk  562 
+90652 Norwalk  562 
+94945 Novato  415 
+94947 Novato  415 
+94948 Novato  415 
+94949 Novato  415 
+94998 Novato  415 
+95437 Noyo  707 
+96068 Nubieber  530 
+92567 Nuevo  951 
+95696 Nut Tree  707 
+93645 O Neals  559 
+92399 Oak Glen  909 
+95965 Oak Grove  530 
+92344 Oak Hills  760 
+91301 Oak Park  818 
+91377 Oak Park  805 
+96069 Oak Run  530 
+93426 Oak Shores  805 
+93022 Oak View  805 
+95361 Oakdale  209 
+93644 Oakhurst  559 
+94601 Oakland  510 
+94602 Oakland  510 
+94603 Oakland  510 
+94604 Oakland  510 
+94605 Oakland  510 
+94606 Oakland  510 
+94607 Oakland  510 
+94608 Oakland  510 
+94609 Oakland  510 
+94610 Oakland  510 
+94611 Oakland  510 
+94612 Oakland  510 
+94613 Oakland  510 
+94614 Oakland  510 
+94615 Oakland  510 
+94617 Oakland  510 
+94618 Oakland  510 
+94619 Oakland  510 
+94620 Oakland  510 
+94621 Oakland  510 
+94622 Oakland  510 
+94623 Oakland  510 
+94624 Oakland  510 
+94649 Oakland  510 
+94659 Oakland  510 
+94660 Oakland  510 
+94661 Oakland  510 
+94662 Oakland  510 
+94666 Oakland  510 
+94622 Oakland International Service Center  510 
+94561 Oakley  925 
+94562 Oakville  707 
+90004 Oakwood  323 
+96070 Obrien  530 
+95465 Occidental  707 
+92107 Ocean Beach  619 
+93445 Oceano  805 
+93475 Oceano  805 
+92049 Oceanside  760 
+92051 Oceanside  760 
+92052 Oceanside  760 
+92054 Oceanside  760 
+92055 Oceanside  760 
+92056 Oceanside  760 
+92057 Oceanside  760 
+92058 Oceanside  760 
+92259 Ocotillo  760 
+93023 Ojai  805 
+93024 Ojai  805 
+93549 Olancha  760 
+95667 Old Fort Jim  530 
+96071 Old Station  530 
+94950 Olema  415 
+96007 Olinda  530 
+95961 Olivehurst  530 
+92024 Olivenhain  760 
+96146 Olympic Valley  530 
+95684 Omo Ranch  530 
+92274 One Hundred Palms  760 
+94088 Onizuka AFB  408 
+91710 Ontario  909 
+91758 Ontario  909 
+91761 Ontario  909 
+91762 Ontario  909 
+91764 Ontario  909 
+93255 Onyx  760 
+95603 Ophir  530 
+92856 Orange  714 
+92857 Orange  714 
+92859 Orange  714 
+92861 Orange  714 
+92862 Orange  714 
+92863 Orange  714 
+92864 Orange  714 
+92865 Orange  714 
+92866 Orange  714 
+92867 Orange  714 
+92868 Orange  714 
+92869 Orange  714 
+93646 Orange Cove  559 
+93675 Orange Cove  559 
+95662 Orangevale  916 
+93455 Orcutt  805 
+93457 Orcutt  805 
+95943 Ordbend  530 
+95965 Oregon City  530 
+95962 Oregon House  530 
+95555 Orick  707 
+94563 Orinda  925 
+95963 Orland  530 
+95556 Orleans  530 
+92368 Oro Grande  760 
+93647 Orosi  559 
+95915 Oroville  530 
+95940 Oroville  530 
+95965 Oroville  530 
+95966 Oroville  530 
+95980 Oroville  530 
+95684 Outingdale  530 
+95662 Ovale  916 
+93030 Oxnard  805 
+93031 Oxnard  805 
+93032 Oxnard  805 
+93033 Oxnard  805 
+93034 Oxnard  805 
+93035 Oxnard  805 
+93036 Oxnard  805 
+94553 Pacheco  925 
+94199 Pacific Area Office  415 
+92109 Pacific Beach  858 
+93760 Pacific Gas and Electric  559 
+93950 Pacific Grove  831 
+95726 Pacific House  530 
+90272 Pacific Palisades  310/424 
+90272 Pacific Plsds  310/424 
+93920 Pacific Valley  831 
+94044 Pacifica  650 
+91331 Pacoima  818 
+91333 Pacoima  818 
+91334 Pacoima  818 
+95043 Paicines  831 
+95615 Paintersville  916 
+95076 Pajaro  831 
+92059 Pala  760 
+92061 Pala  760 
+95968 Palermo  530 
+92210 Palm Desert  760 
+92211 Palm Desert  760 
+92255 Palm Desert  760 
+92260 Palm Desert  760 
+92261 Palm Desert  760 
+92262 Palm Springs  760 
+92263 Palm Springs  760 
+92264 Palm Springs  760 
+92292 Palm Springs  760 
+92262 Palm Springs Municipal Airpo  760 
+93550 Palmdale  661 
+93551 Palmdale  661 
+93552 Palmdale  661 
+93590 Palmdale  661 
+93591 Palmdale  661 
+93599 Palmdale  661 
+90034 Palms  310/424 
+94301 Palo Alto  650 
+94302 Palo Alto  650 
+94303 Palo Alto  650 
+94304 Palo Alto  650 
+94305 Palo Alto  650 
+94306 Palo Alto  650 
+94309 Palo Alto  650 
+96073 Palo Cedro  530 
+92266 Palo Verde  760 
+92060 Palomar Mountain  760 
+94062 Palomar Park  650 
+90274 Palos Verdes Estates  310/424 
+90275 Palos Verdes Estates  310/424 
+90274 Palos Verdes Peninsula  310/424 
+90275 Palos Verdes Peninsula  310/424 
+93545 Panamint Springs  760 
+95043 Panoche  831 
+91402 Panorama City  818 
+91412 Panorama City  818 
+95967 Paradise  530 
+95969 Paradise  530 
+95060 Paradise Park  831 
+95954 Paradise Pines  530 
+90723 Paramount  562 
+92267 Parker Dam  760 
+93451 Parkfield  805 
+93648 Parlier  559 
+91101 Pasadena  626 
+91102 Pasadena  626 
+91103 Pasadena  626 
+91104 Pasadena  626 
+91105 Pasadena  626 
+91106 Pasadena  626 
+91107 Pasadena  626 
+91108 Pasadena  626 
+91109 Pasadena  626 
+91110 Pasadena  626 
+91114 Pasadena  626 
+91115 Pasadena  626 
+91116 Pasadena  626 
+91117 Pasadena  626 
+91118 Pasadena  626 
+91121 Pasadena  626 
+91123 Pasadena  626 
+91124 Pasadena  626 
+91125 Pasadena  626 
+91126 Pasadena  626 
+91129 Pasadena  626 
+91182 Pasadena  626 
+91184 Pasadena  626 
+91185 Pasadena  626 
+91188 Pasadena  626 
+91189 Pasadena  626 
+91199 Pasadena  626 
+96074 Paskenta  530 
+93446 Paso Robles  805 
+93447 Paso Robles  805 
+95363 Patterson  209 
+92369 Patton  909 
+96113 Patton Village  530 
+92061 Pauma Valley  760 
+96075 Paynes Creek  530 
+96041 Peanut  530 
+93553 Pearblossom  661 
+93563 Pearblossom  661 
+95945 Peardale  530 
+93527 Pearsonville  760 
+93953 Pebble Beach  831 
+95646 Peddler Hill  209 
+95532 Pelican Bay State Prison  707 
+95946 Penn Valley  530 
+94951 Penngrove  707 
+95953 Pennington  530 
+95663 Penryn  916 
+95965 Pentz  530 
+95014 Permanente  408 
+92570 Perris  951 
+92571 Perris  951 
+92572 Perris  951 
+92599 Perris  951 
+94060 Pescadero  650 
+94952 Petaluma  707 
+94953 Petaluma  707 
+94954 Petaluma  707 
+94955 Petaluma  707 
+94975 Petaluma  707 
+94999 Petaluma  707 
+95558 Petrolia  707 
+94177 PG&E  415 
+92329 Phelan  760 
+92371 Phelan  760 
+94612 Philatelic Center  510 
+91766 Phillips Ranch  909 
+91766 Phillips Rnch  909 
+95559 Phillipsville  707 
+95463 Philo  707 
+95466 Philo  707 
+90006 Pico Heights  323 
+90601 Pico Rivera  562 
+90660 Pico Rivera  562 
+90661 Pico Rivera  562 
+90662 Pico Rivera  562 
+94602 Piedmont  510 
+94610 Piedmont  510 
+94611 Piedmont  510 
+94618 Piedmont  510 
+94620 Piedmont  510 
+93649 Piedra  559 
+91371 Pierce College  818 
+95587 Piercy  707 
+95960 Pike  530 
+95664 Pilot Hill  530 
+95630 Pine Bluff  916 
+95665 Pine Grove  209 
+93222 Pine Mountain Club  661 
+91962 Pine Valley  619 
+95314 Pinecrest  209 
+95364 Pinecrest  209 
+95375 Pinecrest  209 
+93650 Pinedale  559 
+93641 Pinehurst  559 
+93602 Pineridge  559 
+95043 Pinnacles  831 
+94564 Pinole  510 
+92372 Pinon Hills  760 
+92561 Pinyon Pines  951 
+95644 Pioneer  209 
+95646 Pioneer  209 
+95666 Pioneer  209 
+93562 Pioneer Point  760 
+92268 Pioneertown  760 
+93040 Piru  805 
+93420 Pismo Beach  805 
+93433 Pismo Beach  805 
+93448 Pismo Beach  805 
+93449 Pismo Beach  805 
+94565 Pittsburg  925 
+96056 Pittville  530 
+93256 Pixley  559 
+92870 Placentia  714 
+92871 Placentia  714 
+95667 Placerville  530 
+95365 Planada  209 
+96076 Platina  530 
+92652 Playa  949 
+90291 Playa del Rey  310/424 
+90293 Playa del Rey  310/424 
+90296 Playa del Rey  310/424 
+90045 Playa Vista  310/424 
+90094 Playa Vista  310/424 
+95668 Pleasant Grove  530 
+95668 Pleasant Grv  530 
+94523 Pleasant Hill  925 
+95667 Pleasant Valley  530 
+94566 Pleasanton  925 
+94568 Pleasanton  925 
+94588 Pleasanton  925 
+90274 Pls Vrds Est  310/424 
+90275 Pls Vrds Est  310/424 
+90274 Pls Vrds Pnsl  310/424 
+90275 Pls Vrds Pnsl  310/424 
+95961 Plumas Lake  530 
+95669 Plymouth  209 
+95468 Point Arena  707 
+95468 Point Arena Air Force Statio  707 
+93041 Point Mugu Nawc  805 
+93042 Point Mugu Nawc  805 
+94956 Point Reyes Station  415 
+94801 Point Richmond  510 
+93940 Point Sur  831 
+95726 Pollock Pines  530 
+91765 Pomona  909 
+91766 Pomona  909 
+91767 Pomona  909 
+91768 Pomona  909 
+91769 Pomona  909 
+91797 Pomona  626 
+94567 Pope Valley  707 
+93257 Poplar  559 
+94565 Port Chicago  925 
+94569 Port Costa  510 
+93041 Port Hueneme  805 
+93042 Port Hueneme  805 
+93043 Port Hueneme  805 
+93044 Port Hueneme  805 
+93043 Port Hueneme CBC Base  805 
+93044 Port Hueneme CBC Base  805 
+93043 Port Hueneme Naval Construct  805 
+91326 Porter Ranch  818 
+91327 Porter Ranch  818 
+93257 Porterville  559 
+93258 Porterville  559 
+96122 Portola  530 
+96129 Portola  530 
+92679 Portola Hills  949 
+94028 Portola Valley  650 
+94028 Portola Vally  650 
+93260 Posey  661 
+94497 Postal Data Center  650 
+91963 Potrero  619 
+95469 Potter Valley  707 
+92064 Poway  858 
+92074 Poway  858 
+93453 Pozo  805 
+93651 Prather  559 
+95923 Prattville  530 
+94129 Presidio  415 
+93944 Presidio Mtry  831 
+93940 Presidio of Monterey  831 
+93944 Presidio of Monterey  831 
+90844 Press Telegram  562 
+90035 Preuss  310/424 
+95970 Princeton  530 
+94019 Princeton by the Sea  650 
+96078 Proberta  530 
+96079 Project City  530 
+96161 Prosser Lakeview  530 
+93043 Prt Hueneme  805 
+93907 Prunedale  831 
+95437 Pudding Creek  707 
+95965 Pulga  530 
+93313 Pumpkin Center  661 
+93383 Pumpkin Center  661 
+92587 Quail Valley  951 
+93536 Quartz Hill  661 
+93551 Quartz Hill  661 
+93586 Quartz Hill  661 
+95971 Quincy  530 
+95972 Rackerby  530 
+93452 Ragged Point  805 
+95248 Rail Rd Flat  209 
+95248 Rail Road Flat  209 
+95248 Railroad Flat  209 
+92028 Rainbow  760 
+93652 Raisin City  559 
+91124 Ralph M Parsons Co  626 
+92065 Ramona  760 
+92066 Ranchita  760 
+92555 Rancho Belago  951 
+92128 Rancho Bernardo  858 
+92589 Rancho California  951 
+92590 Rancho California  951 
+92591 Rancho California  951 
+92592 Rancho California  951 
+92593 Rancho California  951 
+95670 Rancho Cordova  916 
+95741 Rancho Cordova  916 
+95742 Rancho Cordova  916 
+91701 Rancho Cucamonga  909 
+91729 Rancho Cucamonga  909 
+91730 Rancho Cucamonga  909 
+91737 Rancho Cucamonga  909 
+91739 Rancho Cucamonga  909 
+90220 Rancho Dominguez  310/424 
+90224 Rancho Dominguez  310/424 
+91352 Rancho La Tuna Canyon  818 
+92270 Rancho Mirage  760 
+95683 Rancho Murieta  916 
+90275 Rancho Palos Verdes  310/424 
+90064 Rancho Park  310/424 
+92067 Rancho Santa Fe  760 
+92091 Rancho Santa Fe  760 
+92688 Rancho Santa Margarita  949 
+92688 Rancho Sta Marg  949 
+95615 Randall Island  916 
+93554 Randsburg  760 
+96123 Ravendale  530 
+93653 Raymond  559 
+91701 Rch Cucamonga  909 
+91729 Rch Cucamonga  909 
+91730 Rch Cucamonga  909 
+91737 Rch Cucamonga  909 
+91739 Rch Cucamonga  909 
+90275 Rch Palos Vrd  310/424 
+92067 Rcho Santa Fe  760 
+92091 Rcho Santa Fe  760 
+92688 Rcho Sta Marg  949 
+96080 Red Bluff  530 
+93558 Red Mountain  760 
+95569 Redcrest  707 
+96001 Redding  530 
+96002 Redding  530 
+96003 Redding  530 
+96049 Redding  530 
+96099 Redding  530 
+92373 Redlands  909 
+92374 Redlands  909 
+92375 Redlands  909 
+90277 Redondo Beach  310/424 
+90278 Redondo Beach  310/424 
+95560 Redway  707 
+94061 Redwood City  650 
+94062 Redwood City  650 
+94063 Redwood City  650 
+94064 Redwood City  650 
+94065 Redwood City  650 
+95044 Redwood Est  408 
+95044 Redwood Estates  408 
+95437 Redwood Lodge  707 
+95470 Redwood Valley  707 
+93654 Reedley  559 
+95962 Renaissance  530 
+95671 Represa  916 
+95672 Rescue  530 
+91335 Reseda  818 
+91337 Reseda  818 
+95546 Resighini Rancheria  530 
+92376 Rialto  909 
+92377 Rialto  909 
+95973 Richardson Springs  530 
+93261 Richgrove  661 
+94801 Richmond  510 
+94802 Richmond  510 
+94803 Richmond  510 
+94804 Richmond  510 
+94805 Richmond  510 
+94806 Richmond  510 
+94807 Richmond  510 
+94808 Richmond  510 
+94820 Richmond  510 
+94850 Richmond  510 
+95974 Richvale  530 
+93555 Ridgecrest  760 
+93556 Ridgecrest  760 
+96140 Ridgewood  530 
+92378 Rimforest  909 
+90019 Rimpau  323 
+92268 Rimrock  760 
+95003 Rio del Mar  831 
+95562 Rio Dell  707 
+95673 Rio Linda  916 
+95471 Rio Nido  707 
+95674 Rio Oso  530 
+94571 Rio Vista  707 
+92225 Ripley  760 
+95366 Ripon  209 
+95605 River Bank  916 
+93238 River Kern  760 
+95675 River Pines  209 
+95367 Riverbank  209 
+93607 Riverdale  559 
+93656 Riverdale  559 
+92501 Riverside  951 
+92502 Riverside  951 
+92503 Riverside  951 
+92504 Riverside  951 
+92505 Riverside  951 
+92506 Riverside  951 
+92507 Riverside  951 
+92508 Riverside  951 
+92509 Riverside  951 
+92513 Riverside  951 
+92514 Riverside  951 
+92515 Riverside  951 
+92516 Riverside  951 
+92517 Riverside  951 
+92518 Riverside  951 
+92519 Riverside  951 
+92521 Riverside  951 
+92522 Riverside  951 
+90274 Rllng Hls Est  310/424 
+90275 Rllng Hls Est  310/424 
+95670 Rncho Cordova  916 
+95741 Rncho Cordova  916 
+95742 Rncho Cordova  916 
+90220 Rncho Domingz  310/424 
+90224 Rncho Domingz  310/424 
+95683 Rncho Murieta  916 
+95676 Robbins  530 
+92679 Robinson Ranch  949 
+92679 Robinson Rnch  949 
+95965 Robinsons Corner  530 
+93924 Robles del Rio  831 
+95980 Rock Creek  530 
+95980 Rock Crest  530 
+95677 Rocklin  916 
+95765 Rocklin  916 
+95488 Rockport  707 
+90103 Rodale Press  213 
+94547 Rodeo  510 
+94572 Rodeo  510 
+95980 Rogers Flat  530 
+94926 Rohnert Park  707 
+94927 Rohnert Park  707 
+94928 Rohnert Park  707 
+93706 Rolinda  559 
+90274 Rolling Hills  310/424 
+90274 Rolling Hills Estates  310/424 
+90275 Rolling Hills Estates  310/424 
+92585 Romoland  951 
+93535 Roosevelt Corner  661 
+93560 Rosamond  661 
+95407 Roseland  707 
+91770 Rosemead  626 
+91771 Rosemead  626 
+91772 Rosemead  626 
+95661 Roseville  916 
+95678 Roseville  916 
+95746 Roseville  916 
+95747 Roseville  916 
+90222 Rosewood  310/424 
+94957 Ross  415 
+90720 Rossmoor  562 
+95975 Rough and Ready  530 
+95975 Rough Ready  530 
+96084 Round Mountain  530 
+93514 Round Valley  760 
+93514 Rovana  760 
+91748 Rowland Heights  626 
+91748 Rowland Hghts  626 
+91748 Rowland Hgts  626 
+95076 Royal Oaks  831 
+92688 RSM  949 
+96142 Rubicon Bay  530 
+92509 Rubidoux  951 
+92519 Rubidoux  951 
+95679 Rumsey  530 
+92382 Running Springs  909 
+95462 Russian River  707 
+95462 Russian River Meadows  707 
+95526 Ruth  707 
+94573 Rutherford  707 
+95680 Ryde  916 
+95690 Ryer Island  916 
+94203 Sacramento  916 
+94204 Sacramento  916 
+94205 Sacramento  916 
+94206 Sacramento  916 
+94207 Sacramento  916 
+94208 Sacramento  916 
+94209 Sacramento  916 
+94211 Sacramento  916 
+94229 Sacramento  916 
+94230 Sacramento  916 
+94232 Sacramento  916 
+94234 Sacramento  916 
+94235 Sacramento  916 
+94236 Sacramento  916 
+94237 Sacramento  916 
+94239 Sacramento  916 
+94240 Sacramento  916 
+94244 Sacramento  916 
+94245 Sacramento  916 
+94246 Sacramento  916 
+94247 Sacramento  916 
+94248 Sacramento  916 
+94249 Sacramento  916 
+94250 Sacramento  916 
+94252 Sacramento  916 
+94254 Sacramento  916 
+94256 Sacramento  916 
+94257 Sacramento  916 
+94258 Sacramento  916 
+94259 Sacramento  916 
+94261 Sacramento  916 
+94262 Sacramento  916 
+94263 Sacramento  916 
+94267 Sacramento  916 
+94268 Sacramento  916 
+94269 Sacramento  916 
+94271 Sacramento  916 
+94273 Sacramento  916 
+94274 Sacramento  916 
+94277 Sacramento  916 
+94278 Sacramento  916 
+94279 Sacramento  916 
+94280 Sacramento  916 
+94282 Sacramento  916 
+94283 Sacramento  916 
+94284 Sacramento  916 
+94285 Sacramento  916 
+94286 Sacramento  916 
+94287 Sacramento  916 
+94288 Sacramento  916 
+94289 Sacramento  916 
+94290 Sacramento  916 
+94291 Sacramento  916 
+94293 Sacramento  916 
+94294 Sacramento  916 
+94295 Sacramento  916 
+94296 Sacramento  916 
+94297 Sacramento  916 
+94298 Sacramento  916 
+94299 Sacramento  916 
+95811 Sacramento  916 
+95812 Sacramento  916 
+95813 Sacramento  916 
+95814 Sacramento  916 
+95815 Sacramento  916 
+95816 Sacramento  916 
+95817 Sacramento  916 
+95818 Sacramento  916 
+95819 Sacramento  916 
+95820 Sacramento  916 
+95821 Sacramento  916 
+95822 Sacramento  916 
+95823 Sacramento  916 
+95824 Sacramento  916 
+95825 Sacramento  916 
+95826 Sacramento  916 
+95827 Sacramento  916 
+95828 Sacramento  916 
+95829 Sacramento  916 
+95830 Sacramento  916 
+95831 Sacramento  916 
+95832 Sacramento  916 
+95833 Sacramento  916 
+95834 Sacramento  916 
+95835 Sacramento  916 
+95836 Sacramento  916 
+95837 Sacramento  916 
+95838 Sacramento  916 
+95840 Sacramento  916 
+95841 Sacramento  916 
+95842 Sacramento  916 
+95843 Sacramento  916 
+95851 Sacramento  916 
+95852 Sacramento  916 
+95853 Sacramento  916 
+95860 Sacramento  916 
+95864 Sacramento  916 
+95865 Sacramento  916 
+95866 Sacramento  916 
+95867 Sacramento  916 
+95887 Sacramento  916 
+95894 Sacramento  916 
+95899 Sacramento  916 
+94660 Safeway Stores  510 
+94574 Saint Helena  707 
+95368 Salida  209 
+93901 Salinas  831 
+93902 Salinas  831 
+93905 Salinas  831 
+93906 Salinas  831 
+93907 Salinas  831 
+93908 Salinas  831 
+93912 Salinas  831 
+93915 Salinas  831 
+93962 Salinas  831 
+94923 Salmon Creek  707 
+92275 Salton City  760 
+95563 Salyer  530 
+95564 Samoa  707 
+95249 San Andreas  209 
+95250 San Andreas  209 
+94960 San Anselmo  415 
+94979 San Anselmo  415 
+93450 San Ardo  831 
+95043 San Benito  831 
+92401 San Bernardino  909 
+92402 San Bernardino  909 
+92403 San Bernardino  909 
+92404 San Bernardino  909 
+92405 San Bernardino  909 
+92406 San Bernardino  909 
+92407 San Bernardino  909 
+92408 San Bernardino  909 
+92410 San Bernardino  909 
+92411 San Bernardino  909 
+92412 San Bernardino  909 
+92413 San Bernardino  909 
+92414 San Bernardino  909 
+92415 San Bernardino  909 
+92418 San Bernardino  909 
+92423 San Bernardino  909 
+92424 San Bernardino  909 
+92427 San Bernardino  909 
+94066 San Bruno  650 
+93001 San Buenaventura  805 
+93003 San Buenaventura  805 
+93004 San Buenaventura  805 
+94070 San Carlos  650 
+92672 San Clemente  949 
+92673 San Clemente  949 
+92674 San Clemente  949 
+92101 San Diego  619 
+92102 San Diego  619 
+92103 San Diego  619 
+92104 San Diego  619 
+92105 San Diego  619 
+92106 San Diego  619 
+92107 San Diego  619 
+92108 San Diego  619 
+92109 San Diego  858 
+92110 San Diego  858 
+92111 San Diego  858 
+92112 San Diego  619 
+92113 San Diego  619 
+92114 San Diego  858 
+92115 San Diego  858 
+92116 San Diego  619 
+92117 San Diego  858 
+92118 San Diego  619 
+92119 San Diego  858 
+92120 San Diego  858 
+92121 San Diego  858 
+92122 San Diego  858 
+92123 San Diego  858 
+92124 San Diego  858 
+92126 San Diego  858 
+92127 San Diego  858 
+92128 San Diego  858 
+92129 San Diego  858 
+92130 San Diego  858 
+92131 San Diego  858 
+92132 San Diego  619 
+92134 San Diego  619 
+92135 San Diego  619 
+92136 San Diego  619 
+92137 San Diego  619 
+92138 San Diego  619 
+92139 San Diego  619 
+92140 San Diego  619 
+92142 San Diego  619 
+92143 San Diego  619 
+92145 San Diego  858 
+92147 San Diego  619 
+92149 San Diego  619 
+92150 San Diego  619 
+92152 San Diego  619 
+92153 San Diego  619 
+92154 San Diego  619 
+92155 San Diego  619 
+92158 San Diego  619 
+92159 San Diego  619 
+92160 San Diego  619 
+92161 San Diego  619 
+92162 San Diego  619 
+92163 San Diego  619 
+92164 San Diego  619 
+92165 San Diego  619 
+92166 San Diego  619 
+92167 San Diego  619 
+92168 San Diego  619 
+92169 San Diego  619 
+92170 San Diego  619 
+92171 San Diego  619 
+92172 San Diego  619 
+92173 San Diego  619 
+92174 San Diego  619 
+92175 San Diego  619 
+92176 San Diego  619 
+92177 San Diego  619 
+92178 San Diego  619 
+92179 San Diego  619 
+92182 San Diego  619 
+92184 San Diego  619 
+92186 San Diego  619 
+92187 San Diego  619 
+92190 San Diego  619 
+92191 San Diego  619 
+92192 San Diego  619 
+92193 San Diego  619 
+92194 San Diego  619 
+92195 San Diego  619 
+92196 San Diego  619 
+92197 San Diego  619 
+92198 San Diego  619 
+92199 San Diego  619 
+92158 San Diego County Jail  619 
+92184 San Diego Gas and Electric  619 
+92182 San Diego State University  619 
+92187 San Diego Water Utilities  619 
+91773 San Dimas  909 
+91340 San Fernando  818 
+91341 San Fernando  818 
+91344 San Fernando  818 
+91345 San Fernando  818 
+91346 San Fernando  818 
+94101 San Francisco  415 
+94102 San Francisco  415 
+94103 San Francisco  415 
+94104 San Francisco  415 
+94105 San Francisco  415 
+94107 San Francisco  415 
+94108 San Francisco  415 
+94109 San Francisco  415 
+94110 San Francisco  415 
+94111 San Francisco  415 
+94112 San Francisco  415 
+94114 San Francisco  415 
+94115 San Francisco  415 
+94116 San Francisco  415 
+94117 San Francisco  415 
+94118 San Francisco  415 
+94119 San Francisco  415 
+94120 San Francisco  415 
+94121 San Francisco  415 
+94122 San Francisco  415 
+94123 San Francisco  415 
+94124 San Francisco  415 
+94125 San Francisco  415 
+94126 San Francisco  415 
+94127 San Francisco  415 
+94128 San Francisco  650 
+94129 San Francisco  415 
+94130 San Francisco  415 
+94131 San Francisco  415 
+94132 San Francisco  415 
+94133 San Francisco  415 
+94134 San Francisco  415 
+94137 San Francisco  415 
+94139 San Francisco  415 
+94140 San Francisco  415 
+94141 San Francisco  415 
+94142 San Francisco  415 
+94143 San Francisco  415 
+94144 San Francisco  415 
+94145 San Francisco  415 
+94146 San Francisco  415 
+94147 San Francisco  415 
+94151 San Francisco  415 
+94153 San Francisco  415 
+94154 San Francisco  415 
+94156 San Francisco  415 
+94158 San Francisco  415 
+94159 San Francisco  415 
+94160 San Francisco  415 
+94161 San Francisco  415 
+94162 San Francisco  415 
+94163 San Francisco  415 
+94164 San Francisco  415 
+94171 San Francisco  415 
+94172 San Francisco  415 
+94177 San Francisco  415 
+94188 San Francisco  415 
+94199 San Francisco  415 
+94128 San Francisco Intnl Airport  650 
+91775 San Gabriel  626 
+91776 San Gabriel  626 
+91778 San Gabriel  626 
+94963 San Geronimo  415 
+94074 San Gregorio  650 
+92581 San Jacinto  951 
+92582 San Jacinto  951 
+92583 San Jacinto  951 
+93660 San Joaquin  559 
+95101 San Jose  408 
+95103 San Jose  408 
+95106 San Jose  408 
+95108 San Jose  408 
+95109 San Jose  408 
+95110 San Jose  408 
+95111 San Jose  408 
+95112 San Jose  408 
+95113 San Jose  408 
+95115 San Jose  408 
+95116 San Jose  408 
+95117 San Jose  408 
+95118 San Jose  408 
+95119 San Jose  408 
+95120 San Jose  408 
+95121 San Jose  408 
+95122 San Jose  408 
+95123 San Jose  408 
+95124 San Jose  408 
+95125 San Jose  408 
+95126 San Jose  408 
+95127 San Jose  408 
+95128 San Jose  408 
+95129 San Jose  408 
+95130 San Jose  408 
+95131 San Jose  408 
+95132 San Jose  408 
+95133 San Jose  408 
+95134 San Jose  408 
+95135 San Jose  408 
+95136 San Jose  408 
+95138 San Jose  408 
+95139 San Jose  408 
+95140 San Jose  408 
+95141 San Jose  408 
+95148 San Jose  408 
+95150 San Jose  408 
+95151 San Jose  408 
+95152 San Jose  408 
+95153 San Jose  408 
+95154 San Jose  408 
+95155 San Jose  408 
+95156 San Jose  408 
+95157 San Jose  408 
+95158 San Jose  408 
+95159 San Jose  408 
+95160 San Jose  408 
+95161 San Jose  408 
+95164 San Jose  408 
+95170 San Jose  408 
+95172 San Jose  408 
+95173 San Jose  408 
+95190 San Jose  408 
+95191 San Jose  408 
+95192 San Jose  408 
+95193 San Jose  408 
+95194 San Jose  408 
+95196 San Jose  408 
+95190 San Jose Mercury NewS  408 
+95192 San Jose State University  408 
+95196 San Jose Water Company  408 
+95045 San Juan Bautista  831 
+92675 San Juan Capistrano  949 
+92690 San Juan Capistrano  949 
+92691 San Juan Capistrano  949 
+92692 San Juan Capistrano  949 
+92693 San Juan Capistrano  949 
+92694 San Juan Capistrano  949 
+92675 San Juan Capo  949 
+92690 San Juan Capo  949 
+92691 San Juan Capo  949 
+92692 San Juan Capo  949 
+92693 San Juan Capo  949 
+94577 San Leandro  510 
+94578 San Leandro  510 
+94579 San Leandro  510 
+94580 San Lorenzo  510 
+93954 San Lucas  831 
+93401 San Luis Obispo  805 
+93402 San Luis Obispo  805 
+93403 San Luis Obispo  805 
+93405 San Luis Obispo  805 
+93406 San Luis Obispo  805 
+93407 San Luis Obispo  805 
+93408 San Luis Obispo  805 
+93409 San Luis Obispo  805 
+93410 San Luis Obispo  805 
+93412 San Luis Obispo  805 
+92068 San Luis Rey  760 
+92069 San Marcos  760 
+92078 San Marcos  760 
+92079 San Marcos  760 
+92096 San Marcos  760 
+94945 San Marin  415 
+91108 San Marino  626 
+91118 San Marino  626 
+95046 San Martin  408 
+94401 San Mateo  650 
+94402 San Mateo  650 
+94403 San Mateo  650 
+94404 San Mateo  650 
+94497 San Mateo  650 
+93451 San Miguel  805 
+94803 San Pablo  510 
+94806 San Pablo  510 
+90731 San Pedro  310/424 
+90732 San Pedro  310/424 
+90733 San Pedro  310/424 
+90734 San Pedro  310/424 
+94964 San Quentin  415 
+94974 San Quentin  415 
+94901 San Rafael  415 
+94903 San Rafael  415 
+94904 San Rafael  415 
+94912 San Rafael  415 
+94913 San Rafael  415 
+94914 San Rafael  415 
+94915 San Rafael  415 
+94582 San Ramon  925 
+94583 San Ramon  925 
+93452 San Simeon  805 
+92143 San Ysidro  619 
+92173 San Ysidro  619 
+93561 Sand Canyon  661 
+93955 Sand City  831 
+93532 Sandberg  661 
+92274 Sandy Korner  760 
+90005 Sanford  323 
+90010 Sanford  213 
+90020 Sanford  323 
+93657 Sanger  559 
+92701 Santa Ana  714 
+92702 Santa Ana  714 
+92703 Santa Ana  714 
+92704 Santa Ana  714 
+92705 Santa Ana  714 
+92706 Santa Ana  714 
+92707 Santa Ana  714 
+92708 Santa Ana  714 
+92711 Santa Ana  714 
+92712 Santa Ana  714 
+92725 Santa Ana  714 
+92728 Santa Ana  714 
+92735 Santa Ana  714 
+92799 Santa Ana  714 
+93101 Santa Barbara  805 
+93102 Santa Barbara  805 
+93103 Santa Barbara  805 
+93105 Santa Barbara  805 
+93106 Santa Barbara  805 
+93107 Santa Barbara  805 
+93108 Santa Barbara  805 
+93109 Santa Barbara  805 
+93110 Santa Barbara  805 
+93111 Santa Barbara  805 
+93116 Santa Barbara  805 
+93117 Santa Barbara  805 
+93118 Santa Barbara  805 
+93120 Santa Barbara  805 
+93121 Santa Barbara  805 
+93130 Santa Barbara  805 
+93140 Santa Barbara  805 
+93150 Santa Barbara  805 
+93160 Santa Barbara  805 
+93190 Santa Barbara  805 
+93199 Santa Barbara  805 
+93199 Santa Barbara P & D Center  805 
+90704 Santa Catalina  310/424 
+95050 Santa Clara  408 
+95051 Santa Clara  408 
+95052 Santa Clara  408 
+95053 Santa Clara  408 
+95054 Santa Clara  408 
+95055 Santa Clara  408 
+95056 Santa Clara  408 
+95053 Santa Clara University  408 
+91310 Santa Clarita  661 
+91321 Santa Clarita  661 
+91322 Santa Clarita  661 
+91350 Santa Clarita  661 
+91351 Santa Clarita  661 
+91354 Santa Clarita  661 
+91355 Santa Clarita  661 
+91380 Santa Clarita  661 
+91381 Santa Clarita  661 
+91382 Santa Clarita  661 
+91383 Santa Clarita  661 
+91384 Santa Clarita  661 
+91385 Santa Clarita  661 
+91386 Santa Clarita  661 
+91387 Santa Clarita  661 
+91390 Santa Clarita  661 
+95060 Santa Cruz  831 
+95061 Santa Cruz  831 
+95062 Santa Cruz  831 
+95063 Santa Cruz  831 
+95064 Santa Cruz  831 
+95065 Santa Cruz  831 
+95066 Santa Cruz  831 
+95067 Santa Cruz  831 
+90605 Santa Fe Springs  562 
+90670 Santa Fe Springs  562 
+90671 Santa Fe Springs  562 
+93453 Santa Margar  805 
+93453 Santa Margarita  805 
+93454 Santa Maria  805 
+93455 Santa Maria  805 
+93456 Santa Maria  805 
+93457 Santa Maria  805 
+93458 Santa Maria  805 
+90401 Santa Monica  310/424 
+90402 Santa Monica  310/424 
+90403 Santa Monica  310/424 
+90404 Santa Monica  310/424 
+90405 Santa Monica  310/424 
+90406 Santa Monica  310/424 
+90407 Santa Monica  310/424 
+90408 Santa Monica  310/424 
+90409 Santa Monica  310/424 
+90410 Santa Monica  310/424 
+90411 Santa Monica  310/424 
+95322 Santa Nella  209 
+93060 Santa Paula  805 
+93061 Santa Paula  805 
+93661 Santa Rita Park  209 
+95401 Santa Rosa  707 
+95402 Santa Rosa  707 
+95403 Santa Rosa  707 
+95404 Santa Rosa  707 
+95405 Santa Rosa  707 
+95406 Santa Rosa  707 
+95407 Santa Rosa  707 
+95409 Santa Rosa  707 
+93012 Santa Rosa Va  805 
+93012 Santa Rosa Valley  805 
+93063 Santa Susana  805 
+94903 Santa Venetia  415 
+90072 Santa Western  213 
+93460 Santa Ynez  805 
+92070 Santa Ysabel  760 
+92071 Santee  619 
+92072 Santee  619 
+95070 Saratoga  408 
+95071 Saratoga  408 
+91301 Saratoga Hills  818 
+91301 Saratoga Hls  818 
+93004 Saticoy  805 
+96124 Sattley  530 
+91350 Saugus  661 
+91390 Saugus  661 
+94965 Sausalito  415 
+94966 Sausalito  415 
+96027 Sawyers Bar  530 
+95476 Schellville  707 
+95565 Scotia  707 
+96085 Scott Bar  530 
+95060 Scotts Valley  831 
+95066 Scotts Valley  831 
+95067 Scotts Valley  831 
+95003 Seacliff  831 
+90740 Seal Beach  562 
+95003 Seascape  831 
+93955 Seaside  831 
+95472 Sebastopol  707 
+95473 Sebastopol  707 
+92273 Seeley  760 
+96086 Seiad Valley  530 
+93662 Selma  559 
+95923 Seneca  530 
+91343 Sepulveda  818 
+91393 Sepulveda  818 
+93262 Seq National Park  559 
+93262 Sequoia National Park  559 
+95728 Serene Lakes  530 
+92305 Seven Oaks  909 
+94013 Sf International Service Center  650 
+91040 Shadow Hills  818 
+91352 Shadow Hills  818 
+95713 Shady Glen  530 
+93263 Shafter  661 
+93314 Shafter  661 
+93461 Shandon  805 
+90096 Shared Firm Zip Code  323 
+91110 Shared Firm Zip Code  626 
+93610 Sharon  559 
+94044 Sharp Park  650 
+96087 Shasta  530 
+96019 Shasta Lake  530 
+96079 Shasta Lake  530 
+96089 Shasta Lake  530 
+93634 Shaver Lake  559 
+93642 Shaver Lake  559 
+93664 Shaver Lake  559 
+95246 Sheep Ranch  209 
+95250 Sheep Ranch  209 
+95246 Sheepranch  209 
+93448 Shell Beach  805 
+93449 Shell Beach  805 
+95589 Shelter Cove  707 
+95486 Sheridan  707 
+95681 Sheridan  530 
+91401 Sherman Oaks  818 
+91403 Sherman Oaks  818 
+91411 Sherman Oaks  818 
+91413 Sherman Oaks  818 
+91423 Sherman Oaks  818 
+91495 Sherman Oaks  818 
+91607 Sherman Village  818 
+95437 Sherwood Valley Rancheria  707 
+95682 Shingle Springs  530 
+96088 Shingletown  530 
+92384 Shoshone  760 
+96113 Sierra Army Depot  530 
+96125 Sierra City  530 
+91024 Sierra Madre  626 
+91025 Sierra Madre  626 
+96126 Sierraville  530 
+90755 Signal Hill  562 
+90804 Signal Hill  562 
+90807 Signal Hill  562 
+90755 Signal Hl  562 
+95720 Silver Fork  530 
+90026 Silver Lake  213 
+95666 Silver Lake  209 
+92342 Silver Lakes  760 
+92676 Silverado  714 
+93062 Simi Valley  805 
+93063 Simi Valley  805 
+93064 Simi Valley  805 
+93065 Simi Valley  805 
+93094 Simi Valley  805 
+93099 Simi Valley  805 
+93454 Sisquoc  805 
+95979 Sites  530 
+92241 Sky Valley  760 
+92385 Skyforest  909 
+91350 Sleepy Valley  661 
+93408 Slo County Govt Center  805 
+95683 Sloughhouse  916 
+95977 Smartsville  530 
+92373 Smiley Heights  909 
+95567 Smith River  707 
+92262 Smoke Tree  760 
+92401 Sn Bernrdno  909 
+92402 Sn Bernrdno  909 
+92403 Sn Bernrdno  909 
+92404 Sn Bernrdno  909 
+92405 Sn Bernrdno  909 
+92406 Sn Bernrdno  909 
+92407 Sn Bernrdno  909 
+92408 Sn Bernrdno  909 
+92410 Sn Bernrdno  909 
+92411 Sn Bernrdno  909 
+92412 Sn Bernrdno  909 
+92413 Sn Bernrdno  909 
+92414 Sn Bernrdno  909 
+92415 Sn Bernrdno  909 
+92418 Sn Bernrdno  909 
+92423 Sn Bernrdno  909 
+92424 Sn Bernrdno  909 
+92427 Sn Bernrdno  909 
+95045 Sn Jun Batsta  831 
+93401 SN Luis Obisp  805 
+93402 SN Luis Obisp  805 
+93403 SN Luis Obisp  805 
+93405 SN Luis Obisp  805 
+93406 SN Luis Obisp  805 
+93407 SN Luis Obisp  805 
+93408 SN Luis Obisp  805 
+93409 SN Luis Obisp  805 
+93410 SN Luis Obisp  805 
+93412 SN Luis Obisp  805 
+93453 Sn Margarita  805 
+95369 Snelling  209 
+95709 Snowline Camp  530 
+91771 So Cal Edison Co  626 
+91772 So Cal Edison Co  626 
+95724 Soda Springs  530 
+95728 Soda Springs  530 
+92075 Solana Beach  858 
+93960 Soledad  831 
+93463 Solvang  805 
+93464 Solvang  805 
+95684 Somerset  530 
+95568 Somes Bar  530 
+95568 Somesbar  530 
+93066 Somis  805 
+95476 Sonoma  707 
+95370 Sonora  209 
+95373 Sonora  209 
+95073 Soquel  831 
+95372 Soulsbyville  209 
+90061 South  323 
+92415 South B County Offices  909 
+93665 South Dos Palos  209 
+91733 South El Monte  626 
+90280 South Gate  323 
+92651 South Laguna  949 
+96150 South Lake Tahoe  530 
+96151 South Lake Tahoe  530 
+96152 South Lake Tahoe  530 
+96154 South Lake Tahoe  530 
+96155 South Lake Tahoe  530 
+96156 South Lake Tahoe  530 
+96157 South Lake Tahoe  530 
+96158 South Lake Tahoe  530 
+92707 South Main  714 
+95965 South Oroville  530 
+91030 South Pasadena  626 
+91031 South Pasadena  626 
+94080 South San Fran  650 
+94083 South San Fran  650 
+94083 South San Francis  650 
+94080 South San Francisco  650 
+94083 South San Francisco  650 
+91756 Southern California Gas Co  626 
+95691 Southport  916 
+94558 Spanish Flat  707 
+95956 Spanish Ranch  530 
+95971 Spanish Ranch  530 
+96130 Spaulding  530 
+92152 Spawars System Center  619 
+92395 Spg Valley Lake  760 
+93962 Spreckels  831 
+95971 Spring Garden  530 
+95945 Spring Hill  530 
+91976 Spring Valley  619 
+91977 Spring Valley  619 
+91978 Spring Valley  619 
+91979 Spring Valley  619 
+92395 Spring Valley Lake  760 
+93208 Springville  559 
+93265 Springville  559 
+93646 Squaw Valley  559 
+93675 Squaw Valley  559 
+94080 Ssf  650 
+93561 Stallion Springs  661 
+95373 Standard  209 
+96128 Standish  530 
+94305 Stanford  650 
+94309 Stanford  650 
+90680 Stanton  714 
+92599 Starcrest of Cal  951 
+91501 Starlight Hills  818 
+94926 State Farm Insurance  707 
+96157 Stateline  530 
+91381 Stevenson Ranch  661 
+91381 Stevenson Rnh  661 
+95374 Stevinson  209 
+95480 Stewarts Point  707 
+95480 Stewarts Point Rancheria  707 
+94970 Stinson Beach  415 
+95978 Stirling City  530 
+95201 Stkn  209 
+95202 Stkn  209 
+95203 Stkn  209 
+95204 Stkn  209 
+95205 Stkn  209 
+95206 Stkn  209 
+95207 Stkn  209 
+95208 Stkn  209 
+95209 Stkn  209 
+95210 Stkn  209 
+95211 Stkn  209 
+95212 Stkn  209 
+95213 Stkn  209 
+95215 Stkn  209 
+95219 Stkn  209 
+95267 Stkn  209 
+95269 Stkn  209 
+95201 Stockton  209 
+95202 Stockton  209 
+95203 Stockton  209 
+95204 Stockton  209 
+95205 Stockton  209 
+95206 Stockton  209 
+95207 Stockton  209 
+95208 Stockton  209 
+95209 Stockton  209 
+95210 Stockton  209 
+95211 Stockton  209 
+95212 Stockton  209 
+95213 Stockton  209 
+95215 Stockton  209 
+95219 Stockton  209 
+95267 Stockton  209 
+95269 Stockton  209 
+95296 Stockton  209 
+95297 Stockton  209 
+95297 Stockton Brm Zip  209 
+95979 Stonyford  530 
+95980 Storrie  530 
+92328 Stove Pipe Wells  760 
+93266 Stratford  559 
+93267 Strathmore  559 
+95375 Strawberry  209 
+94941 Strawberry Point  415 
+95981 Strawberry Valley  530 
+95981 Strawbrry Valley  530 
+91602 Studio City  818 
+91604 Studio City  818 
+91607 Studio City  818 
+91614 Studio City  818 
+92386 Sugarloaf  909 
+94512 Suisun City  707 
+94534 Suisun City  707 
+94585 Suisun City  707 
+95423 Sulphur Bank Rancheria  707 
+93666 Sultana  559 
+93067 Summerland  805 
+96089 Summit City  530 
+92584 Sun City  951 
+92585 Sun City  951 
+92586 Sun City  951 
+92587 Sun City  951 
+91352 Sun Valley  818 
+91353 Sun Valley  818 
+93543 Sun Village  661 
+92806 Sunkist  714 
+91040 Sunland  818 
+91041 Sunland  818 
+95640 Sunnybrook  209 
+94085 Sunnyvale  408 
+94086 Sunnyvale  408 
+94087 Sunnyvale  408 
+94088 Sunnyvale  408 
+94089 Sunnyvale  408 
+94586 Sunol  925 
+90742 Sunset Beach  562 
+95945 Sunset View  530 
+95677 Sunset Whitney Ranch  916 
+90743 Surfside  562 
+96127 Susanville  530 
+96130 Susanville  530 
+95982 Sutter  530 
+95685 Sutter Creek  209 
+95699 Sutter Creek  209 
+95685 Sutter Hill  209 
+95615 Sutter Island  916 
+93514 Swall Meadows  760 
+95667 Swansboro Country  530 
+93545 Swansea  760 
+96017 Sweet Brier  530 
+95960 Sweetland  530 
+95957 Sycamore  530 
+91342 Sylmar  818 
+91392 Sylmar  818 
+91987 T K Manufacturing  619 
+93268 Taft  661 
+96145 Tahoe City  530 
+96146 Tahoe City  530 
+96161 Tahoe Donner  530 
+96155 Tahoe Paradise  530 
+96141 Tahoe Pines  530 
+96158 Tahoe Valley  530 
+96148 Tahoe Vista  530 
+96142 Tahoma  530 
+95481 Talmage  707 
+94941 Tamalpais Valley  415 
+94806 Tara Hills  510 
+91335 Tarzana  818 
+91356 Tarzana  818 
+91357 Tarzana  818 
+93924 Tassajara Hot Springs  831 
+95983 Taylorsville  530 
+91980 Tecate  619 
+91987 Tecate  619 
+92389 Tecopa  760 
+92389 Tecopa Hot Springs  760 
+93561 Tehachapi  661 
+93581 Tehachapi  661 
+96090 Tehama  530 
+92589 Temecula  951 
+92590 Temecula  951 
+92591 Temecula  951 
+92592 Temecula  951 
+92593 Temecula  951 
+91780 Temple City  626 
+93465 Templeton  805 
+90731 Terminal Island  310/424 
+96132 Termo  530 
+93270 Terra Bella  559 
+94903 Terra Linda  415 
+90079 Textile Boxes  213 
+90015 Textile Finance  213 
+95728 The Cedars  530 
+95425 The Geysers  707 
+95445 The Sea Ranch  707 
+95497 The Sea Ranch  707 
+92274 Thermal  760 
+92275 Thermal  760 
+95965 Thermalito  530 
+95686 Thornton  209 
+91319 Thousand Oaks  805 
+91320 Thousand Oaks  805 
+91358 Thousand Oaks  805 
+91359 Thousand Oaks  805 
+91360 Thousand Oaks  805 
+91361 Thousand Oaks  805 
+91362 Thousand Oaks  805 
+92276 Thousand Palms  760 
+92276 Thousand Plms  760 
+93532 Three Points  661 
+93271 Three Rivers  559 
+93608 Three Rocks  559 
+94920 Tiburon  415 
+95991 Tierra Buena  530 
+96134 Tionesta  530 
+93272 Tipton  559 
+93657 Tivy Valley  559 
+95980 Tobin  530 
+95631 Todd Valley  530 
+93667 Tollhouse  559 
+91602 Toluca Lake  818 
+91610 Toluca Lake  818 
+91601 Toluca Ter  818 
+91601 Toluca Terrace  818 
+94971 Tomales  707 
+93546 Toms Place  760 
+93247 Tonyville  559 
+90290 Topanga  310/424 
+96133 Topaz  760 
+90501 Torrance  310/424 
+90502 Torrance  310/424 
+90503 Torrance  310/424 
+90504 Torrance  310/424 
+90505 Torrance  310/424 
+90506 Torrance  310/424 
+90507 Torrance  310/424 
+90508 Torrance  310/424 
+90509 Torrance  310/424 
+90510 Torrance  310/424 
+92274 Torres Martinez Indian Reser  760 
+91184 Tournament of Roses Assoc  626 
+92679 Trabuco  949 
+92678 Trabuco Canyon  949 
+92679 Trabuco Canyon  949 
+92688 Trabuco Canyon  949 
+92678 Trabuco Cyn  949 
+92679 Trabuco Cyn  949 
+95304 Tracy  209 
+95376 Tracy  209 
+95377 Tracy  209 
+95378 Tracy  209 
+95385 Tracy  209 
+95391 Tracy  209 
+93668 Tranquillity  559 
+92090 Travel Lodge  619 
+93673 Traver  559 
+94535 Travis AFB  707 
+95075 Tres Pinos  831 
+95570 Trinidad  707 
+96091 Trinity Center  530 
+93562 Trona  760 
+93592 Trona  760 
+93560 Tropico Village  661 
+95659 Trowbridge  530 
+96160 Truckee  530 
+96161 Truckee  530 
+96162 Truckee  530 
+91042 Tujunga  818 
+91043 Tujunga  818 
+93274 Tulare  559 
+93275 Tulare  559 
+96134 Tulelake  530 
+95379 Tuolumne  209 
+95389 Tuolumne Meadows  209 
+93276 Tupman  661 
+95380 Turlock  209 
+95381 Turlock  209 
+95382 Turlock  209 
+92780 Tustin  714 
+92781 Tustin  714 
+92782 Tustin  714 
+95984 Twain  530 
+95383 Twain Harte  209 
+92277 Twentynin Plm  760 
+92278 Twentynin Plm  760 
+92277 Twentynine Palms  760 
+92278 Twentynine Palms  760 
+92278 Twentynine Palms MCB  760 
+95721 Twin Bridges  530 
+95735 Twin Bridges  530 
+92391 Twin Peaks  909 
+94952 Two Rock Coast Guard Station  707 
+94952 Two Rock Ranch Station  707 
+94720 U C Berkeley  510 
+91496 U S Purchasing Corp  818 
+91495 U S Purchasing Exchange  818 
+94720 UC Berkeley  510 
+92697 UCI  949 
+90095 UCLA  213 
+92092 UCSB  858 
+92093 UCSB  858 
+93106 UCSB  805 
+93107 UCSB Student Dorm Boxes  805 
+92092 UCSD  858 
+92093 UCSD  858 
+94143 UCSF  415 
+95418 Ukiah  707 
+95482 Ukiah  707 
+94145 Union Bank of California  415 
+94587 Union City  510 
+95945 Union Hill  530 
+93761 United Faith Found  559 
+91608 Universal City  818 
+91618 Universal City  818 
+92521 University of CA Riverside  951 
+93106 University of Ca Santa Barbara  805 
+93106 University of Cal Santa Barbara  805 
+92697 University of California Irvine  949 
+90089 University of Southern Ca  213 
+95211 University of the Pacific  209 
+91784 Upland  909 
+91785 Upland  909 
+91786 Upland  909 
+95485 Upper Lake  707 
+95493 Upper Lake  707 
+93246 Us Naval Air Station  559 
+91611 Us Purchasing Exchange  818 
+91612 Us Purchasing Exchange  818 
+92161 V A Hospital  619 
+95687 Vacaville  707 
+95688 Vacaville  707 
+95696 Vacaville  707 
+93437 VAFB  805 
+91384 Val Verde  661 
+91354 Valencia  661 
+91355 Valencia  661 
+91380 Valencia  661 
+91381 Valencia  661 
+91385 Valencia  661 
+92274 Valerie  760 
+95229 Vallecito  209 
+95251 Vallecito  209 
+94503 Vallejo  707 
+94589 Vallejo  707 
+94590 Vallejo  707 
+94591 Vallejo  707 
+94592 Vallejo  707 
+92082 Valley Center  760 
+94972 Valley Ford  707 
+91401 Valley Glen  818 
+91405 Valley Glen  818 
+91606 Valley Glen  818 
+95361 Valley Home  209 
+92325 Valley of Enchantment  909 
+95226 Valley Springs  209 
+95252 Valley Springs  209 
+91601 Valley Village  818 
+91607 Valley Village  818 
+91617 Valley Village  818 
+93563 Valyermo  661 
+91316 Van Nuys  818 
+91401 Van Nuys  818 
+91402 Van Nuys  818 
+91403 Van Nuys  818 
+91404 Van Nuys  818 
+91405 Van Nuys  818 
+91406 Van Nuys  818 
+91407 Van Nuys  818 
+91408 Van Nuys  818 
+91409 Van Nuys  818 
+91410 Van Nuys  818 
+91411 Van Nuys  818 
+91412 Van Nuys  818 
+91413 Van Nuys  818 
+91416 Van Nuys  818 
+91423 Van Nuys  818 
+91426 Van Nuys  818 
+91436 Van Nuys  818 
+91470 Van Nuys  818 
+91482 Van Nuys  818 
+91495 Van Nuys  818 
+91496 Van Nuys  818 
+91499 Van Nuys  818 
+91606 Van Nuys  818 
+93437 Vandenberg AFB  805 
+93437 Vandenberg Air Force Base  805 
+93436 Vandenberg Village  805 
+93437 Vandenbrg AFB  805 
+90291 Venice  310/424 
+90292 Venice  310/424 
+90293 Venice  310/424 
+90294 Venice  310/424 
+90295 Venice  310/424 
+90296 Venice  310/424 
+93001 Ventura  805 
+93002 Ventura  805 
+93003 Ventura  805 
+93004 Ventura  805 
+93005 Ventura  805 
+93006 Ventura  805 
+93007 Ventura  805 
+93009 Ventura  805 
+93009 Ventura County Gov  805 
+92407 Verdemont  909 
+91046 Verdugo City  818 
+90029 Vermont  323 
+95385 Vernalis  209 
+90058 Vernon  323 
+95659 Verona  530 
+95659 Verona Landing  530 
+90073 Veterans Adm  310/424 
+90073 Veterans Admin  310/424 
+90073 Veterans Administration  310/424 
+90073 Veterans Admn  310/424 
+92357 Veterans' Hospital  909 
+95253 Victor  209 
+92392 Victorville  760 
+92393 Victorville  760 
+92394 Victorville  760 
+92395 Victorville  760 
+92280 Vidal  760 
+92280 Vidal Junction  760 
+90043 View Park  323 
+95486 Villa Grande  707 
+92861 Villa Park  714 
+92867 Villa Park  714 
+95965 Villa Verona  530 
+90024 Village  310/424 
+96092 Vina  530 
+95487 Vineburg  707 
+96135 Vinton  530 
+96088 Viola  530 
+95984 Virgilia  530 
+95634 Virner  530 
+93277 Visalia  559 
+93278 Visalia  559 
+93279 Visalia  559 
+93290 Visalia  559 
+93291 Visalia  559 
+93292 Visalia  559 
+92081 Vista  760 
+92083 Vista  760 
+92084 Vista  760 
+92085 Vista  760 
+92274 Vista Santa Rosa  760 
+95689 Volcano  209 
+95634 Volcanoville  530 
+95690 Vorden  916 
+90047 Wagner  323 
+96107 Walker  760 
+95690 Walker Landing  916 
+95254 Wallace  209 
+91788 Walnut  909 
+91789 Walnut  909 
+91795 Walnut  909 
+94595 Walnut Creek  925 
+94596 Walnut Creek  925 
+94597 Walnut Creek  925 
+94598 Walnut Creek  925 
+95690 Walnut Grove  916 
+90255 Walnut Park  323 
+95826 Walsh Station  916 
+91526 Walt Disney Co  818 
+92066 Warner Springs  760 
+92086 Warner Springs  760 
+93280 Wasco  661 
+95986 Washington  530 
+95386 Waterford  209 
+95076 Watsonville  831 
+95077 Watsonville  831 
+90002 Watts  323 
+93282 Waukena  559 
+95389 Wawona  209 
+96093 Weaverville  530 
+96094 Weed  530 
+95736 Weimar  530 
+95546 Weitchpec  530 
+93283 Weldon  760 
+91735 Wells Fargo Bank  626 
+94139 Wells Fargo Bank  415 
+94144 Wells Fargo Bank  415 
+94153 Wells Fargo Bank  415 
+94156 Wells Fargo Bank  415 
+94162 Wells Fargo Bank  415 
+94163 Wells Fargo Bank  415 
+96136 Wendel  530 
+95634 Wentworth Springs  530 
+95571 Weott  707 
+90016 West Adams  323 
+91790 West Covina  626 
+91791 West Covina  626 
+91792 West Covina  626 
+91793 West Covina  626 
+91304 West Hills  818 
+91307 West Hills  818 
+91308 West Hills  818 
+90038 West Hollywood  323 
+90046 West Hollywood  323 
+90048 West Hollywood  323 
+90069 West Hollywood  323 
+95961 West Linda  530 
+90025 West Los Angeles  310/424 
+94025 West Menlo Park  650 
+94026 West Menlo Park  650 
+94565 West Pittsburg  925 
+95255 West Point  209 
+95605 West Sacramento  916 
+95691 West Sacramento  916 
+95798 West Sacramento  916 
+95799 West Sacramento  916 
+95798 West Sacto  916 
+91602 West Toluca Lake  818 
+96162 West Truckee  530 
+90045 Westchester  310/424 
+95570 Westhaven  707 
+91359 Westlake Village  805 
+91361 Westlake Village  805 
+91362 Westlake Village  805 
+95387 Westley  209 
+92683 Westminster  714 
+92684 Westminster  714 
+92685 Westminster  714 
+92281 Westmorland  760 
+95488 Westport  707 
+90062 Westvern  323 
+96137 Westwood  530 
+95692 Wheatland  530 
+96095 Whiskeytown  530 
+95630 White Rock  916 
+95589 Whitethorn  707 
+92282 Whitewater  760 
+96096 Whitmore  530 
+90601 Whittier  562 
+90602 Whittier  562 
+90603 Whittier  562 
+90604 Whittier  562 
+90605 Whittier  562 
+90606 Whittier  562 
+90607 Whittier  562 
+90608 Whittier  562 
+90609 Whittier  562 
+90610 Whittier  562 
+95987 Wilbur Springs  530 
+90038 Wilcox  323 
+92595 Wildomar  951 
+96076 Wildwood  530 
+95945 Willaura Estates  530 
+95987 Williams  530 
+95490 Willits  707 
+95573 Willow Creek  530 
+96108 Willow Ranch  530 
+93560 Willow Springs  661 
+95988 Willows  530 
+90744 Wilmington  310/424 
+90748 Wilmington  310/424 
+95257 Wilseyville  209 
+90036 Wilshire-La Brea  323 
+93534 Wilsona Gardens  661 
+93535 Wilsona Gardens  661 
+93633 Wilsonia  559 
+95693 Wilton  916 
+92596 Winchester  951 
+95492 Windsor  707 
+90043 Windsor Hills  323 
+90056 Windsor Hills  310/424 
+91306 Winnetka  818 
+91396 Winnetka  818 
+92283 Winterhaven  760 
+95694 Winters  530 
+95388 Winton  209 
+93669 Wishon  559 
+95493 Witter Springs  707 
+90025 WLA  310/424 
+93285 Wofford Heights  760 
+94973 Woodacre  415 
+95258 Woodbridge  209 
+92504 Woodcrest  951 
+96120 Woodfords  530 
+93286 Woodlake  559 
+95695 Woodland  530 
+95776 Woodland  530 
+91302 Woodland Hills  818 
+91303 Woodland Hills  818 
+91364 Woodland Hills  818 
+91365 Woodland Hills  818 
+91367 Woodland Hills  818 
+91371 Woodland Hills  818 
+91372 Woodland Hills  818 
+91302 Woodland Hls  818 
+91303 Woodland Hls  818 
+91364 Woodland Hls  818 
+91365 Woodland Hls  818 
+91367 Woodland Hls  818 
+91371 Woodland Hls  818 
+91372 Woodland Hls  818 
+95925 Woodleaf  530 
+94061 Woodside  650 
+94062 Woodside  650 
+93257 Woodville  559 
+93287 Woody  661 
+92397 Wrightwood  760 
+95965 Wyandotte  530 
+96101 Xl Ranch Indian Reservation  530 
+95965 Yankee Hill  530 
+95713 Yankee Jims  530 
+92398 Yermo  760 
+93670 Yettem  559 
+95697 Yolo  530 
+92885 Yorba Linda  714 
+92886 Yorba Linda  714 
+92887 Yorba Linda  714 
+95494 Yorkville  707 
+95389 Yosemite  209 
+95389 Yosemite National Park  209 
+94599 Yountville  707 
+96097 Yreka  530 
+95991 Yuba City  530 
+95992 Yuba City  530 
+95993 Yuba City  530 
+92399 Yucaipa  909 
+92284 Yucca Valley  760 
+92285 Yucca Valley  760 
+92286 Yucca Valley  760 
+95698 Zamora  530 
+95595 Zenia  707 

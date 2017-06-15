@@ -1,0 +1,113 @@
+﻿<Page x:Class="CoolIcePro.Views.InsertCompany"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      mc:Ignorable="d" 
+      xmlns:local="clr-namespace:CoolIcePro.Views"
+      d:DesignHeight="825" d:DesignWidth="920"
+	    Title="InsertRecord">
+    <Page.Resources>
+   
+    </Page.Resources>
+    <Grid Background="White">    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Popup Grid.Row="0" Name="_popup" Grid.RowSpan="2" PlacementTarget="{Binding ElementName=_addressExtTxtBox}" Height="600" Width="500" Opened="PopupOpenedEventHandler" >
+            <Frame Name="_popupFrame"/>
+        </Popup>
+        <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal">
+            <Button Width="95" Content="Save" Click="SaveButtonHanlder"/>
+            <!--<Button Width="95" Content="Edit"/>
+            <Button Width="95" Content="Delete"/>-->
+        </StackPanel>
+        <GroupBox Grid.Row="1" Header="Company Information" FontSize="16" Style="{Binding}"  VerticalAlignment="Top" >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition  Height="245"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="135"/>
+                    <ColumnDefinition Width="220"/>
+                </Grid.ColumnDefinitions>
+                
+                <Label Grid.Row="0" Grid.Column="0" Content="Company Name" VerticalAlignment="Center"/>
+                <Label Grid.Row="1" Grid.Column="0" Content="Address" VerticalAlignment="Center"/>
+                <Label Grid.Row="2" Grid.Column="0" Content="Address Ext." VerticalAlignment="Center"/>
+                <Label Grid.Row="3" Grid.Column="0" Content="City" VerticalAlignment="Center"/>
+                <Label Grid.Row="4" Grid.Column="0" Content="State" VerticalAlignment="Center"/>
+                <Label Grid.Row="5" Grid.Column="0" Content="Zipcode" VerticalAlignment="Center"/>
+                <Label Grid.Row="6" Grid.Column="0" Content="Telephone" VerticalAlignment="Center"/>
+                <Label Grid.Row="7" Grid.Column="0" Content="Fax" VerticalAlignment="Center"/>
+                <Label Grid.Row="8" Grid.Column="0" Content="E-mail" VerticalAlignment="Center"/>
+                <Label Grid.Row="9" Grid.Column="0" Content="Website" VerticalAlignment="Center"/>
+
+                <TextBox Grid.Row="0" Grid.Column="1" Name="_companyNameTxtBox" >
+                    
+                </TextBox>
+                <TextBox Grid.Row="1" Grid.Column="1" Name="_addressTxtBox"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Name="_addressExtTxtBox"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Name="_cityTxtBox"/>
+                <ComboBox Grid.Row="4" Grid.Column="1" Name="_stateTxtBox" SelectedIndex="4"/>
+                <xctk:MaskedTextBox x:Name="_telephoneTxtBox"  Grid.Row="6" Grid.Column="1" Mask="(000) 000-0000"/>
+
+                <xctk:MaskedTextBox Grid.Row="5" Grid.Column="1" x:Name="_zipcodeTxtBox" Mask="00000"/>
+                <xctk:MaskedTextBox Grid.Row="7" Grid.Column="1" x:Name="_faxTxtBox" Mask="(000) 000-0000"/>
+
+                <TextBox Grid.Row="8" Grid.Column="1" Name="_emailTxtBox" >
+                   
+                </TextBox>
+                
+                <TextBox Grid.Row="9" Grid.Column="1" Name="_websiteTxtBox"/>
+
+                <GroupBox Grid.Row="10" Grid.ColumnSpan="2" FontSize="16" Style="{Binding}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Header="Contact Information">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="135"/>
+                            <ColumnDefinition Width="205"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" Content="First Name"/>
+                        <Label Grid.Row="1" Grid.Column="0" Content="Last Name"/>
+                        <Label Grid.Row="2" Grid.Column="0" Content="Telephone" />
+                        <Label Grid.Row="3" Grid.Column="0" Content="Cell"/>
+                        <Label Grid.Row="4" Grid.Column="0" Content="Position"/>
+                        
+                        <TextBox Grid.Row="0" Grid.Column="1" Name="_fNameTxtBox" />
+                        <TextBox Grid.Row="1" Grid.Column="1" Name="_lNameTxtBox"/>
+                        <xctk:MaskedTextBox Grid.Row="2" Grid.Column="1" Name="_contactTelephoneTxtBox" Mask="(000) 000-0000"/>
+                        <xctk:MaskedTextBox Grid.Row="3" Grid.Column="1" Name="_cellTxtBox" Mask="(000) 000-0000"/>
+                        <ComboBox Grid.Row="4" Grid.Column="1" Name="_positionComboBox" SelectedIndex="0">
+                            <ComboBoxItem Content="Owner"/>
+                            <ComboBoxItem Content="Manager"/>
+                            <ComboBoxItem Content="Employee"/>
+                        </ComboBox>
+                    </Grid>
+                </GroupBox>
+            </Grid>  
+        </GroupBox>
+       
+    </Grid>
+</Page>

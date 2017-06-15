@@ -1,0 +1,14 @@
+﻿<Controls:MetroWindow
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        x:Class="CoolIcePro.Controls.PopupWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PopupWindow"
+    
+        Topmost="True"
+    Focusable="True"
+        Height="825" Width="620" ShowMinButton="False" WindowStartupLocation="Manual" ShowMaxRestoreButton="False">
+    <Grid>
+        <Frame NavigationUIVisibility="Hidden" Name="_frame" x:FieldModifier="public"></Frame> 
+    </Grid>
+</Controls:MetroWindow>
