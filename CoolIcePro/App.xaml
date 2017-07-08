@@ -13,7 +13,7 @@
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml">
         </ResourceDictionary>
         <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml">
-          <vm:ViewModelLocator d6p1:Key="Locator" d:IsDataSource="True" xmlns:d6p1="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:CoolIcePro.ViewModel" />
+          <vm:ViewModelLocator d6p1:Key="Locator" d:IsDataSource="True" xmlns:d6p1="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:vm="clr-namespace:CoolIcePro.ViewModels" />
         </ResourceDictionary>
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>

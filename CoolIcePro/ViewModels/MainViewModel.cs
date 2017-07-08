@@ -1,6 +1,6 @@
 using GalaSoft.MvvmLight;
 
-namespace CoolIcePro.ViewModel
+namespace CoolIcePro.ViewModels
 {
     /// <summary>
     /// This class contains properties that the main View can data bind to.

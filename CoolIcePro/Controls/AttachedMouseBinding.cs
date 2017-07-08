@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Windows.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,8 +10,6 @@ using System.Windows.Input;
 namespace CoolIcePro.Controls
 {
 
-public sealed class RowDoubleClickHandler : FrameworkElement
-{
    public sealed class RowDoubleClickHandler : FrameworkElement
 	{
 		public RowDoubleClickHandler(DataGrid dataGrid)
@@ -67,7 +66,7 @@ public sealed class RowDoubleClickHandler : FrameworkElement
 				}
 			}));
 	}
-}
+
 
  
     public class AttachedMouseBinding
