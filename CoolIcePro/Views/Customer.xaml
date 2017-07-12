@@ -3,8 +3,8 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:VM="clr-namespace:CoolIcePro.ViewModels"
       xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+      xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
       xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
       xmlns:helpers="clr-namespace:CoolIcePro.Controls"
       xmlns:local="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
@@ -14,9 +14,6 @@
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       d:DesignHeight="720" d:DesignWidth="725"
 	Title="Customer">
-    <!--<Page.DataContext>
-        <VM:CompanyViewModel/>
-    </Page.DataContext>-->
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="45"/>
@@ -36,7 +33,7 @@
         </Grid.RowDefinitions>
         <!--<TextBox Grid.Column="2" ></TextBox>-->
         <!--<Button Grid.Column="3" Width="65" HorizontalAlignment="Left" Content="Search" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top"></Button>-->
-        <Button Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Click="EditButtonClickedEventHandler"/>
+        <Button Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Command="{Binding EditButtonCommand}"/>
 
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content="Company" FontFamily="Segoe UI" FontSize="15" Height="35"/>
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="Black" Height="1" VerticalAlignment="Bottom"/>
@@ -60,7 +57,7 @@
             <TextBox Name="_address"  Height="28" FontSize="14" Text ="{Binding Address}"  IsReadOnly="True"/>
             <TextBox Name="_addressExtTextbox" Height="28" FontSize="14" Text="{Binding AddressExt}"  IsReadOnly="True"/>
             <TextBox Name="_cityTextBox" Height="28" FontSize="14" Text="{Binding City}"  IsReadOnly="True"/>
-            <ComboBox Name="_stateComboBox"  HorizontalAlignment="Left"  SelectedIndex="4" FontSize="14" Height="28" IsReadOnly="True"/>
+            <ComboBox Name="_stateComboBox"  HorizontalAlignment="Left"  SelectedIndex="4" ItemsSource="{Binding States}"  FontSize="14" Height="28" IsReadOnly="True"/>
             <xctk:MaskedTextBox x:Name="__zipCodeTextBox"  Height="28" Text="{Binding Zipcode}"  FontSize="14" Mask="00000" IsReadOnly="True"/>
         </StackPanel>
         
@@ -84,48 +81,12 @@
             </TextBlock>-->
         </StackPanel>
         <Button Grid.Row="3" Content="Insert Invoice" Grid.Column="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Command="{Binding InsertButtonClicked}"/>
-        <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8"  GridLinesVisibility="ALL" IsReadOnly="True" >
-            <DataGrid.InputBindings>
-                <MouseBinding
-                    MouseAction="LeftDoubleClick"
-                    Command="{Binding DoubleClickCommand}"/>
-            </DataGrid.InputBindings>
-            <!--<i:Interaction.Triggers>
-                    <i:EventTrigger EventName="MouseDoubleClick">
-                    <local:EventToCommand CommandParameter="{Binding SelectedItem, ElementName=_dataGrid}" Command="{Binding Path=DoubleClickCommand, Mode=OneWay}"/>
-                    </i:EventTrigger>
-                </i:Interaction.Triggers>-->
-            
-            <!--<DataGrid.RowStyle>
-                <Style TargetType="{x:Type DataGridRow}">
-                    <EventSetter Event="MouseDoubleClick" Handler="{Binding Element}"/>
-                </Style>
-            </DataGrid.RowStyle>
+        <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8"  GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding Invoices}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
-                    <i:InvokeCommandAction Command="{Binding DoubleClickCommand}" />
-            </i:EventTrigger>
-            </i:Interaction.Triggers>-->
-            <!--<DataGrid.InputBindings>
-                <MouseBinding
-                    MouseAction="LeftDoubleClick"
-                    Command="{Binding DoubleClickCommand}"
-                    CommandParameter="{Binding HiButtonCommand/}"/>
-            </DataGrid.InputBindings>-->
-         
-            <DataGrid.DataContext>
-                <ContextMenu DataContext="{Binding PlacementTarget.DataContext}">
-                    <MenuItem Header="Cut" Command="Cut">
-
-                    </MenuItem>
-                    <MenuItem Header="Copy" Command="Copy">
-
-                    </MenuItem>
-                    <MenuItem Header="Paste" Command="Paste">
-
-                    </MenuItem>
-                </ContextMenu>
-            </DataGrid.DataContext>
+                    <cmd:EventToCommand Command="{Binding RowDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
         </DataGrid>          
     </Grid>
 </Page>

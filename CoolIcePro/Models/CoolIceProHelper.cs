@@ -129,7 +129,7 @@ namespace CoolIcePro.Models
             return false;
         }
 
-        public IEnumerable GetAllCompanies()
+        public IEnumerable<Company> GetAllCompanies()
         {
             
             DataTable table = this.GetDataTable("select * from company");
@@ -156,7 +156,7 @@ namespace CoolIcePro.Models
             }
             return _list;
         }
-        internal IEnumerable GetCustomerInvoices(long companyId)
+        internal IEnumerable<Invoice> GetCustomerInvoices(long companyId)
         {
 
             DataTable table = this.GetDataTable(string.Format("select Id,CompanyId, datetime(Date) as Date,Description,InvoiceNumber,ServicePerformanceOn,TotalAmount,Warranty,IsCheck from Invoice where CompanyId ='{0}'", companyId.ToString()));

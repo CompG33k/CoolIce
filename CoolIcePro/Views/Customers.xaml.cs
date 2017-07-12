@@ -24,19 +24,7 @@ namespace CoolIcePro.Views
     {
         public Customers()
         {
-            InitializeComponent();
-            _dataGrid.ItemsSource = ProjectManager.Instance.CoolIceProDBHelper.GetAllCompanies();
-            
+            InitializeComponent();            
         }
-        private void resultDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (sender != null)
-            {
-                var company = _dataGrid.SelectedItem as Models.Company;
-                PopupWindow p = new PopupWindow("Customer Details", new Customer(new CompanyViewModel(company)));
-                p.Show();
-            }
-        }
-      
     }
 }

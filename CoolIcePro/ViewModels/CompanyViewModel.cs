@@ -1,4 +1,5 @@
 ﻿using CoolIcePro.View.ViewModel;
+using GalaSoft.MvvmLight.CommandWpf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,11 +33,14 @@ namespace CoolIcePro.ViewModels
         string contactCellphone;
         string contactPosition;
         private bool canExecute = true;
-        private ICommand doubleClickCommand;
-        private ICommand insertButtonClicked;
-        
-        List<CoolIcePro.Models.Contact> contacts;
 
+        
+        private ICommand insertButtonClicked;
+        private ICommand rowDoubleClickCommand;
+        
+        IEnumerable<CoolIcePro.Models.Contact> contacts;
+        IEnumerable<string> states;
+        IEnumerable<Models.Invoice> invoices;
 
 
         public long Id
@@ -236,7 +240,8 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public List<CoolIcePro.Models.Contact> Contacts{ 
+        public IEnumerable<CoolIcePro.Models.Contact> Contacts
+        { 
             get { return contacts; }
             set
             {
@@ -248,10 +253,36 @@ namespace CoolIcePro.ViewModels
             }
         }
 
+        public IEnumerable<string> States
+        {
+            get
+            {
+                if (states == null)
+                {
+                    states = ProjectManager.Instance.States;
+                }
+                return states;
+            }
+        }
+
+        public IEnumerable<Models.Invoice> Invoices
+        {
+            get { return invoices; }
+            set
+            {
+                if (invoices != value)
+                {
+                    invoices = value;
+                    OnPropertyChanged("Invoices");
+                }
+            }
+        }
 
         public CompanyViewModel(CoolIcePro.Models.Company company)
         {
             Id = company.Id;
+            invoices = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id);
+           
             CompanyName = company.CompanyName;
             Address = company.Address;
             AddressExt = company.AddressExt;
@@ -263,8 +294,7 @@ namespace CoolIcePro.ViewModels
             Fax = company.Fax;
             Email = company.Email;
             Website = company.Website; 
-            DoubleClickCommand = new RelayCommand(ShowMessage, param => this.canExecute);
-            InsertButtonClicked = new RelayCommand(InsertMessage);
+            
             if (company.Contacts == null)
                 return;
             var contact  = company.Contacts.FirstOrDefault();
@@ -275,55 +305,25 @@ namespace CoolIcePro.ViewModels
             ContactPosition = contact.Position;
            
         }
-        public bool CanExecute
+     
+        public ICommand RowDoubleClickCommand
         {
             get
             {
-                return this.canExecute;
-            }
-
-            set
-            {
-                if (this.canExecute == value)
+                if (rowDoubleClickCommand == null)
                 {
-                    return;
+                    rowDoubleClickCommand = new RelayCommand<Models.Invoice>(
+                        item =>
+                        {
+                            System.Windows.MessageBox.Show("VM Invoice Double Click");
+                        });
                 }
-
-                this.canExecute = value;
-            }
-        }
-        public ICommand DoubleClickCommand
-        {
-            get
-            {
-                return doubleClickCommand;
-            }
-            set
-            {
-                doubleClickCommand = value;
+                return rowDoubleClickCommand;
             }
         }
 
-        public ICommand InsertButtonClicked
-        {
-            get
-            {
-                return insertButtonClicked;
-            }
-            set
-            {
-                insertButtonClicked = value;
-            }
-        }
-
-        public void InsertMessage(object obj)
-        {
-            System.Windows.MessageBox.Show("INSERT");
-        }
-        public void ShowMessage(object obj)
-        {
-            System.Windows.MessageBox.Show("SHOW");
-        }
+  
+     
         public void OnPropertyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)
@@ -334,55 +334,5 @@ namespace CoolIcePro.ViewModels
 
 
 
-
-        //===============================
-
-
-        //public class DataGridAttachedBehaviors
-        //{
-        //    #region DoubleClick
-
-        //    public static DependencyProperty OnDoubleClickProperty = DependencyProperty.RegisterAttached(
-        //        "OnDoubleClick",
-        //        typeof(ICommand),
-        //        typeof(DataGridAttachedBehaviors),
-        //        new UIPropertyMetadata(DataGridAttachedBehaviors.OnDoubleClick));
-
-        //    public static void SetOnDoubleClick(DependencyObject target, ICommand value)
-        //    {
-        //        target.SetValue(DataGridAttachedBehaviors.OnDoubleClickProperty, value);
-        //    }
-
-        //    private static void OnDoubleClick(DependencyObject target, DependencyPropertyChangedEventArgs e)
-        //    {
-        //        var element = target as Control;
-        //        if (element == null)
-        //        {
-        //            throw new InvalidOperationException("This behavior can be attached to a Control item only.");
-        //        }
-
-        //        if ((e.NewValue != null) && (e.OldValue == null))
-        //        {
-        //            element.MouseDoubleClick += MouseDoubleClick;
-        //        }
-        //        else if ((e.NewValue == null) && (e.OldValue != null))
-        //        {
-        //            element.MouseDoubleClick -= MouseDoubleClick;
-        //        }
-        //    }
-
-        //    private static void MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        //    {
-        //        UIElement element = (UIElement)sender;
-        //        ICommand command = (ICommand)element.GetValue(DataGridAttachedBehaviors.OnDoubleClickProperty);
-        //        command.Execute(null);
-        //    }
-
-        //    #endregion DoubleClick
-
-        //    #region SelectionChanged
-        //    //removed
-        //    #endregion
-        //}
     }
 }

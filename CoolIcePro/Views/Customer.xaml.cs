@@ -26,8 +26,6 @@ namespace CoolIcePro.Views
         {
             InitializeComponent();
             this.DataContext = company;
-            _stateComboBox.ItemsSource = ProjectManager.Instance.States;
-            _dataGrid.ItemsSource = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(company.Id);      
         }
 
         private void ClickEventHandler(object sender, RoutedEventArgs e)
@@ -54,22 +52,5 @@ namespace CoolIcePro.Views
             MessageBox.Show("Excel file created , you can find the file c:\\csharp-Excel.xls");
         }
 
-        private void DataGridRightClickEventHandler(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void InsertInvoiceClickEventHandler(object sender, RoutedEventArgs e)
-        {
-            CoolIcePro.Controls.PopupWindow win = new Controls.PopupWindow("Insert Invoice",new InsertInvoice());
-            win.ShowDialog();   
-        }
-
-        private void EditButtonClickedEventHandler(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Edit Button Clicked");
-        }
-
-      
     }
 }
