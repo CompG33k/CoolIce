@@ -10,6 +10,7 @@
       xmlns:local="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
       xmlns:telerik="clr-namespaceCoolIcePro;assempbly=CoolIcePro.Controls"
       mc:Ignorable="d" 
+      FontSize="16"
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       d:DesignHeight="720" d:DesignWidth="725"
 	Title="Customer">
@@ -83,7 +84,7 @@
             </TextBlock>-->
         </StackPanel>
         <Button Grid.Row="3" Content="Insert Invoice" Grid.Column="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Command="{Binding InsertButtonClicked}"/>
-        <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8" AlternationCount="2" AlternatingRowBackground="#9FBDD9" GridLinesVisibility="Vertical" IsReadOnly="True" >
+        <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8"  GridLinesVisibility="ALL" IsReadOnly="True" >
             <DataGrid.InputBindings>
                 <MouseBinding
                     MouseAction="LeftDoubleClick"

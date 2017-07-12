@@ -12,7 +12,7 @@ namespace CoolIcePro
     class ProjectManager
     {
         private static ProjectManager _instance;
-        private CoolIceProHelper _coolIceProDBHelper;
+        private readonly CoolIceProHelper _coolIceProDBHelper;
 
         private ProjectManager() {
             _coolIceProDBHelper = new CoolIceProHelper();
@@ -31,7 +31,6 @@ namespace CoolIcePro
         public CoolIceProHelper CoolIceProDBHelper
         {
             get { return _coolIceProDBHelper; }
-            set { _coolIceProDBHelper = value; }
         }
 
         public Company CurrentCompany { get; set; } 

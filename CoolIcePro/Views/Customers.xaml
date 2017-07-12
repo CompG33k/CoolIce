@@ -4,17 +4,21 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       mc:Ignorable="d" 
+      FontSize="14"
       d:DesignHeight="300" d:DesignWidth="300"
 	Title="Customers">
 
     <Grid>
-        <DataGrid  Name="_dataGrid" AlternationCount="2" AlternatingRowBackground="#9FBDD9" GridLinesVisibility="Vertical" IsReadOnly="True" >
-            <DataGrid.RowStyle>
+        <DataGrid  Name="_dataGrid"  GridLinesVisibility="All" IsReadOnly="True" >
+            <!--<DataGrid.InputBindings>
+                <MouseBinding Gesture="LeftDoubleClick" Command="{Binding SomeCommand}"/>
+            </DataGrid.InputBindings>-->
+            <!--<DataGrid.RowStyle>
                 <Style TargetType="{x:Type DataGridRow}">
                     <EventSetter Event="MouseDoubleClick" Handler="resultDataGrid_MouseDoubleClick"/>
                 </Style>
-            </DataGrid.RowStyle>
-            <DataGrid.DataContext>
+            </DataGrid.RowStyle>-->            
+            <!--<DataGrid.DataContext>
                 <ContextMenu DataContext="{Binding PlacementTarget.DataContext}">
                     <MenuItem Header="Cut" Command="Cut">
 
@@ -26,7 +30,7 @@
 
                     </MenuItem>
                 </ContextMenu>
-            </DataGrid.DataContext>
+            </DataGrid.DataContext>-->
         </DataGrid>
     </Grid>
 </Page>

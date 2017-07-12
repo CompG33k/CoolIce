@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30324.0
+VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoolIcePro", "CoolIcePro\CoolIcePro.csproj", "{A8474DBE-664E-43A8-A29D-EC0A29E911CC}"
 EndProject
@@ -12,16 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{05D0B0
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEnterpriseUserControls", "WpfEnterpriseUserControls\WpfEnterpriseUserControls.csproj", "{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}"
+EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 2
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://projectstumbler.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = CoolIcePro\\CoolIcePro.csproj
-		SccProjectName1 = CoolIcePro
-		SccLocalPath1 = CoolIcePro
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -31,6 +24,10 @@ Global
 		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

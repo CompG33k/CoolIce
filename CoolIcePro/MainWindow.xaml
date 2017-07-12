@@ -4,22 +4,28 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:Controls1="clr-namespace:CoolIcePro.Controls"
         x:Class="CoolIcePro.MainWindow"
-        FontSize="14"
+        FontSize="16"
         Title="Cool Ice Pro" Height="825" Width="920">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="45" />
+            <RowDefinition Height="35" />
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions >
-            <ColumnDefinition Name="FirstColumn"  Width="135"/>
+            <ColumnDefinition Name="FirstColumn"  Width="38"/>
             <ColumnDefinition Width="0" />
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" BorderBrush="Transparent"  Background="{DynamicResource AccentColorBrush}" Foreground="{DynamicResource AccentColorBrush}"/>
-        <Button Grid.Column="0"  Width="35" Height="40" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource GroupIcon}" HorizontalAlignment="Left" Click="GroupButtonClickedEventHandler"/>
-        <ListView Grid.Column="0" Grid.Row="1" Margin="0"  Name="_listView" FontSize="15" FontFamily="Bold" SelectionMode="Single"  SelectionChanged="ListViewSelectionChangedHandler" >
-
+        
+        <TextBlock Grid.Column="2" Grid.Row="0" Text="Double Click a company from dropdown" VerticalAlignment="Center" FontSize="14" FontWeight="bold" Margin="5"/>
+        <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,0">
+            <TextBox Width="180" FontSize="14" Height="30" Background="ghostwhite" VerticalAlignment="Top"  TextAlignment="right" Margin="1"/>
+            <Button Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource SearchIcon}" HorizontalAlignment="Left" Margin="1"/>
+        </StackPanel>
+        <Separator Name="MySeparator" Height="1" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Black" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+        <Label Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"  Background="#FF252121"/>
+        <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Width="35" Height="30" BorderThickness="1" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource HamburgerIcon}" HorizontalAlignment="Left" Click="GroupButtonClickedEventHandler"/>
+        <!--<ListView Grid.Column="0" Grid.Row="1" Margin="0"  Name="_listView" FontSize="15" FontFamily="Bold" SelectionMode="Single"  SelectionChanged="ListViewSelectionChangedHandler" >
             <ListViewItem Tag="Customers">
                 <ListViewItem.Content >
                     <StackPanel Orientation="Horizontal" Margin="0" >
@@ -37,7 +43,7 @@
                     
                 </ListViewItem.Content>
             </ListViewItem>
-        </ListView>
+        </ListView>-->
 
         <!--<TextBox Grid.Column="1" Background="Gainsboro" />-->
         <Frame Grid.Column="2" Grid.Row="1"  Name="_frame" NavigationUIVisibility="Hidden"/>
