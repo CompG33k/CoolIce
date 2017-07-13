@@ -28,51 +28,9 @@ namespace CoolIcePro
             //Check if the event is not raised by the visual studio designer
             if (System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
                 return;
-            _frame.Navigate(new Customers());
-            //_listView.ItemsSource = new List<String>() { "Customer", "Account Receivables", "Account Payables","Insert Company", "Insert Invoice" };
-         //   _listView.ItemsSource = new List<String>() { "Customers", "Account Receivables", "Account Payables" };
         }
        
-        private void ListViewSelectionChangedHandler(object sender, SelectionChangedEventArgs e)
-        {
-            var l = sender as ListView;
-            var listItemView = l.SelectedItem as ListViewItem;
-
-            var sp = listItemView.Content as StackPanel;
-            var label = sp.Children[1] as Label;
-            
-            var page = label.Content as string;
-            var type = _frame.Content.GetType();
-            
-            if (type.Name == page) 
-                return;
-            switch (page)
-            {
-                case "Customers":
-                    _frame.Navigate(new Customers());
-                    break;
-                case "Invoices":
-                    _frame.Navigate(new Invoices());
-                    break;
-                //case "Insert Invoice":
-                       
-                //   // CoolIcePro.Controls.PopupWindow win = new Controls.PopupWindow();
-                //    _frame.Navigate(new InsertInvoice());
-                //  //  win.ShowDialog();
-                        
-                //    break;
-                //case "Account Receivables":
-                //    _frame.Navigate(new AccountReceivables());
-                //    break;
-                //case "Account Payables":
-                //    _frame.Navigate(new AccountPayables());
-                //    break;
-                //case "Insert Company":
-                //    _frame.Navigate(new InsertCompany());
-                //    break;
-            }
-        }
-
+      
         private void GroupButtonClickedEventHandler(object sender, RoutedEventArgs e)
         {
             if(FirstColumn.Width.Value == 135)
@@ -85,6 +43,8 @@ namespace CoolIcePro
                 FirstColumn.Width = g;
             }
         }
+
+       
 
     }
 }

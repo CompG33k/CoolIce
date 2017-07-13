@@ -24,7 +24,10 @@ namespace CoolIcePro.Views
     {
         public Customer(CompanyViewModel company)
         {
+
             InitializeComponent();
+            if (System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
+                return;
             this.DataContext = company;
         }
 

@@ -3,31 +3,23 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+      xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+      xmlns:VM="clr-namespace:CoolIcePro.ViewModels"
       mc:Ignorable="d" 
+      FontSize="16"
       d:DesignHeight="300" d:DesignWidth="300"
 	Title="Invoices">
-
+    <Page.DataContext>
+        <VM:InvoicesViewModel/>
+    </Page.DataContext>
     <Grid>
-        <DataGrid  Name="_dataGrid" AlternationCount="2" AlternatingRowBackground="#9FBDD9" GridLinesVisibility="Vertical" IsReadOnly="True" >
-            <DataGrid.RowStyle>
-                <Style TargetType="{x:Type DataGridRow}">
-                    <EventSetter Event="MouseDoubleClick" Handler="resultDataGrid_MouseDoubleClick"/>
-                </Style>
-            </DataGrid.RowStyle>
-            <DataGrid.DataContext>
-                <ContextMenu DataContext="{Binding PlacementTarget.DataContext}">
-                    <MenuItem Header="Cut" Command="Cut">
-
-                    </MenuItem>
-                    <MenuItem Header="Copy" Command="Copy">
-
-                    </MenuItem>
-                    <MenuItem Header="Paste" Command="Paste">
-
-                    </MenuItem>
-                </ContextMenu>
-            </DataGrid.DataContext>
+        <DataGrid  Name="_dataGrid" GridLinesVisibility="ALL" IsReadOnly="True" >
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <cmd:EventToCommand Command="{Binding RowDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
         </DataGrid>
-
     </Grid>
 </Page>

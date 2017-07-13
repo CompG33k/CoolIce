@@ -1,5 +1,4 @@
-﻿using CoolIcePro.View.ViewModel;
-using GalaSoft.MvvmLight.CommandWpf;
+﻿using GalaSoft.MvvmLight.CommandWpf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

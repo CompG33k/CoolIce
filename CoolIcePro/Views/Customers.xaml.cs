@@ -24,7 +24,9 @@ namespace CoolIcePro.Views
     {
         public Customers()
         {
-            InitializeComponent();            
+            if (System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
+                return;
+            InitializeComponent();
         }
     }
 }

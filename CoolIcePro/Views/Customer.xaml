@@ -81,7 +81,7 @@
             </TextBlock>-->
         </StackPanel>
         <Button Grid.Row="3" Content="Insert Invoice" Grid.Column="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Command="{Binding InsertButtonClicked}"/>
-        <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8"  GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding Invoices}">
+        <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding Invoices}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <cmd:EventToCommand Command="{Binding RowDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />

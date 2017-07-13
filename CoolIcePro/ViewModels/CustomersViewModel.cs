@@ -1,6 +1,7 @@
 ﻿using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,8 +9,9 @@ using System.Windows.Input;
 
 namespace CoolIcePro.ViewModels
 {
-    public class CustomersViewModel
+    public class CustomersViewModel: INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
         ICommand mouseDoubleClickCommand;
         IEnumerable<Models.Company> customerList;
        
@@ -22,6 +24,7 @@ namespace CoolIcePro.ViewModels
                 if (customerList == null || customerList != tempList)
                 {
                     customerList = tempList;
+                    //OnPropertyChanged("CustomerList");
                 }
                 return customerList;
             }
@@ -30,6 +33,7 @@ namespace CoolIcePro.ViewModels
                 if (customerList != value)
                 {
                     customerList = value;
+                    OnPropertyChanged("CustomerList");
                 }
             }
         }
@@ -51,6 +55,12 @@ namespace CoolIcePro.ViewModels
                 return mouseDoubleClickCommand;
             }
         }
-
+        public void OnPropertyChanged(string propertyName)
+        {
+            if (this.PropertyChanged != null)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
     }
 }
