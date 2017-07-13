@@ -312,9 +312,10 @@ namespace CoolIcePro.ViewModels
                 if (rowDoubleClickCommand == null)
                 {
                     rowDoubleClickCommand = new RelayCommand<Models.Invoice>(
-                        item =>
+                        sender =>
                         {
-                            System.Windows.MessageBox.Show("VM Invoice Double Click");
+                            var inv = sender as Models.Invoice;
+                            System.Windows.MessageBox.Show(string.Format("VM Invoice Id: {0}\nClicked",inv.Id));
                         });
                 }
                 return rowDoubleClickCommand;

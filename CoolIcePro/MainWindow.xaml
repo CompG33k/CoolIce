@@ -25,8 +25,8 @@
         
         <TextBlock Grid.Column="2" Grid.Row="0" Text="Double Click a company from dropdown" VerticalAlignment="Center" FontSize="14" FontWeight="bold" Margin="5"/>
         <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,0">
-            <TextBox Width="180" FontSize="14" Height="30" Background="ghostwhite" VerticalAlignment="Top"  TextAlignment="right" Margin="1"/>
-            <Button Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource SearchIcon}" HorizontalAlignment="Left" Margin="1"/>
+            <TextBox Width="180" FontSize="14" Height="30" Background="ghostwhite" VerticalAlignment="Top" TextAlignment="right" Margin="1"/>
+            <Button Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource SearchIcon}" HorizontalAlignment="Left" Margin="1" ToolTip="Expand/Compress"/>
         </StackPanel>
         <Separator Name="MySeparator" Height="1" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Black" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
         <Label Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"  Background="#FF252121"/>
@@ -37,18 +37,18 @@
                     <cmd:EventToCommand Command="{Binding ListViewSelectionChangedCommand}" CommandParameter="{Binding ElementName=__listView, Path=SelectedItem}"  PassEventArgsToCommand="True" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
-            <ListViewItem Tag="Customers">
+            <ListViewItem Tag="Customers" ToolTip="Customers">
                 <ListViewItem.Content >
                     <StackPanel Orientation="Horizontal" Margin="0" >
-                        <Button IsEnabled="False" BorderThickness="0"   BorderBrush="Transparent"  Background="Transparent" Width="35" Height="35"  Content="{DynamicResource CustomerIcon}" Command="{Binding CustomerClickedCommand}"/>
+                        <Button BorderThickness="0" BorderBrush="Transparent" Foreground="Transparent" Background="Transparent" Width="35" Height="35"  Content="{DynamicResource CustomerIcon}" Command="{Binding CustomerClickedCommand}" IsHitTestVisible="false"/>
                         <Label VerticalAlignment="Center"   Margin="5"  Content="Customers" Foreground="GhostWhite"/>
                     </StackPanel>
                 </ListViewItem.Content>
             </ListViewItem>
-            <ListViewItem Tag="Invoice">
+            <ListViewItem Tag="Invoice" ToolTip="Invoices">
                 <ListViewItem.Content>
                     <StackPanel Orientation="Horizontal">
-                        <Button IsEnabled="False" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Width="35" Height="35" Content="{DynamicResource InvoiceIcon}" Command="{Binding InvoicesClickedCommand}"/>
+                        <Button  BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Width="35" Height="35" Content="{DynamicResource InvoiceIcon}" Command="{Binding InvoicesClickedCommand}" IsHitTestVisible="false"/>
                         <Label VerticalAlignment="Center" Margin="5" Content="Invoices" Foreground="GhostWhite"/>
                     </StackPanel>
                 </ListViewItem.Content>

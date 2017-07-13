@@ -20,9 +20,6 @@ namespace CoolIcePro.ViewModels
         public MainWindowViewModel()
         {
             mainWindowPage = new CoolIcePro.Views.Customers();
-
-            //_listView.ItemsSource = new List<String>() { "Customer", "Account Receivables", "Account Payables","Insert Company", "Insert Invoice" };
-            //   _listView.ItemsSource = new List<String>() { "Customers", "Account Receivables", "Account Payables" };
         }
 
         public ICommand ListViewSelectionChangedCommand
