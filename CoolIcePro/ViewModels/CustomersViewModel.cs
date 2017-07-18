@@ -13,6 +13,7 @@ namespace CoolIcePro.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
         ICommand mouseDoubleClickCommand;
+        ICommand customerMenuItemClickCommand;
         IEnumerable<Models.Company> customerList;
        
 
@@ -53,6 +54,28 @@ namespace CoolIcePro.ViewModels
                         });
                 }
                 return mouseDoubleClickCommand;
+            }
+        }
+        public ICommand CustomerMenuItemClickCommand
+        {
+            get
+            {
+                if (customerMenuItemClickCommand == null)
+                {
+                    customerMenuItemClickCommand = new RelayCommand<Object>(
+                        sender =>
+                        {
+                            var inv = sender as Models.Invoice;
+                            if (inv != null)
+                            {
+                                System.Windows.MessageBox.Show(string.Format("CustomerMenuItemClickCommand id: {0}\nDouble row Clicked", inv.Id));
+                            }
+                            //var company = item as Models.Company;
+                            //var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
+                            //p.Show();
+                        });
+                }
+                return customerMenuItemClickCommand;
             }
         }
         public void OnPropertyChanged(string propertyName)

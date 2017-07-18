@@ -36,6 +36,7 @@ namespace CoolIcePro.ViewModels
         
         private ICommand insertButtonClicked;
         private ICommand rowDoubleClickCommand;
+        private ICommand invoiceDetailMenuItemClickCommand;
         
         IEnumerable<CoolIcePro.Models.Contact> contacts;
         IEnumerable<string> states;
@@ -321,7 +322,23 @@ namespace CoolIcePro.ViewModels
                 return rowDoubleClickCommand;
             }
         }
-
+        public ICommand InvoiceDetailMenuItemClickCommand
+        {
+            get
+            {
+                if (invoiceDetailMenuItemClickCommand == null)
+                {
+                    invoiceDetailMenuItemClickCommand = new RelayCommand<Models.Invoice>(
+                        sender =>
+                        {
+                            var inv = sender as Models.Invoice;
+                            if(inv != null)
+                                System.Windows.MessageBox.Show(string.Format("VM Invoice Detail Id: {0}\nClicked",inv.Id));
+                        });
+                }
+                return invoiceDetailMenuItemClickCommand;
+            }
+        }
   
      
         public void OnPropertyChanged(string propertyName)
