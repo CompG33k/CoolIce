@@ -12,7 +12,9 @@ namespace CoolIcePro.ViewModels
     public class InvoicesViewModel : INotifyPropertyChanged
     {
         ICommand rowDoubleClickCommand;
-
+        ICommand customerMenuItemClickCommand;
+        ICommand invoiceMenuItemClickCommand;
+        
         public event PropertyChangedEventHandler PropertyChanged;
 
         public ICommand RowDoubleClickCommand
@@ -35,6 +37,55 @@ namespace CoolIcePro.ViewModels
                 return rowDoubleClickCommand;
             }
         }
+
+        public ICommand CustomerMenuItemClickCommand
+        {
+            get
+            {
+                if (customerMenuItemClickCommand == null)
+                {
+                    customerMenuItemClickCommand = new RelayCommand<Object>(
+                        sender =>
+                        {
+                            var inv =sender as Models.Invoice;
+                            if (inv != null)
+                            {
+                                System.Windows.MessageBox.Show(string.Format("CustomerMenuItemClickCommand id: {0}\nDouble row Clicked", inv.Id));
+                            }
+                            //var company = item as Models.Company;
+                            //var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
+                            //p.Show();
+                        });
+                }
+                return customerMenuItemClickCommand;
+            }
+        }
+
+        public ICommand InvoiceMenuItemClickCommand
+        {
+            get
+            {
+                if (invoiceMenuItemClickCommand == null)
+                {
+                    invoiceMenuItemClickCommand = new RelayCommand<Models.Invoice>(
+                        sender =>
+                        {
+                            var inv =sender as Models.Invoice;
+                            if (inv != null)
+                            {
+                                System.Windows.MessageBox.Show(string.Format("InvoiceMenuItemClickCommand id: {0}\nDouble row Clicked", inv.Id));
+                            }
+
+                            var invoice = sender as Models.Invoice;
+                            var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
+                            p.Show();
+                        });
+                }
+                return invoiceMenuItemClickCommand;
+            }
+        }
+
+        
         public void OnPropertyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)

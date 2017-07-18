@@ -42,7 +42,11 @@ namespace CoolIcePro.Views
             //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "11334443",TotalAmount = 912.39 }
             //};
         }
-
+        public InsertInvoice(ViewModels.InsertInvoiceViewModel insertVm)
+        {
+            InitializeComponent();
+            DataContext = insertVm;
+        }
         private void CancelButtonEventHandler(object sender, RoutedEventArgs e)
         {
             Window w = Window.GetWindow(this);

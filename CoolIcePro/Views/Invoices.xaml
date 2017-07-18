@@ -20,6 +20,12 @@
                     <cmd:EventToCommand Command="{Binding RowDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
+            <DataGrid.ContextMenu>
+                <ContextMenu >
+                    <MenuItem Header="Customer Detail" Command="{Binding CustomerMenuItemClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}" />
+                    <MenuItem Header="Invoice Detail" Command="{Binding InvoiceMenuItemClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
         </DataGrid>
     </Grid>
 </Page>
