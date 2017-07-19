@@ -23,17 +23,6 @@ namespace CoolIcePro.Views
         public Invoices()
         {
             InitializeComponent();
-            _dataGrid.ItemsSource = ProjectManager.Instance.CoolIceProDBHelper.GetInvoices();
-
-        }
-        private void resultDataGrid_MouseDoubleClick(object sender, MouseButtonEventArgs e)
-        {
-            if (sender != null)
-            {
-                //Models.Company value = (Models.Company)_dataGrid.SelectedValue;
-                //PopupWindow p = new PopupWindow("Customer Details", new Customer());
-                //p.Show();
-            }
         }
     }
 }

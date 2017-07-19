@@ -9,32 +9,31 @@ using System.Windows.Input;
 
 namespace CoolIcePro.ViewModels
 {
-    public class CustomersViewModel: INotifyPropertyChanged
+    public class CustomersViewModel : INotifyPropertyChanged, IPageViewModel
     {
         public event PropertyChangedEventHandler PropertyChanged;
         ICommand mouseDoubleClickCommand;
         ICommand customerMenuItemClickCommand;
-        IEnumerable<Models.Company> customerList;
-       
-
-        public IEnumerable<Models.Company> CustomerList
+        IEnumerable<Models.IModel> _list;
+        
+        public IEnumerable<Models.IModel> List
         {
             get
             {
                 var tempList = ProjectManager.Instance.CoolIceProDBHelper.GetAllCompanies();
-                if (customerList == null || customerList != tempList)
+                if (_list == null || _list != tempList)
                 {
-                    customerList = tempList;
+                    _list = tempList;
                     //OnPropertyChanged("CustomerList");
                 }
-                return customerList;
+                return _list;
             }
             set
             {
-                if (customerList != value)
+                if (_list != value)
                 {
-                    customerList = value;
-                    OnPropertyChanged("CustomerList");
+                    _list = value;
+                    OnPropertyChanged("List");
                 }
             }
         }

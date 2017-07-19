@@ -9,7 +9,7 @@ namespace CoolIcePro.Models
     /// <summary>
     /// This s the Invoice Class for data.
     /// </summary>
-    public class Invoice
+    public class Invoice: IModel
     {
         public DateTime Date { get; set; }
         public long Id { get; set; }

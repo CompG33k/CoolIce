@@ -9,7 +9,7 @@ namespace CoolIcePro.Models
     /// <summary>
     /// This is the Customer class for data.
     /// </summary>
-    public class Company
+    public class Company: IModel
     {
         public long Id { get; set; }
         public string CompanyName { get; set; }

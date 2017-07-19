@@ -25,7 +25,11 @@
         
         <TextBlock Grid.Column="2" Grid.Row="0" Text="Double Click a company from dropdown" VerticalAlignment="Center" FontSize="14" FontWeight="bold" Margin="5"/>
         <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,0">
-            <TextBox Width="180" FontSize="14" Height="30" Background="ghostwhite" VerticalAlignment="Top" TextAlignment="right" Margin="1"/>
+            <TextBox Width="180" FontSize="14" Height="30" Background="ghostwhite" VerticalAlignment="Top" TextAlignment="right" Margin="1" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}">
+                <TextBox.InputBindings>
+                    <KeyBinding Command="{Binding EnterKeyPressedCommand}" CommandParameter="{Binding MainWindowPage.DataContext}" Key="Enter" />
+                </TextBox.InputBindings>
+            </TextBox>
             <Button Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource SearchIcon}" HorizontalAlignment="Left" Margin="1" ToolTip="Expand/Compress"/>
         </StackPanel>
         <Separator Name="MySeparator" Height="1" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Black" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
@@ -34,7 +38,7 @@
         <ListView Grid.Column="0" Grid.Row="1" Margin="0"  Name="_listView" FontSize="15" FontFamily="Bold" Background="Transparent"  SelectionMode="Single" >
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="SelectionChanged">
-                    <cmd:EventToCommand Command="{Binding ListViewSelectionChangedCommand}" CommandParameter="{Binding ElementName=__listView, Path=SelectedItem}"  PassEventArgsToCommand="True" />
+                    <cmd:EventToCommand Command="{Binding ListViewSelectionChangedCommand}"  PassEventArgsToCommand="True" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
             <ListViewItem Tag="Customers" ToolTip="Customers">
@@ -55,7 +59,6 @@
             </ListViewItem>
         </ListView>
 
-        <!--<TextBox Grid.Column="1" Background="Gainsboro" />-->
         <Frame Grid.Column="2" Grid.Row="1"  Name="_frame" NavigationUIVisibility="Hidden" Content="{Binding MainWindowPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
     </Grid>
 </Controls:MetroWindow>

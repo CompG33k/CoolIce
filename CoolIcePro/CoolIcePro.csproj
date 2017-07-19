@@ -200,6 +200,7 @@
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\CoolIceProHelper.cs" />
     <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\SqliteDatabase.cs" />
     <Compile Include="ProjectManager.cs" />
@@ -209,6 +210,7 @@
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\InsertInvoiceViewModel.cs" />
     <Compile Include="ViewModels\InvoicesViewModel.cs" />
+    <Compile Include="ViewModels\IPageViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Views\AccountPayables.xaml.cs">
       <DependentUpon>AccountPayables.xaml</DependentUpon>

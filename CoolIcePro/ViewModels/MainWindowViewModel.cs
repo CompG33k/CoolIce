@@ -12,10 +12,38 @@ namespace CoolIcePro.ViewModels
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
+        string _searchText;
         System.Windows.Controls.Page mainWindowPage;
         ICommand listViewSelectionChangedCommand;
-
-        public event PropertyChangedEventHandler PropertyChanged;        
+        ICommand enterKeyPressedCommand;
+      
+        public event PropertyChangedEventHandler PropertyChanged;
+        public System.Windows.Controls.Page MainWindowPage
+        {
+            get { return mainWindowPage; }
+            set
+            {
+                if (mainWindowPage.Equals(value))
+                    return;
+                mainWindowPage = value;
+                OnPropertyChanged("MainWindowPage");
+            }
+        }
+        public string SearchText
+        {
+            set
+            {
+                if (_searchText != value)
+                {
+                    _searchText = value;
+                    OnPropertyChanged("SearchText");
+                }
+            }
+            get
+            {
+                return _searchText;
+            }
+        }
      
         public MainWindowViewModel()
         {
@@ -32,7 +60,6 @@ namespace CoolIcePro.ViewModels
                         args =>
                         {
                             var pageSelectedTitle = GetPageSelectedTitle(args);
-                            
                             if (MainWindowPage.Title == pageSelectedTitle)
                                     return;
 
@@ -51,19 +78,40 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public System.Windows.Controls.Page MainWindowPage
+        public ICommand EnterKeyPressedCommand
         {
-            get { return mainWindowPage; }
-            set
+            get
             {
-                if (mainWindowPage.Equals(value))
-                    return;
-                mainWindowPage = value;
-                OnPropertyChanged("MainWindowPage");
+                    if (enterKeyPressedCommand == null)
+                    {
+                        enterKeyPressedCommand = new RelayCommand<CoolIcePro.Models.IModel>(
+                            args =>
+                            {
+                                if (string.IsNullOrWhiteSpace(SearchText))
+                                    return;
+                                var pageName = args.GetType().Name;
+                                DataGridSearchLogic(pageName, args);
+                                System.Windows.MessageBox.Show("Enter Key Pressed");
+                            });
+                    }
+                return enterKeyPressedCommand;
             }
         }
 
-        private static string GetPageSelectedTitle(SelectionChangedEventArgs args)
+        private void DataGridSearchLogic(string pageName, CoolIcePro.Models.IModel args)
+        {
+            int i = 0;
+        }
+      
+        public void OnPropertyChanged(string propertyName)
+        {
+            if (this.PropertyChanged != null)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        private static string GetPageSelectedTitle(System.Windows.Controls.SelectionChangedEventArgs args)
         {
             var sender = args.Source as ListView;
             var l = sender as ListView;
@@ -73,15 +121,6 @@ namespace CoolIcePro.ViewModels
             var label = sp.Children[1] as Label;
 
             return label.Content as string;
-        }
-     
-
-        public void OnPropertyChanged(string propertyName)
-        {
-            if (this.PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
         }
     }
 }

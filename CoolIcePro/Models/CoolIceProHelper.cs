@@ -180,7 +180,7 @@ namespace CoolIcePro.Models
             }
             return _list;
         }
-        internal IEnumerable GetInvoices()
+        internal IEnumerable<Invoice> GetInvoices()
         {
             //select strftime('%m/%d/%Y',substr(colName,0,20)) from tablename
 
