@@ -36,7 +36,7 @@ namespace CoolIcePro.ViewModels
         
         private ICommand insertButtonClicked;
         private ICommand rowDoubleClickCommand;
-        private ICommand invoiceDetailMenuItemClickCommand;
+        private ICommand invoiceMenuItemClickCommand;
         
         IEnumerable<CoolIcePro.Models.Contact> contacts;
         IEnumerable<string> states;
@@ -312,34 +312,42 @@ namespace CoolIcePro.ViewModels
             {
                 if (rowDoubleClickCommand == null)
                 {
-                    rowDoubleClickCommand = new RelayCommand<Models.Invoice>(
-                        sender =>
+                    rowDoubleClickCommand = new RelayCommand<Models.IModel>(
+                        selectedItem =>
                         {
-                            var inv = sender as Models.Invoice;
-                            System.Windows.MessageBox.Show(string.Format("VM Invoice Id: {0}\nClicked",inv.Id));
+                            var invoice = selectedItem as Models.Invoice;
+                            if (invoice == null)
+                                return;
+
+                            var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
+                            p.Show();
                         });
                 }
                 return rowDoubleClickCommand;
             }
         }
-        public ICommand InvoiceDetailMenuItemClickCommand
+
+        public ICommand InvoiceMenuItemClickCommand
         {
             get
             {
-                if (invoiceDetailMenuItemClickCommand == null)
+                if (invoiceMenuItemClickCommand == null)
                 {
-                    invoiceDetailMenuItemClickCommand = new RelayCommand<Models.Invoice>(
-                        sender =>
+                    invoiceMenuItemClickCommand = new RelayCommand<Models.IModel>(
+                        selectedItem =>
                         {
-                            var inv = sender as Models.Invoice;
-                            if(inv != null)
-                                System.Windows.MessageBox.Show(string.Format("VM Invoice Detail Id: {0}\nClicked",inv.Id));
+                            var invoice = selectedItem as Models.Invoice;
+                            if (invoice == null)
+                                return;
+
+                            var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
+                            p.Show();
                         });
                 }
-                return invoiceDetailMenuItemClickCommand;
+                return invoiceMenuItemClickCommand;
             }
         }
-  
+    
      
         public void OnPropertyChanged(string propertyName)
         {

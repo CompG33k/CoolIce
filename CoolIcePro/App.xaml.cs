@@ -13,5 +13,8 @@ namespace CoolIcePro
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+        }
     }
 }

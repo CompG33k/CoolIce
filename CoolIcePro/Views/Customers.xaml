@@ -9,20 +9,21 @@
       mc:Ignorable="d" 
       FontSize="14"
       d:DesignHeight="300" d:DesignWidth="300"
+      d:DataContext="{d:DesignInstance VM:CustomersViewModel, IsDesignTimeCreatable=False}"
 	Title="Customers">
     <Page.DataContext>
         <VM:CustomersViewModel/>
     </Page.DataContext>
     <Grid>
-        <DataGrid  Name="_dataGrid"  GridLinesVisibility="All" IsReadOnly="True" ItemsSource="{Binding List}">
+        <DataGrid  Name="_dataGrid"  GridLinesVisibility="All" IsReadOnly="True" ItemsSource="{Binding List}"  SelectedItem="{Binding IModel, Mode=TwoWay}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <cmd:EventToCommand Command="{Binding MouseDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />
                 </i:EventTrigger>
             </i:Interaction.Triggers>
             <DataGrid.ContextMenu>
-                <ContextMenu >
-                    <MenuItem Header="Customer Detail" Command="{Binding CustomerMenuItemClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}" />
+                <ContextMenu> 
+                    <MenuItem Header="Customer Detail" Command="{Binding CustomerMenuItemClickCommand}" CommandParameter="{Binding PlacementTarget.SelectedItem,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ContextMenu}}}" />
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>

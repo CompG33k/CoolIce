@@ -15,7 +15,7 @@ namespace CoolIcePro.ViewModels
         ICommand mouseDoubleClickCommand;
         ICommand customerMenuItemClickCommand;
         IEnumerable<Models.IModel> _list;
-        
+
         public IEnumerable<Models.IModel> List
         {
             get
@@ -24,7 +24,6 @@ namespace CoolIcePro.ViewModels
                 if (_list == null || _list != tempList)
                 {
                     _list = tempList;
-                    //OnPropertyChanged("CustomerList");
                 }
                 return _list;
             }
@@ -44,12 +43,15 @@ namespace CoolIcePro.ViewModels
             {
                 if (mouseDoubleClickCommand == null)
                 {
-                    mouseDoubleClickCommand = new RelayCommand<Models.Company>(
-                        item =>
+                    mouseDoubleClickCommand = new RelayCommand<Models.IModel>(
+                        selectedItem =>
                         {
-                            var company = item as Models.Company;
-                            var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
-                            p.Show();
+                            var company = selectedItem as Models.Company;
+                            if (company != null)
+                            {
+                                var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
+                                p.Show();
+                            }
                         });
                 }
                 return mouseDoubleClickCommand;
@@ -61,17 +63,15 @@ namespace CoolIcePro.ViewModels
             {
                 if (customerMenuItemClickCommand == null)
                 {
-                    customerMenuItemClickCommand = new RelayCommand<Object>(
-                        sender =>
+                    customerMenuItemClickCommand = new RelayCommand<Models.IModel>(
+                        selectedItem =>
                         {
-                            var inv = sender as Models.Invoice;
-                            if (inv != null)
+                            var company = selectedItem as Models.Company;
+                            if (company != null)
                             {
-                                System.Windows.MessageBox.Show(string.Format("CustomerMenuItemClickCommand id: {0}\nDouble row Clicked", inv.Id));
+                                var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
+                                p.Show();
                             }
-                            //var company = item as Models.Company;
-                            //var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
-                            //p.Show();
                         });
                 }
                 return customerMenuItemClickCommand;

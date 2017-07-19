@@ -156,6 +156,38 @@ namespace CoolIcePro.Models
             }
             return _list;
         }
+        public Models.Company GetCompany(long Id)
+        {
+            Models.Company company = new Company();
+            using(DataTable table = this.GetDataTable(string.Format("select * from company where id = '{0}'",Id)))
+            {
+                //var buffer2 = table["Company"];
+                using (DataTableReader dtr = table.CreateDataReader())
+                {
+                    
+                    while (dtr.Read())
+                    {
+                        company = new Models.Company()
+                        {
+                            Id = (long)dtr["Id"],
+                            CompanyName = dtr["CompanyName"] as string,
+                            Address = dtr["Address"] as string,
+                            AddressExt = dtr["AddressExt"] as string,
+                            City = dtr["City"] as string,
+                            State = dtr["State"] as string,
+                            Zipcode = dtr["Zipcode"] as string,
+                            Telephone = dtr["Telephone"] as string,
+                            Fax = dtr["Fax"] as string,
+                            Email = dtr["Email"] as string,
+                            Website = dtr["Website"] as string
+
+                        };
+                    }
+                }
+            }
+            
+            return company;
+        }
         internal IEnumerable<Invoice> GetCustomerInvoices(long companyId)
         {
 

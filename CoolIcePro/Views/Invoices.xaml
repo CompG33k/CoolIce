@@ -9,6 +9,7 @@
       mc:Ignorable="d" 
       FontSize="16"
       d:DesignHeight="300" d:DesignWidth="300"
+      d:DataContext="{d:DesignInstance VM:InvoicesViewModel, IsDesignTimeCreatable=False}"
 	Title="Invoices">
     <Page.DataContext>
         <VM:InvoicesViewModel/>
@@ -22,8 +23,8 @@
             </i:Interaction.Triggers>
             <DataGrid.ContextMenu>
                 <ContextMenu >
-                    <MenuItem Header="Customer Detail" Command="{Binding CustomerMenuItemClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}" />
-                    <MenuItem Header="Invoice Detail" Command="{Binding InvoiceMenuItemClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}" />
+                    <MenuItem Header="Customer Detail" Command="{Binding CustomerMenuItemClickCommand}" CommandParameter="{Binding PlacementTarget.SelectedItem,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ContextMenu}}}" />
+                    <MenuItem Header="Invoice Detail" Command="{Binding InvoiceMenuItemClickCommand}" CommandParameter="{Binding PlacementTarget.SelectedItem,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ContextMenu}}}" />
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>

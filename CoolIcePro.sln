@@ -12,22 +12,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{05D0B0
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEnterpriseUserControls", "WpfEnterpriseUserControls\WpfEnterpriseUserControls.csproj", "{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
 		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Debug|x86.ActiveCfg = Debug|x86
+		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Debug|x86.Build.0 = Debug|x86
 		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5862C51-FAC1-4A59-BAF5-82F51DB00FC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Release|x86.ActiveCfg = Release|x86
+		{A8474DBE-664E-43A8-A29D-EC0A29E911CC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
