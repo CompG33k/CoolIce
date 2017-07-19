@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoolIcePro.Models
 {
-    interface IModel
+    public interface IModel
     {
         long Id { get; set; }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CoolIcePro.ViewModels
 {
-    interface IPageViewModel
+    public interface IPageViewModel
     {
         IEnumerable<Models.IModel> List { get; set; }
     }
