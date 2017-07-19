@@ -15,7 +15,7 @@
         <VM:InvoicesViewModel/>
     </Page.DataContext>
     <Grid>
-        <DataGrid  Name="_dataGrid" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding List}">
+        <DataGrid  Name="_dataGrid" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding List}" SelectedItem="{Binding IModel, Mode=TwoWay}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <cmd:EventToCommand Command="{Binding RowDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />

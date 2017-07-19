@@ -9,5 +9,7 @@ namespace CoolIcePro.ViewModels
     public interface IPageViewModel
     {
         IEnumerable<Models.IModel> List { get; set; }
+        void FilterList(string searchText);
+        void ResetList();
     }
 }

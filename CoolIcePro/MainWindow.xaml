@@ -30,7 +30,7 @@
                     <KeyBinding Command="{Binding EnterKeyPressedCommand}" CommandParameter="{Binding MainWindowPage.DataContext}" Key="Enter" />
                 </TextBox.InputBindings>
             </TextBox>
-            <Button Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource SearchIcon}" HorizontalAlignment="Left" Margin="1" ToolTip="Expand/Compress"/>
+            <Button Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource SearchIcon}" HorizontalAlignment="Left" Margin="1" ToolTip="Expand/Compress" Command="{Binding EnterKeyPressedCommand}" CommandParameter="{Binding MainWindowPage.DataContext}"/>
         </StackPanel>
         <Separator Name="MySeparator" Height="1" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Black" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
         <Label Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"  Background="#FF252121"/>

@@ -18,16 +18,15 @@ namespace CoolIcePro.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public InvoicesViewModel()
+        {
+            _list = ProjectManager.Instance.CoolIceProDBHelper.GetAllInvoices();
+        }
+
         public IEnumerable<Models.IModel> List
         {
             get
             {
-                var list = ProjectManager.Instance.CoolIceProDBHelper.GetInvoices();
-
-                if (_list == null || _list != list)
-                {
-                    _list = list;
-                }
                 return _list;
             }
             set
@@ -106,7 +105,16 @@ namespace CoolIcePro.ViewModels
                 return invoiceMenuItemClickCommand;
             }
         }
-        
+
+        public void FilterList(string searchText)
+        {
+            List = ProjectManager.Instance.CoolIceProDBHelper.SearchInvoices(searchText.Trim());
+        }
+
+        public void ResetList()
+        {
+            List = ProjectManager.Instance.CoolIceProDBHelper.GetAllInvoices();
+        }
         public void OnPropertyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)

@@ -84,24 +84,26 @@ namespace CoolIcePro.ViewModels
             {
                     if (enterKeyPressedCommand == null)
                     {
-                        enterKeyPressedCommand = new RelayCommand<CoolIcePro.Models.IModel>(
-                            args =>
+                        enterKeyPressedCommand = new RelayCommand<CoolIcePro.ViewModels.IPageViewModel>(
+                            iViewModel =>
                             {
                                 if (string.IsNullOrWhiteSpace(SearchText))
+                                {
+                                    if (iViewModel != null)
+                                        iViewModel.ResetList();
                                     return;
-                                var pageName = args.GetType().Name;
-                                DataGridSearchLogic(pageName, args);
-                                System.Windows.MessageBox.Show("Enter Key Pressed");
+                                }
+                                if (iViewModel == null)
+                                    return;
+                                if (iViewModel.List == null)
+                                    return;
+
+                                iViewModel.FilterList(SearchText);
                             });
                     }
                 return enterKeyPressedCommand;
             }
-        }
-
-        private void DataGridSearchLogic(string pageName, CoolIcePro.Models.IModel args)
-        {
-            int i = 0;
-        }
+        }     
       
         public void OnPropertyChanged(string propertyName)
         {
@@ -110,7 +112,7 @@ namespace CoolIcePro.ViewModels
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
+    
         private static string GetPageSelectedTitle(System.Windows.Controls.SelectionChangedEventArgs args)
         {
             var sender = args.Source as ListView;

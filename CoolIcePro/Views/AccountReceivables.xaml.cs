@@ -23,7 +23,7 @@ namespace CoolIcePro.Views
         public AccountReceivables()
         {
             InitializeComponent();
-            _dataGrid.ItemsSource = ProjectManager.Instance.CoolIceProDBHelper.GetInvoices();
+            _dataGrid.ItemsSource = ProjectManager.Instance.CoolIceProDBHelper.GetAllInvoices();
         }
     }
 }

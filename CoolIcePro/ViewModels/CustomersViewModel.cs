@@ -15,16 +15,15 @@ namespace CoolIcePro.ViewModels
         ICommand mouseDoubleClickCommand;
         ICommand customerMenuItemClickCommand;
         IEnumerable<Models.IModel> _list;
+        public CustomersViewModel()
+        {
+            _list = ProjectManager.Instance.CoolIceProDBHelper.GetAllCompanies(); 
+        }
 
         public IEnumerable<Models.IModel> List
         {
             get
             {
-                var tempList = ProjectManager.Instance.CoolIceProDBHelper.GetAllCompanies();
-                if (_list == null || _list != tempList)
-                {
-                    _list = tempList;
-                }
                 return _list;
             }
             set
@@ -77,6 +76,17 @@ namespace CoolIcePro.ViewModels
                 return customerMenuItemClickCommand;
             }
         }
+        public void FilterList(string searchText)
+        {
+
+            List = ProjectManager.Instance.CoolIceProDBHelper.SearchCompanies(searchText.Trim());       
+        }
+     
+        public void ResetList()
+        {
+            List = ProjectManager.Instance.CoolIceProDBHelper.GetAllCompanies();
+        }
+
         public void OnPropertyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)
