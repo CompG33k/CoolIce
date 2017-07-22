@@ -15,9 +15,10 @@ namespace CoolIcePro.ViewModels
         ICommand mouseDoubleClickCommand;
         ICommand customerMenuItemClickCommand;
         IEnumerable<Models.IModel> _list;
+
         public CustomersViewModel()
         {
-            _list = ProjectManager.Instance.CoolIceProDBHelper.GetAllCompanies(); 
+            _list = ProjectManager.Instance.CoolIceProDBHelper.GetAllCustomers(); 
         }
 
         public IEnumerable<Models.IModel> List
@@ -45,7 +46,7 @@ namespace CoolIcePro.ViewModels
                     mouseDoubleClickCommand = new RelayCommand<Models.IModel>(
                         selectedItem =>
                         {
-                            var company = selectedItem as Models.Company;
+                            var company = selectedItem as Models.Customer;
                             if (company != null)
                             {
                                 var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
@@ -65,7 +66,7 @@ namespace CoolIcePro.ViewModels
                     customerMenuItemClickCommand = new RelayCommand<Models.IModel>(
                         selectedItem =>
                         {
-                            var company = selectedItem as Models.Company;
+                            var company = selectedItem as Models.Customer;
                             if (company != null)
                             {
                                 var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
@@ -78,20 +79,19 @@ namespace CoolIcePro.ViewModels
         }
         public void FilterList(string searchText)
         {
-
-            List = ProjectManager.Instance.CoolIceProDBHelper.SearchCompanies(searchText.Trim());       
+            List = ProjectManager.Instance.CoolIceProDBHelper.SearchCustomers(searchText.Trim());       
         }
      
         public void ResetList()
         {
-            List = ProjectManager.Instance.CoolIceProDBHelper.GetAllCompanies();
+            List = ProjectManager.Instance.CoolIceProDBHelper.GetAllCustomers();
         }
 
         public void OnPropertyChanged(string propertyName)
         {
-            if (this.PropertyChanged != null)
+            if (PropertyChanged != null)
             {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }

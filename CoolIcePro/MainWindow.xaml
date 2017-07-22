@@ -25,6 +25,8 @@
         
         <TextBlock Grid.Column="2" Grid.Row="0" Text="Double Click a company from dropdown" VerticalAlignment="Center" FontSize="14" FontWeight="bold" Margin="5"/>
         <StackPanel Grid.Column="3" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,0,0,0">
+            <Button Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource AddCustomerButton}" HorizontalAlignment="Left" Margin="1" ToolTip="New Customer" Command="{Binding NewCustomerPressedCommand}" />
+            <Label Width="15" />
             <TextBox Width="180" FontSize="14" Height="30" Background="ghostwhite" VerticalAlignment="Top" TextAlignment="right" Margin="1" Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}">
                 <TextBox.InputBindings>
                     <KeyBinding Command="{Binding EnterKeyPressedCommand}" CommandParameter="{Binding MainWindowPage.DataContext}" Key="Enter" />
@@ -32,7 +34,7 @@
             </TextBox>
             <Button Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource SearchIcon}" HorizontalAlignment="Left" Margin="1" ToolTip="Expand/Compress" Command="{Binding EnterKeyPressedCommand}" CommandParameter="{Binding MainWindowPage.DataContext}"/>
         </StackPanel>
-        <Separator Name="MySeparator" Height="1" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Black" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
+        <Separator Height="1" Width="Auto" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Background="Black" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3"/>
         <Label Grid.Column="0" Grid.Row="0" Grid.RowSpan="2"  Background="#FF252121"/>
         <Button Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Width="35" Height="30" BorderThickness="1" BorderBrush="Transparent"  Background="Transparent" Content="{DynamicResource HamburgerIcon}" HorizontalAlignment="Left" Click="GroupButtonClickedEventHandler"/>
         <ListView Grid.Column="0" Grid.Row="1" Margin="0"  Name="_listView" FontSize="15" FontFamily="Bold" Background="Transparent"  SelectionMode="Single" >

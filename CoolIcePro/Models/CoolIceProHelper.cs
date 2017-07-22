@@ -16,25 +16,25 @@ namespace CoolIcePro.Models
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="company"></param>
+        /// <param name="customer"></param>
         /// <returns></returns>
-        public bool InsertCompany(Company company)
+        public bool InsertCustomer(Customer customer)
         {
             try
             {
                 return Insert("'Company'",
                        new Dictionary<string, string>()
                     {
-                        {"CompanyName" ,company.CompanyName},
-                        {"Address" ,company.Address},
-                        {"AddressExt" ,company.AddressExt},
-                        {"City" ,company.City},
-                        {"State" ,company.State},
-                        {"Zipcode" ,company.Zipcode},
-                        {"Telephone" ,company.Telephone},
-                        {"Fax" ,company.Fax},
-                        {"Email" ,company.Email},
-                        {"Website" ,company.Website}
+                        {"CompanyName" ,customer.CompanyName},
+                        {"Address" ,customer.Address},
+                        {"AddressExt" ,customer.AddressExt},
+                        {"City" ,customer.City},
+                        {"State" ,customer.State},
+                        {"Zipcode" ,customer.Zipcode},
+                        {"Telephone" ,customer.Telephone},
+                        {"Fax" ,customer.Fax},
+                        {"Email" ,customer.Email},
+                        {"Website" ,customer.Website}
                     });
             }
             catch (Exception ex)
@@ -50,7 +50,7 @@ namespace CoolIcePro.Models
         /// <param name="contact"></param>
         /// <param name="foreignKey"></param>
         /// <returns></returns>
-        public bool InserContact(Contact contact, long foreignKey)
+        public bool InserCustomerContact(Contact contact, long foreignKey)
         {
             try
             {
@@ -76,35 +76,35 @@ namespace CoolIcePro.Models
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="company"></param>
+        /// <param name="customer"></param>
         /// <returns></returns>
-        public long GetContactForeignKey(Company company)
+        public long GetCustomerContactForeignKey(Customer customer)
         {
             long foreignKey = ExecuteScalar(string.Format("Select Id from 'Company' where CompanyName = '{0}' AND Address ='{1}' AND AddressExt = '{2}' AND City = '{3}' AND Telephone = '{4}' AND Fax = '{5}' AND Email = '{6}' AND Website = '{7}'",
-                   company.CompanyName,
-                   company.Address,
-                   company.AddressExt,
-                   company.City,
-                   company.State,
-                   company.Zipcode,
-                   company.Telephone,
-                   company.Fax,
-                   company.Email,
-                   company.Website
+                   customer.CompanyName,
+                   customer.Address,
+                   customer.AddressExt,
+                   customer.City,
+                   customer.State,
+                   customer.Zipcode,
+                   customer.Telephone,
+                   customer.Fax,
+                   customer.Email,
+                   customer.Website
                 ));
             return foreignKey;
         }
 
      
-        public IEnumerable<Company> GetAllCompanies()
+        public IEnumerable<Customer> GetAllCustomers()
         {
-            List<Company> list = new List<Company>();
+            List<Customer> list = new List<Customer>();
             using(DataTable table = this.GetDataTable("select * from company"))
             using (DataTableReader dtr = table.CreateDataReader())
             {
                 while (dtr.Read())
                 {
-                    list.Add(new Company()
+                    list.Add(new Customer()
                     {
                         Id = (long)dtr["Id"],
                         CompanyName = dtr["CompanyName"] as string,
@@ -123,15 +123,15 @@ namespace CoolIcePro.Models
             }
             return list;
         }
-        public Models.Company GetCompany(long Id)
+        public Models.Customer GetCustomer(long Id)
         {
-            Models.Company company = new Company();
+            Models.Customer company = new Customer();
             using(DataTable table = this.GetDataTable(string.Format("select * from company where id = '{0}'",Id)))
             using (DataTableReader dtr = table.CreateDataReader())
             {
                 while (dtr.Read())
                 {
-                    company = new Models.Company()
+                    company = new Models.Customer()
                     {
                             Id = (long)dtr["Id"],
                             CompanyName = dtr["CompanyName"] as string,
@@ -151,15 +151,15 @@ namespace CoolIcePro.Models
             return company;
         }
 
-        public IEnumerable<Models.Company> SearchCompanies(string searchText)
+        public IEnumerable<Models.Customer> SearchCustomers(string searchText)
         {
-            List<Models.Company> list = new List<Models.Company>();
+            List<Models.Customer> list = new List<Models.Customer>();
             using (DataTable table = this.GetDataTable(string.Format("select * from company where CompanyName like '%{0}%' or Address like '%{0}%' or AddressExt like '%{0}%' or City like '%{0}%' or State like '%{0}%'", searchText)))
             using (DataTableReader dtr = table.CreateDataReader())
             {
                 while (dtr.Read())
                 {
-                    list.Add( new Models.Company()
+                    list.Add( new Models.Customer()
                     {
                         Id = (long)dtr["Id"],
                         CompanyName = dtr["CompanyName"] as string,

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using CoolIcePro.Models;
 using System.Windows;
 using CoolIcePro.Models;
+using CoolIcePro.Controls;
 
 namespace CoolIcePro
 {
@@ -13,9 +14,11 @@ namespace CoolIcePro
     {
         private static ProjectManager _instance;
         private readonly CoolIceProHelper _coolIceProDBHelper;
+        private List<PopupWindow> _windowsOpen;
 
         private ProjectManager() {
             _coolIceProDBHelper = new CoolIceProHelper();
+            _windowsOpen = new List<PopupWindow>();
         }
 
         public static ProjectManager Instance
@@ -33,7 +36,29 @@ namespace CoolIcePro
             get { return _coolIceProDBHelper; }
         }
 
-        public Company CurrentCompany { get; set; } 
+        public Customer CurrentCompany { get; set; }
+              
+
+        public bool RemoveOpenWindow(string Id)
+        {
+            var window = _windowsOpen.FirstOrDefault(x => x.Tag.ToString().Equals(Id));
+            if (window != null)
+            {
+                return _windowsOpen.Remove(window);
+            }
+            return false;
+        }
+
+        public bool AddWindow(PopupWindow newWindow)
+        {
+            if (_windowsOpen.Count > 5)
+            {
+                MessageBox.Show("Too many windows open, close some windows.");
+                return false;
+            }
+            _windowsOpen.Add(newWindow);
+            return true;
+        }
 
         public string[] States
         {

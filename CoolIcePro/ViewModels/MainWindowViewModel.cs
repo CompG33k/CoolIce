@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight.Command;
+﻿using CoolIcePro.Views;
+using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +17,7 @@ namespace CoolIcePro.ViewModels
         System.Windows.Controls.Page mainWindowPage;
         ICommand listViewSelectionChangedCommand;
         ICommand enterKeyPressedCommand;
-      
+        ICommand newCustomerPressedCommand;
         public event PropertyChangedEventHandler PropertyChanged;
         public System.Windows.Controls.Page MainWindowPage
         {
@@ -82,26 +83,44 @@ namespace CoolIcePro.ViewModels
         {
             get
             {
-                    if (enterKeyPressedCommand == null)
-                    {
-                        enterKeyPressedCommand = new RelayCommand<CoolIcePro.ViewModels.IPageViewModel>(
-                            iViewModel =>
-                            {
-                                if (string.IsNullOrWhiteSpace(SearchText))
-                                {
-                                    if (iViewModel != null)
-                                        iViewModel.ResetList();
-                                    return;
-                                }
-                                if (iViewModel == null)
-                                    return;
-                                if (iViewModel.List == null)
-                                    return;
+                if (enterKeyPressedCommand == null)
+                {
+                    enterKeyPressedCommand = new RelayCommand<CoolIcePro.ViewModels.IPageViewModel>(
+                        iViewModel =>
+                        {
+                        if (string.IsNullOrWhiteSpace(SearchText))
+                        {
+                            if (iViewModel != null)
+                            iViewModel.ResetList();
+                            return;
+                        }
+                        if (iViewModel == null)
+                            return;
+                        if (iViewModel.List == null)
+                            return;
 
-                                iViewModel.FilterList(SearchText);
-                            });
-                    }
+                        iViewModel.FilterList(SearchText);
+                        });
+                }
                 return enterKeyPressedCommand;
+            }
+        }
+
+        public ICommand NewCustomerPressedCommand
+        {
+            get
+            {
+                if (newCustomerPressedCommand == null)
+                {
+                    newCustomerPressedCommand = new RelayCommand(
+                        () =>
+                        {
+                            InsertCustomerViewModel ivm = new InsertCustomerViewModel(685, 625, "New Customer", new Views.InsertCustomer());
+                            Windows.GenericWindow gw = new Windows.GenericWindow(ivm);
+                            gw.ShowDialog();
+                        });
+                }
+                return newCustomerPressedCommand;
             }
         }     
       

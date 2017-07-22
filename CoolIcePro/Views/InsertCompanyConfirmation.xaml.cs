@@ -39,25 +39,25 @@ namespace CoolIcePro.Views
                 var button = sender as Button;
                 if(button.Tag.ToString() == "Confirm"){
 
-                    Company company = GetCompanyFromUI();
+                    Models.Customer customer = GetCustomerInformationFromUI();
 
-                    if(!ProjectManager.Instance.CoolIceProDBHelper.InsertCompany(company))
+                    if(!ProjectManager.Instance.CoolIceProDBHelper.InsertCustomer(customer))
                         MessageBox.Show("NO INSERT PERFORMED");
 
-                    long foreignKey = ProjectManager.Instance.CoolIceProDBHelper.GetContactForeignKey(company);
+                    long foreignKey = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContactForeignKey(customer);
 
                     if (foreignKey == null)
                         MessageBox.Show("No Foreign Key");
                     
                     Contact contact =  GetContactUI();
-                    ProjectManager.Instance.CoolIceProDBHelper.InserContact(contact,foreignKey);
+                    ProjectManager.Instance.CoolIceProDBHelper.InserCustomerContact(contact,foreignKey);
                 }
 
                 MainWindow w = Window.GetWindow(this) as MainWindow;
                 var g = w.Content as Grid;
-                var page = w._frame.Content as InsertCompany;
+                var page = w._frame.Content as InsertCustomer;
                 g.IsEnabled = true;
-                page._popup.IsOpen = false;
+  //===              page._popup.IsOpen = false;
             }
             catch (DbEntityValidationException dbEx){
                 foreach (var validationErrors in dbEx.EntityValidationErrors){
@@ -125,26 +125,26 @@ namespace CoolIcePro.Views
             return contact;
         }
 
-        private Company GetCompanyFromUI()
+        private Models.Customer GetCustomerInformationFromUI()
         {
-            Company company = new Company();
-            company.CompanyName = _companyNameLabel.Content as string;
-            company.Address = _addressLabel.Content as string;
-            company.AddressExt = _addressExtLabel.Content as string;
-            company.City = _cityLabel.Content as string;
-            company.State = _stateLabel.Content as string;
-            company.Zipcode = _zipcodeLabel.Content as string;
-            company.Telephone = _telephoneLabel.Content as string;
-            company.Fax = _faxLabel.Content as string;
-            company.Email = _emailLabel.Content as string;
-            company.Website = _websiteLabel.Content as string;
+            Models.Customer customer = new Models.Customer();
+            customer.CompanyName = _companyNameLabel.Content as string;
+            customer.Address = _addressLabel.Content as string;
+            customer.AddressExt = _addressExtLabel.Content as string;
+            customer.City = _cityLabel.Content as string;
+            customer.State = _stateLabel.Content as string;
+            customer.Zipcode = _zipcodeLabel.Content as string;
+            customer.Telephone = _telephoneLabel.Content as string;
+            customer.Fax = _faxLabel.Content as string;
+            customer.Email = _emailLabel.Content as string;
+            customer.Website = _websiteLabel.Content as string;
 
-            if (company.CompanyName == null || company.Address == null || company.Zipcode == null || company.Telephone == null)
+            if (customer.CompanyName == null || customer.Address == null || customer.Zipcode == null || customer.Telephone == null)
             {
                 MessageBox.Show("Not all fields are fill in!");
                 return null;
             }
-            return company;
+            return customer;
         }
     }
 }

@@ -95,7 +95,7 @@ namespace CoolIcePro.ViewModels
             {
                 if (city != value)
                 {
-                    companyName = value;
+                    city = value;
                     OnPropertyChanged("City");
                 }
             }
@@ -278,7 +278,7 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public CompanyViewModel(CoolIcePro.Models.Company company)
+        public CompanyViewModel(CoolIcePro.Models.Customer company)
         {
             Id = company.Id;
             invoices = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id);
@@ -320,7 +320,7 @@ namespace CoolIcePro.ViewModels
                                 return;
 
                             var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
-                            p.Show();
+                            p.ShowDialog();
                         });
                 }
                 return rowDoubleClickCommand;
@@ -341,13 +341,12 @@ namespace CoolIcePro.ViewModels
                                 return;
 
                             var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
-                            p.Show();
+                            p.ShowDialog();
                         });
                 }
                 return invoiceMenuItemClickCommand;
             }
-        }
-    
+        }    
      
         public void OnPropertyChanged(string propertyName)
         {
@@ -356,8 +355,5 @@ namespace CoolIcePro.ViewModels
                 this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
-
-
     }
 }

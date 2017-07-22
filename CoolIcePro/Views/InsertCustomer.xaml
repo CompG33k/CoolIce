@@ -1,4 +1,4 @@
-﻿<Page x:Class="CoolIcePro.Views.InsertCompany"
+﻿<Page x:Class="CoolIcePro.Views.InsertCustomer"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       xmlns:local="clr-namespace:CoolIcePro.Views"
       d:DesignHeight="825" d:DesignWidth="920"
-	    Title="InsertRecord">
+	    Title="InsertCompany">
     <Page.Resources>
    
     </Page.Resources>
@@ -16,15 +16,15 @@
             <RowDefinition Height="45"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Popup Grid.Row="0" Name="_popup" Grid.RowSpan="2" PlacementTarget="{Binding ElementName=_addressExtTxtBox}" Height="600" Width="500" Opened="PopupOpenedEventHandler" >
+        <!--<Popup Grid.Row="0" Name="_popup" Grid.RowSpan="2" PlacementTarget="{Binding ElementName=_addressExtTxtBox}" Height="600" Width="500" Opened="PopupOpenedEventHandler" >
             <Frame Name="_popupFrame"/>
-        </Popup>
+        </Popup>-->
         <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal">
-            <Button Width="95" Content="Save" Click="SaveButtonHanlder"/>
+            <Button Width="95" Content="Save" />
             <!--<Button Width="95" Content="Edit"/>
             <Button Width="95" Content="Delete"/>-->
         </StackPanel>
-        <GroupBox Grid.Row="1" Header="Company Information" FontSize="16" Style="{Binding}"  VerticalAlignment="Top" >
+        <GroupBox Grid.Row="1" Header="Customer Information" FontSize="16" Style="{Binding}"  VerticalAlignment="Top" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>

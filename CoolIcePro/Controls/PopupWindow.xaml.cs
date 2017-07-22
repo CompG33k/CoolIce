@@ -30,7 +30,7 @@ namespace CoolIcePro.Controls
         {
             InitializeComponent();
             this.Title = windowTitle;
-            _frame.Navigate(page);
+            _frame.Navigate(page);            
             this.Activate(); 
         }
     }

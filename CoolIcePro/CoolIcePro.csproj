@@ -210,7 +210,7 @@
     <Compile Include="Converters\MainWIndowGridToolBarWidthAdjustConverter.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\CoolIceProHelper.cs" />
-    <Compile Include="Models\Company.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\SqliteDatabase.cs" />
@@ -219,6 +219,9 @@
     <Compile Include="SqlLiteLogic\SQLiteAsync.cs" />
     <Compile Include="ViewModels\CompanyViewModel.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
+    <Compile Include="ViewModels\IGenericPageViewModel.cs" />
+    <Compile Include="ViewModels\IGenericWindowViewModel.cs" />
+    <Compile Include="ViewModels\InsertCustomerViewModel.cs" />
     <Compile Include="ViewModels\InsertInvoiceViewModel.cs" />
     <Compile Include="ViewModels\InvoicesViewModel.cs" />
     <Compile Include="ViewModels\IPageViewModel.cs" />
@@ -238,14 +241,17 @@
     <Compile Include="Views\InsertCompanyConfirmation.xaml.cs">
       <DependentUpon>InsertCompanyConfirmation.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\InsertCompany.xaml.cs">
-      <DependentUpon>InsertCompany.xaml</DependentUpon>
+    <Compile Include="Views\InsertCustomer.xaml.cs">
+      <DependentUpon>InsertCustomer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\InsertInvoice.xaml.cs">
       <DependentUpon>InsertInvoice.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Invoices.xaml.cs">
       <DependentUpon>Invoices.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\GenericWindow.xaml.cs">
+      <DependentUpon>GenericWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="Controls\HeaderControl.xaml">
       <SubType>Designer</SubType>
@@ -295,7 +301,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\InsertCompany.xaml">
+    <Page Include="Views\InsertCustomer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -304,6 +310,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Invoices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\GenericWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
