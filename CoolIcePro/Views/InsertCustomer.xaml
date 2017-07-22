@@ -6,24 +6,19 @@
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns:VM="clr-namespace:CoolIcePro.ViewModels"
       mc:Ignorable="d" 
+      FontSize="14"
       d:DesignHeight="825" d:DesignWidth="920">
     <Page.DataContext>
         <VM:InsertCustomerViewModel/>
     </Page.DataContext>
     <Grid Background="White">    
         <Grid.RowDefinitions>
-            <RowDefinition Height="45"/>
+            <RowDefinition Height="35"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <!--<Popup Grid.Row="0" Name="_popup" Grid.RowSpan="2" PlacementTarget="{Binding ElementName=_addressExtTxtBox}" Height="600" Width="500" Opened="PopupOpenedEventHandler" >
-            <Frame Name="_popupFrame"/>
-        </Popup>-->
-        <StackPanel Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Orientation="Horizontal">
-            <Button Width="95" Content="Save" />
-            <!--<Button Width="95" Content="Edit"/>
-            <Button Width="95" Content="Delete"/>-->
-        </StackPanel>
-        <GroupBox Grid.Row="1" Header="Customer Information" FontSize="16" Style="{Binding}"  VerticalAlignment="Top" >
+        <TextBlock  Grid.Row="0" Text="Double Click a company from dropdown" VerticalAlignment="Center"  FontWeight="bold" Margin="5"/>
+        <Button  Grid.Row="0" HorizontalAlignment="Right" Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Margin="1" ToolTip="Save" Content="{DynamicResource SaveIcon}"/>
+        <GroupBox Grid.Row="1" Header="Customer Information" FontSize="16" VerticalAlignment="Top" Style="{Binding}"  >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -58,16 +53,11 @@
                 <TextBox Grid.Row="1" Grid.Column="1" Name="_addressTxtBox" Text="{Binding CustomerAddress}"/>
                 <TextBox Grid.Row="2" Grid.Column="1" Name="_addressExtTxtBox" Text="{Binding CustomerAddressExt}"/>
                 <TextBox Grid.Row="3" Grid.Column="1" Name="_cityTxtBox" Text="{Binding CustomerCity}"/>
-                <ComboBox Grid.Row="4" Grid.Column="1" Name="_stateTxtBox" SelectedIndex="4" SelectedItem="{Binding CustomerState}"/>
+                <ComboBox Grid.Row="4" Grid.Column="1" Name="_stateTxtBox" SelectedIndex="4" SelectedItem="{Binding CustomerState}" ItemsSource="{Binding States}"/>
                 <xctk:MaskedTextBox x:Name="_telephoneTxtBox"  Grid.Row="6" Grid.Column="1" Mask="(000) 000-0000" Text="{Binding CustomerName}"/>
-
                 <xctk:MaskedTextBox Grid.Row="5" Grid.Column="1" x:Name="_zipcodeTxtBox" Mask="00000" Text="{Binding CustomerZipCode}" Margin="5,0,-5,0"/>
                 <xctk:MaskedTextBox Grid.Row="7" Grid.Column="1" x:Name="_faxTxtBox" Mask="(000) 000-0000" Text="{Binding CustomerFax}"/>
-
-                <TextBox Grid.Row="8" Grid.Column="1" Name="_emailTxtBox" Text="{Binding CustomerEmail}">
-                   
-                </TextBox>
-
+                <TextBox Grid.Row="8" Grid.Column="1" Name="_emailTxtBox" Text="{Binding CustomerEmail}"/>
                 <TextBox Grid.Row="9" Grid.Column="1" Name="_websiteTxtBox" Text="{Binding CustomerWebsite}"/>
 
                 <GroupBox Grid.Row="10" Grid.ColumnSpan="2" FontSize="16" Style="{Binding}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Header="Contact Information">
@@ -105,6 +95,5 @@
                 </GroupBox>
             </Grid>  
         </GroupBox>
-       
     </Grid>
 </Page>

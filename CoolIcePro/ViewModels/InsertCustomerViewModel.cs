@@ -24,8 +24,13 @@ namespace CoolIcePro.ViewModels
         string _contactTelephone;
         string _contactCellphone;
         string _contactPosition;
+        IEnumerable<string> _states;
 
         public event PropertyChangedEventHandler PropertyChanged;
+        public InsertCustomerViewModel()
+        {
+            States = ProjectManager.Instance.States;
+        }
 
         public string CustomerName
         {
@@ -259,6 +264,22 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+        public IEnumerable<string> States
+        {
+            get
+            {
+                return _states;
+            }
+            set
+            {
+                if (_states != value)
+                {
+                    _states = value;
+                    OnPropertyChanged("States");
+                }
+            }
+        }
+
         public void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)

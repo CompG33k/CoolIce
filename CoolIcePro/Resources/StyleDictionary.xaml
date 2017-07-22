@@ -111,10 +111,25 @@
         </Grid>
     </Viewbox>
 
-    <Viewbox x:Key="AddCustomerButton">
+    <Viewbox x:Key="AddCustomerIcon">
         <Grid>
             <Grid Width="48" Height="48" Visibility="Collapsed" />
             <Path Data="M12.126984,0L19.872009,0 19.872009,12.128 32,12.128 32,19.872999 19.872009,19.872999 19.872009,31.999 12.126984,31.999 12.126984,19.872999 0,19.872999 0,12.128 12.126984,12.128z" Stretch="Uniform" Fill="#FF000000" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
+                <Path.RenderTransform>
+                    <TransformGroup>
+                        <TransformGroup.Children>
+                            <RotateTransform Angle="0" />
+                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                        </TransformGroup.Children>
+                    </TransformGroup>
+                </Path.RenderTransform>
+            </Path>
+        </Grid>
+    </Viewbox>
+    <Viewbox x:Key="SaveIcon">
+        <Grid>
+            <Grid Width="48" Height="48" Visibility="Collapsed" />
+            <Path Data="M5.4189969,24.678986L5.4189969,27.915009 26.188982,27.915009 26.188982,24.678986z M8.2970601,0.038998604L12.289056,0.038998604 12.289056,8.1850023 8.2970601,8.1850023z M0,0L5.2730013,0 5.2730013,9.7799988 26.188982,9.7799988 26.188982,0 31.653999,0 31.653999,32 0,32z" Stretch="Uniform" Fill="#FF000000" Width="26" Height="26" Margin="0,0,0,0" RenderTransformOrigin="0.5,0.5">
                 <Path.RenderTransform>
                     <TransformGroup>
                         <TransformGroup.Children>
