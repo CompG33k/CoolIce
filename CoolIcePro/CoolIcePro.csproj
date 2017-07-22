@@ -221,6 +221,8 @@
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\IGenericPageViewModel.cs" />
     <Compile Include="ViewModels\IGenericWindowViewModel.cs" />
+    <Compile Include="ViewModels\GenericWindowViewModel.cs" />
+    <Compile Include="ViewModels\IInsertViewModel.cs" />
     <Compile Include="ViewModels\InsertCustomerViewModel.cs" />
     <Compile Include="ViewModels\InsertInvoiceViewModel.cs" />
     <Compile Include="ViewModels\InvoicesViewModel.cs" />

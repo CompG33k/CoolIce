@@ -4,13 +4,12 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:VM="clr-namespace:CoolIcePro.ViewModels"
       mc:Ignorable="d" 
-      xmlns:local="clr-namespace:CoolIcePro.Views"
-      d:DesignHeight="825" d:DesignWidth="920"
-	    Title="InsertCompany">
-    <Page.Resources>
-   
-    </Page.Resources>
+      d:DesignHeight="825" d:DesignWidth="920">
+    <Page.DataContext>
+        <VM:InsertCustomerViewModel/>
+    </Page.DataContext>
     <Grid Background="White">    
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
@@ -55,23 +54,21 @@
                 <Label Grid.Row="8" Grid.Column="0" Content="E-mail" VerticalAlignment="Center"/>
                 <Label Grid.Row="9" Grid.Column="0" Content="Website" VerticalAlignment="Center"/>
 
-                <TextBox Grid.Row="0" Grid.Column="1" Name="_companyNameTxtBox" >
-                    
-                </TextBox>
-                <TextBox Grid.Row="1" Grid.Column="1" Name="_addressTxtBox"/>
-                <TextBox Grid.Row="2" Grid.Column="1" Name="_addressExtTxtBox"/>
-                <TextBox Grid.Row="3" Grid.Column="1" Name="_cityTxtBox"/>
-                <ComboBox Grid.Row="4" Grid.Column="1" Name="_stateTxtBox" SelectedIndex="4"/>
-                <xctk:MaskedTextBox x:Name="_telephoneTxtBox"  Grid.Row="6" Grid.Column="1" Mask="(000) 000-0000"/>
+                <TextBox Grid.Row="0" Grid.Column="1" Name="_companyNameTxtBox" Text="{Binding CustomerName}"/>
+                <TextBox Grid.Row="1" Grid.Column="1" Name="_addressTxtBox" Text="{Binding CustomerAddress}"/>
+                <TextBox Grid.Row="2" Grid.Column="1" Name="_addressExtTxtBox" Text="{Binding CustomerAddressExt}"/>
+                <TextBox Grid.Row="3" Grid.Column="1" Name="_cityTxtBox" Text="{Binding CustomerCity}"/>
+                <ComboBox Grid.Row="4" Grid.Column="1" Name="_stateTxtBox" SelectedIndex="4" SelectedItem="{Binding CustomerState}"/>
+                <xctk:MaskedTextBox x:Name="_telephoneTxtBox"  Grid.Row="6" Grid.Column="1" Mask="(000) 000-0000" Text="{Binding CustomerName}"/>
 
-                <xctk:MaskedTextBox Grid.Row="5" Grid.Column="1" x:Name="_zipcodeTxtBox" Mask="00000"/>
-                <xctk:MaskedTextBox Grid.Row="7" Grid.Column="1" x:Name="_faxTxtBox" Mask="(000) 000-0000"/>
+                <xctk:MaskedTextBox Grid.Row="5" Grid.Column="1" x:Name="_zipcodeTxtBox" Mask="00000" Text="{Binding CustomerZipCode}" Margin="5,0,-5,0"/>
+                <xctk:MaskedTextBox Grid.Row="7" Grid.Column="1" x:Name="_faxTxtBox" Mask="(000) 000-0000" Text="{Binding CustomerFax}"/>
 
-                <TextBox Grid.Row="8" Grid.Column="1" Name="_emailTxtBox" >
+                <TextBox Grid.Row="8" Grid.Column="1" Name="_emailTxtBox" Text="{Binding CustomerEmail}">
                    
                 </TextBox>
-                
-                <TextBox Grid.Row="9" Grid.Column="1" Name="_websiteTxtBox"/>
+
+                <TextBox Grid.Row="9" Grid.Column="1" Name="_websiteTxtBox" Text="{Binding CustomerWebsite}"/>
 
                 <GroupBox Grid.Row="10" Grid.ColumnSpan="2" FontSize="16" Style="{Binding}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Header="Contact Information">
                     <Grid>
@@ -95,11 +92,11 @@
                         <Label Grid.Row="3" Grid.Column="0" Content="Cell"/>
                         <Label Grid.Row="4" Grid.Column="0" Content="Position"/>
                         
-                        <TextBox Grid.Row="0" Grid.Column="1" Name="_fNameTxtBox" />
-                        <TextBox Grid.Row="1" Grid.Column="1" Name="_lNameTxtBox"/>
-                        <xctk:MaskedTextBox Grid.Row="2" Grid.Column="1" Name="_contactTelephoneTxtBox" Mask="(000) 000-0000"/>
-                        <xctk:MaskedTextBox Grid.Row="3" Grid.Column="1" Name="_cellTxtBox" Mask="(000) 000-0000"/>
-                        <ComboBox Grid.Row="4" Grid.Column="1" Name="_positionComboBox" SelectedIndex="0">
+                        <TextBox Grid.Row="0" Grid.Column="1" Name="_fNameTxtBox" Text="{Binding ContactFirstName}"/>
+                        <TextBox Grid.Row="1" Grid.Column="1" Name="_lNameTxtBox" Text="{Binding ContactLastName}"/>
+                        <xctk:MaskedTextBox Grid.Row="2" Grid.Column="1" Name="_contactTelephoneTxtBox" Mask="(000) 000-0000" Text="{Binding ContactTelephone}"/>
+                        <xctk:MaskedTextBox Grid.Row="3" Grid.Column="1" Name="_cellTxtBox" Mask="(000) 000-0000" Text="{Binding ContactCellphone}"/>
+                        <ComboBox Grid.Row="4" Grid.Column="1" Name="_positionComboBox" SelectedIndex="0" SelectedItem="{Binding ContactPosition, Mode=TwoWay}">
                             <ComboBoxItem Content="Owner"/>
                             <ComboBoxItem Content="Manager"/>
                             <ComboBoxItem Content="Employee"/>

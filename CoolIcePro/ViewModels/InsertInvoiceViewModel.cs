@@ -185,9 +185,9 @@ namespace CoolIcePro.ViewModels
         
         public void OnPropertyChanged(string propertyName)
         {
-            if (this.PropertyChanged != null)
+            if (PropertyChanged != null)
             {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 

@@ -115,8 +115,7 @@ namespace CoolIcePro.ViewModels
                     newCustomerPressedCommand = new RelayCommand(
                         () =>
                         {
-                            InsertCustomerViewModel ivm = new InsertCustomerViewModel(685, 625, "New Customer", new Views.InsertCustomer());
-                            Windows.GenericWindow gw = new Windows.GenericWindow(ivm);
+                            Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, "New Customer", new Views.InsertCustomer());
                             gw.ShowDialog();
                         });
                 }
@@ -126,9 +125,9 @@ namespace CoolIcePro.ViewModels
       
         public void OnPropertyChanged(string propertyName)
         {
-            if (this.PropertyChanged != null)
+            if (PropertyChanged != null)
             {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     
