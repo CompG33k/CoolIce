@@ -1,4 +1,5 @@
 ﻿using CoolIcePro.ViewModels;
+using MahApps.Metro.Controls;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,21 +12,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace CoolIcePro.Views
+namespace CoolIcePro.Windows
 {
     /// <summary>
-    /// Interaction logic for AllCustomers.xaml
+    /// Interaction logic for GenericWIndow.xaml
     /// </summary>
-    public partial class Customers : Page
+    public partial class GenericWindow : MetroWindow
     {
-        public Customers()
+        public GenericWindow(double height,double width,string windowTitle, Page page)
         {
-            if (System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
-                return;
             InitializeComponent();
+            DataContext = new GenericWindowViewModel(height, width, windowTitle, page);
         }
     }
 }

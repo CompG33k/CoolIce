@@ -46,17 +46,17 @@ namespace CoolIcePro.ViewModels
                     mouseDoubleClickCommand = new RelayCommand<Models.IModel>(
                         selectedItem =>
                         {
-                            var company = selectedItem as Models.Customer;
-                            if (company != null)
+                            var customer = selectedItem as Models.Customer;
+                            if (customer != null)
                             {
-                                var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
-                                p.Show();
+                                CustomerWindowLogic(customer);
                             }
                         });
                 }
                 return mouseDoubleClickCommand;
             }
         }
+      
         public ICommand CustomerMenuItemClickCommand
         {
             get
@@ -66,11 +66,10 @@ namespace CoolIcePro.ViewModels
                     customerMenuItemClickCommand = new RelayCommand<Models.IModel>(
                         selectedItem =>
                         {
-                            var company = selectedItem as Models.Customer;
-                            if (company != null)
+                            var customer = selectedItem as Models.Customer;
+                            if (customer != null)
                             {
-                                var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
-                                p.Show();
+                                CustomerWindowLogic(customer);
                             }
                         });
                 }
@@ -85,6 +84,12 @@ namespace CoolIcePro.ViewModels
         public void ResetList()
         {
             List = ProjectManager.Instance.CoolIceProDBHelper.GetAllCustomers();
+        }
+        private static void CustomerWindowLogic(Models.Customer customer)
+        {
+            var page = new CoolIcePro.Views.Customer(new CustomerViewModel(customer));
+            Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("{0}", customer.CompanyName), page);
+            gw.ShowDialog();
         }
 
         public void OnPropertyChanged(string propertyName)

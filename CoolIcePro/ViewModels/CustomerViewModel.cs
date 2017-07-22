@@ -9,7 +9,7 @@ using System.Windows.Input;
 
 namespace CoolIcePro.ViewModels
 {
-    public class CompanyViewModel : INotifyPropertyChanged
+    public class CustomerViewModel : INotifyPropertyChanged
     {
         
         public event PropertyChangedEventHandler PropertyChanged;
@@ -278,7 +278,7 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public CompanyViewModel(CoolIcePro.Models.Customer company)
+        public CustomerViewModel(CoolIcePro.Models.Customer company)
         {
             Id = company.Id;
             invoices = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id);
@@ -319,8 +319,7 @@ namespace CoolIcePro.ViewModels
                             if (invoice == null)
                                 return;
 
-                            var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
-                            p.ShowDialog();
+                            InvoiceWindowLogic(invoice);
                         });
                 }
                 return rowDoubleClickCommand;
@@ -340,13 +339,20 @@ namespace CoolIcePro.ViewModels
                             if (invoice == null)
                                 return;
 
-                            var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
-                            p.ShowDialog();
+                            InvoiceWindowLogic(invoice);
                         });
                 }
                 return invoiceMenuItemClickCommand;
             }
-        }    
+        }
+
+        private static void InvoiceWindowLogic(Models.Invoice invoice)
+        {
+            var page = new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice));
+            var customer = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(invoice.CompanyId);
+            Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("Invoice for {0}", customer.CompanyName), page);
+            gw.ShowDialog();
+        }
      
         public void OnPropertyChanged(string propertyName)
         {

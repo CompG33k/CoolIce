@@ -51,12 +51,8 @@ namespace CoolIcePro.ViewModels
                             var invoice = selectedItem as Models.Invoice;
                             if (invoice == null)
                                 return;
-                            
-                            var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
-                            p.Tag = invoice.Id.ToString();
-                            if(ProjectManager.Instance.AddWindow(p))
-                                p.ShowDialog();
 
+                            InvoiceWindowLogic(invoice);
                         });
                 }
                 return rowDoubleClickCommand;
@@ -76,12 +72,13 @@ namespace CoolIcePro.ViewModels
                             if (invoice == null)
                                 return;
 
-                            var company = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(invoice.CompanyId);
-                            if (company == null)
+                            var customer = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(invoice.CompanyId);
+                            if (customer == null)
                                 return;
-                                                        
-                            var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
-                            p.Show();
+
+                            var page = new CoolIcePro.Views.Customer(new CustomerViewModel(customer));
+                            Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("Invoice for {0}", customer.CompanyName), page);
+                            gw.ShowDialog();
                         });
                 }
                 return customerMenuItemClickCommand;
@@ -101,8 +98,7 @@ namespace CoolIcePro.ViewModels
                             if (invoice == null)
                                 return;
 
-                            var p = new CoolIcePro.Controls.PopupWindow("Invoice Details", new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice)));
-                            p.ShowDialog();
+                            InvoiceWindowLogic(invoice);
                         });
                 }
                 return invoiceMenuItemClickCommand;
@@ -117,6 +113,14 @@ namespace CoolIcePro.ViewModels
         public void ResetList()
         {
             List = ProjectManager.Instance.CoolIceProDBHelper.GetAllInvoices();
+        }
+
+        private static void InvoiceWindowLogic(Models.Invoice invoice)
+        {
+            var page = new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice));
+            var customer = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(invoice.CompanyId);
+            Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("Invoice for {0}", customer.CompanyName), page);
+            gw.ShowDialog();
         }
 
         public void OnPropertyChanged(string propertyName)

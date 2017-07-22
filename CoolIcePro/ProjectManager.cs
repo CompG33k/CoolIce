@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CoolIcePro.Models;
 using System.Windows;
 using CoolIcePro.Models;
-using CoolIcePro.Controls;
+using CoolIcePro.Windows;
 
 namespace CoolIcePro
 {
@@ -14,11 +14,11 @@ namespace CoolIcePro
     {
         private static ProjectManager _instance;
         private readonly CoolIceProHelper _coolIceProDBHelper;
-        private List<PopupWindow> _windowsOpen;
+        private List<GenericWindow> _windowsOpen;
 
         private ProjectManager() {
             _coolIceProDBHelper = new CoolIceProHelper();
-            _windowsOpen = new List<PopupWindow>();
+            _windowsOpen = new List<GenericWindow>();
         }
 
         public static ProjectManager Instance
@@ -49,7 +49,7 @@ namespace CoolIcePro
             return false;
         }
 
-        public bool AddWindow(PopupWindow newWindow)
+        public bool AddWindow(GenericWindow newWindow)
         {
             if (_windowsOpen.Count > 5)
             {

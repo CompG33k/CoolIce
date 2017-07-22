@@ -22,7 +22,7 @@ namespace CoolIcePro.Views
     /// </summary>
     public partial class Customer : System.Windows.Controls.Page
     {
-        public Customer(CompanyViewModel company)
+        public Customer(CustomerViewModel company)
         {
 
             InitializeComponent();

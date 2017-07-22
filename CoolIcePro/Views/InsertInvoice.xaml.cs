@@ -24,23 +24,6 @@ namespace CoolIcePro.Views
         public InsertInvoice()
         {
             InitializeComponent();
-
-            //_dataGrid.ItemsSource = new List<Models.Invoice>(){
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "1138676",TotalAmount = 12.33 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "1133335",TotalAmount = 212.33 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "11333576",TotalAmount = 123.44 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "1133333",TotalAmount = 124.23 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "1133333",TotalAmount = 12.33 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "11333daa",TotalAmount = 212.33 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "11333a3",TotalAmount = 123.44 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "113ad53333",TotalAmount = 124.23 },
-            //     new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "1138676",TotalAmount = 12.33 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "1133335",TotalAmount = 212.33 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "11333576",TotalAmount = 123.44 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "1133333",TotalAmount = 124.23 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "1133333",TotalAmount = 12.33 },
-            //    new Models.Invoice()  {Date = new DateTime(),Description = "DESCRIPTION",InvoiceNumber = "11334443",TotalAmount = 912.39 }
-            //};
         }
         public InsertInvoice(ViewModels.InsertInvoiceViewModel insertVm)
         {

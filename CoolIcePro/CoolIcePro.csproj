@@ -200,13 +200,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\AttachedMouseBinding.cs" />
-    <Compile Include="Controls\HeaderControl.xaml.cs">
-      <DependentUpon>HeaderControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\PopupWindow.xaml.cs">
-      <DependentUpon>PopupWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Converters\MainWIndowGridToolBarWidthAdjustConverter.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\CoolIceProHelper.cs" />
@@ -217,7 +210,7 @@
     <Compile Include="ProjectManager.cs" />
     <Compile Include="SqlLiteLogic\SQLite.cs" />
     <Compile Include="SqlLiteLogic\SQLiteAsync.cs" />
-    <Compile Include="ViewModels\CompanyViewModel.cs" />
+    <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\IGenericPageViewModel.cs" />
     <Compile Include="ViewModels\IGenericWindowViewModel.cs" />
@@ -255,14 +248,6 @@
     <Compile Include="Windows\GenericWindow.xaml.cs">
       <DependentUpon>GenericWindow.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\HeaderControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\PopupWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

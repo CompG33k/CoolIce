@@ -104,7 +104,7 @@ namespace CoolIcePro.ViewModels
                 if (_customerState != value)
                 {
                     _customerState = value;
-                    OnPropertyChanged("State");
+                    OnPropertyChanged("CustomerState");
                 }
             }
         }

@@ -6,7 +6,6 @@
       xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
       xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
-      xmlns:helpers="clr-namespace:CoolIcePro.Controls"
       xmlns:local="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
       xmlns:telerik="clr-namespaceCoolIcePro;assempbly=CoolIcePro.Controls"
       mc:Ignorable="d" 
