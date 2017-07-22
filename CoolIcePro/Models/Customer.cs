@@ -19,7 +19,7 @@ namespace CoolIcePro.Models
         public string State { get; set; }
         public string Zipcode { get; set; }
         public string Telephone { get; set; }
-        public string CellNumber { get; set; }
+       // public string CellNumber { get; set; }
         public string Fax { get; set; }
         public string Email { get; set; }
         public string Website { get; set; }

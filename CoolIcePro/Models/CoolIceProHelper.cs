@@ -11,14 +11,14 @@ namespace CoolIcePro.Models
 {
     public class CoolIceProHelper : SQLiteDatabase
     {
-        private static string CONNECTIONSTRING;
+        //private static string CONNECTIONSTRING;
                   
         /// <summary>
         /// 
         /// </summary>
         /// <param name="customer"></param>
         /// <returns></returns>
-        public bool InsertCustomer(Customer customer)
+        public bool InsertCustomerEx(Customer customer)
         {
             try
             {
@@ -43,35 +43,35 @@ namespace CoolIcePro.Models
             }
             return false;
         }
-        
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="contact"></param>
-        /// <param name="foreignKey"></param>
-        /// <returns></returns>
-        public bool InserCustomerContact(Contact contact, long foreignKey)
+
+        public long InsertCustomer(Customer customer)
         {
+            long number = -1;
             try
             {
-                return Insert("'Contact'",
-                      new Dictionary<string, string>()
+                number = InsertGetLastRowId("'Company'",
+                       new Dictionary<string, string>()
                     {
-                        {"Fname" ,contact.Fname},
-                        {"Lname" ,contact.Lname},
-                        {"Telephone" ,contact.Telephone},
-                        {"Cellphone" ,contact.Cellphone},
-                        {"Position" ,contact.Position},
-                       {"fk_Id" ,foreignKey.ToString()}
-                    }
-                      );
+                        {"CompanyName" ,customer.CompanyName},
+                        {"Address" ,customer.Address},
+                        {"AddressExt" ,customer.AddressExt},
+                        {"City" ,customer.City},
+                        {"State" ,customer.State},
+                        {"Zipcode" ,customer.Zipcode},
+                        {"Telephone" ,customer.Telephone},
+                        {"Fax" ,customer.Fax},
+                        {"Email" ,customer.Email},
+                        {"Website" ,customer.Website}
+                    });
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            return false;
+            return number;
         }
+        
+     
 
         /// <summary>
         /// 
@@ -278,5 +278,33 @@ namespace CoolIcePro.Models
             return false;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="contact"></param>
+        /// <param name="customerPrimaryId"></param>
+        /// <returns></returns>
+        public bool InserCustomerContact(long customerPrimaryId,Contact contact)
+        {
+            try
+            {
+                return Insert("'Contact'",
+                      new Dictionary<string, string>()
+                    {
+                        {"Fname" ,contact.Fname},
+                        {"Lname" ,contact.Lname},
+                        {"Telephone" ,contact.Telephone},
+                        {"Cellphone" ,contact.Cellphone},
+                        {"Position" ,contact.Position},
+                       {"fk_Id" ,customerPrimaryId.ToString()}
+                    }
+                      );
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
     }
 }

@@ -1,9 +1,12 @@
-﻿using System;
+﻿using GalaSoft.MvvmLight.Command;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Input;
 
 namespace CoolIcePro.ViewModels
 {
@@ -25,6 +28,7 @@ namespace CoolIcePro.ViewModels
         string _contactCellphone;
         string _contactPosition;
         IEnumerable<string> _states;
+        ICommand saveButtonPressedCommand;
 
         public event PropertyChangedEventHandler PropertyChanged;
         public InsertCustomerViewModel()
@@ -43,10 +47,11 @@ namespace CoolIcePro.ViewModels
                 if (_customerName != value)
                 {
                     _customerName = value;
-                    OnPropertyChanged("Name");
+                    OnPropertyChanged("CustomerName");
                 }
             }
         }
+
         public string CustomerAddress
         {
             get
@@ -62,6 +67,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string CustomerAddressExt
         {
             get
@@ -77,6 +83,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string CustomerCity
         {
             get
@@ -136,7 +143,7 @@ namespace CoolIcePro.ViewModels
                 if (_customerTelephone != value)
                 {
                     _customerTelephone = value;
-                    OnPropertyChanged("Telephone");
+                    OnPropertyChanged("CustomerTelephone");
                 }
             }
         }
@@ -156,6 +163,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string CustomerEmail
         {
             get
@@ -187,6 +195,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string ContactFirstName
         {
             get
@@ -234,6 +243,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string ContactCellphone
         {
             get
@@ -249,6 +259,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string ContactPosition
         {
             get
@@ -264,6 +275,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public IEnumerable<string> States
         {
             get
@@ -279,6 +291,68 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
+        public ICommand SaveButtonPressedCommand
+        {
+            get
+            {
+                if (saveButtonPressedCommand == null)
+                {
+                    saveButtonPressedCommand = new RelayCommand(
+                        () =>
+                        {
+                            InsertCustomerLogic();
+                            var window = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+                            if (window != null)
+                            {
+                                window.Close();
+                            }
+                        });
+                }
+                return saveButtonPressedCommand;
+            }
+        }
+
+        private void UpdateListLogic()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void InsertCustomerLogic()
+        {
+            Models.Customer customer = GetCutomerLogic();
+            Models.Contact contact = GetCustomerContactLogic();
+
+            long customerId = ProjectManager.Instance.CoolIceProDBHelper.InsertCustomer(customer);
+            ProjectManager.Instance.CoolIceProDBHelper.InserCustomerContact(customerId, contact);
+        }
+
+        private Models.Contact GetCustomerContactLogic()
+        {
+            Models.Contact cContact = new Models.Contact();
+            cContact.Cellphone = this.ContactCellphone;
+            cContact.Fname = this.ContactFirstName;
+            cContact.Lname = this.ContactLastName;
+            cContact.Position = this.ContactPosition;
+            cContact.Telephone = this.ContactTelephone;
+            return cContact;
+        }
+
+        private Models.Customer GetCutomerLogic()
+        {
+            Models.Customer c = new Models.Customer();
+            c.Address = this.CustomerAddress;
+            c.AddressExt = this.CustomerAddressExt;
+            c.City = this.CustomerCity;
+            c.CompanyName = this.CustomerName;
+            c.Email = this.CustomerEmail;
+            c.Fax = this.CustomerFax;
+            c.State = this.CustomerState;
+            c.Telephone = this.CustomerTelephone;
+            c.Website = this.CustomerWebsite;
+            c.Zipcode = this.CustomerZipCode;
+            return c;
+        }     
 
         public void OnPropertyChanged(string propertyName)
         {

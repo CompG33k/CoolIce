@@ -21,8 +21,6 @@ namespace CoolIcePro.Models
             string location = System.Reflection.Assembly.GetEntryAssembly().Location;
             location = location.Replace(@"CoolIcePro.exe", @"Data\Database.db3");
             dbConnection = "Data Source=" + location;
-            //dbConnection = @"Data Source=F:\Users\Nick\Source\Workspaces\RefrigerationPro\CoolIcePro\CoolIcePro\Data\Database.db3";
-            int wait = 9;
         }
 
         /// <summary>
@@ -68,7 +66,6 @@ namespace CoolIcePro.Models
                         CommandText = sql
                     };
                 
-                
                     SQLiteDataReader reader = mycommand.ExecuteReader();
                     dt.Load(reader);
                 
@@ -79,7 +76,7 @@ namespace CoolIcePro.Models
             catch (Exception e)
             {
                 MessageBox.Show(e.Message + e.StackTrace);
-                //throw new Exception(e.Message);
+                throw;
             }
             return dt;
         }
@@ -92,13 +89,54 @@ namespace CoolIcePro.Models
         /// <returns>An Integer containing the number of rows updated.</returns>
         public int ExecuteNonQuery(string sql)
         {
-            SQLiteConnection cnn = new SQLiteConnection(dbConnection);
-            cnn.Open();
-            SQLiteCommand mycommand = new SQLiteCommand(cnn);
-            mycommand.CommandText = sql;
-            int rowsUpdated = mycommand.ExecuteNonQuery();
-            cnn.Close();
-            return rowsUpdated;
+            using (SQLiteConnection cnn = new SQLiteConnection(dbConnection))
+            {
+                cnn.Open();
+                using (SQLiteTransaction transaction = cnn.BeginTransaction())
+                {
+                    using (SQLiteCommand mycommand = new SQLiteCommand(sql, cnn, transaction))
+                    {
+                        mycommand.CommandText = sql;
+                        int rowsUpdated = mycommand.ExecuteNonQuery();
+                        transaction.Commit();
+                        cnn.Close();
+                        return rowsUpdated;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        ///     Allows the programmer to interact with the database for purposes other than a query.
+        /// </summary>
+        /// <param name="sql">The SQL to be run.</param>
+        /// <returns>An Integer containing the number of rows updated.</returns>
+        public long ExecuteNonQueryGetLastInsertRowId(string sql)
+        {
+            using (SQLiteConnection cnn = new SQLiteConnection(dbConnection))
+            {
+                cnn.Open();
+                using (SQLiteTransaction transaction = cnn.BeginTransaction())
+                {
+                    try
+                    {
+                        using (SQLiteCommand mycommand = new SQLiteCommand(sql, cnn, transaction))
+                        {
+                            mycommand.ExecuteNonQuery();
+                        }
+                        var rowID = cnn.LastInsertRowId;
+                        transaction.Commit();
+                        return rowID;
+                    }
+                    catch (Exception ex)
+                    {
+                        transaction.Rollback();
+                        Console.Error.WriteLine(string.Format("I did nothing, because something wrong happened: {0}", ex));
+                        throw;
+                    }
+                    cnn.Close();
+                }
+            }
         }
 
         /// <summary>
@@ -108,17 +146,22 @@ namespace CoolIcePro.Models
         /// <returns>A string.</returns>
         public dynamic ExecuteScalar(string sql)
         {
-            SQLiteConnection cnn = new SQLiteConnection(dbConnection);
-            cnn.Open();
-            SQLiteCommand mycommand = new SQLiteCommand(cnn);
-            mycommand.CommandText = sql;
-            dynamic value = mycommand.ExecuteScalar();
-            cnn.Close();
-            if (value != null)
+            using (SQLiteConnection cnn = new SQLiteConnection(dbConnection))
             {
-                return value;
+                cnn.Open();
+                using (SQLiteCommand mycommand = new SQLiteCommand(cnn))
+                {
+                    mycommand.CommandText = sql;
+                    dynamic value = mycommand.ExecuteScalar();
+                    cnn.Close();
+                    if (value != null)
+                    {
+                        return value;
+                    }
+
+                    return value;
+                }
             }
-            return value;
         }
 
         /// <summary>
@@ -192,12 +235,35 @@ namespace CoolIcePro.Models
             values = values.Substring(0, values.Length - 1);
             try
             {
-                this.ExecuteNonQuery(String.Format("insert into {0}({1}) values({2});", tableName, columns, values));
+                this.ExecuteNonQuery(string.Format("insert into {0}({1}) values({2});", tableName, columns, values));
             }
             catch (Exception fail)
             {
                 MessageBox.Show(fail.Message);
                 returnCode = false;
+            }
+            return returnCode;
+        }
+
+        public long InsertGetLastRowId(String tableName, Dictionary<String, String> data)
+        {
+            String columns = "";
+            String values = "";
+            long returnCode = -1;
+            foreach (KeyValuePair<String, String> val in data)
+            {
+                columns += String.Format(" {0},", val.Key.ToString());
+                values += String.Format(" '{0}',", val.Value);
+            }
+            columns = columns.Substring(0, columns.Length - 1);
+            values = values.Substring(0, values.Length - 1);
+            try
+            {
+                return this.ExecuteNonQueryGetLastInsertRowId(string.Format("insert into {0}({1}) values({2});", tableName, columns, values));
+            }
+            catch (Exception fail)
+            {
+                MessageBox.Show(fail.Message);
             }
             return returnCode;
         }

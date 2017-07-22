@@ -17,7 +17,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock  Grid.Row="0" Text="Double Click a company from dropdown" VerticalAlignment="Center"  FontWeight="bold" Margin="5"/>
-        <Button  Grid.Row="0" HorizontalAlignment="Right" Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Margin="1" ToolTip="Save" Content="{DynamicResource SaveIcon}"/>
+        <Button  Grid.Row="0" HorizontalAlignment="Right" Width="35" Height="30" BorderThickness="0" BorderBrush="Transparent"  Background="Transparent" Margin="1" ToolTip="Save" Content="{DynamicResource SaveIcon}" Command="{Binding SaveButtonPressedCommand}" />
         <GroupBox Grid.Row="1" Header="Customer Information" FontSize="16" VerticalAlignment="Top" Style="{Binding}"  >
             <Grid>
                 <Grid.RowDefinitions>
@@ -54,7 +54,7 @@
                 <TextBox Grid.Row="2" Grid.Column="1" Name="_addressExtTxtBox" Text="{Binding CustomerAddressExt}"/>
                 <TextBox Grid.Row="3" Grid.Column="1" Name="_cityTxtBox" Text="{Binding CustomerCity}"/>
                 <ComboBox Grid.Row="4" Grid.Column="1" Name="_stateTxtBox" SelectedIndex="4" SelectedItem="{Binding CustomerState}" ItemsSource="{Binding States}"/>
-                <xctk:MaskedTextBox x:Name="_telephoneTxtBox"  Grid.Row="6" Grid.Column="1" Mask="(000) 000-0000" Text="{Binding CustomerName}"/>
+                <xctk:MaskedTextBox x:Name="_telephoneTxtBox"  Grid.Row="6" Grid.Column="1" Mask="(000) 000-0000" Text="{Binding CustomerTelephone}"/>
                 <xctk:MaskedTextBox Grid.Row="5" Grid.Column="1" x:Name="_zipcodeTxtBox" Mask="00000" Text="{Binding CustomerZipCode}" Margin="5,0,-5,0"/>
                 <xctk:MaskedTextBox Grid.Row="7" Grid.Column="1" x:Name="_faxTxtBox" Mask="(000) 000-0000" Text="{Binding CustomerFax}"/>
                 <TextBox Grid.Row="8" Grid.Column="1" Name="_emailTxtBox" Text="{Binding CustomerEmail}"/>

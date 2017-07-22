@@ -30,10 +30,7 @@
             <RowDefinition Height="180"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <!--<TextBox Grid.Column="2" ></TextBox>-->
-        <!--<Button Grid.Column="3" Width="65" HorizontalAlignment="Left" Content="Search" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top"></Button>-->
         <Button Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Command="{Binding EditButtonCommand}"/>
-
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content="Company" FontFamily="Segoe UI" FontSize="15" Height="35"/>
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="Black" Height="1" VerticalAlignment="Bottom"/>
         

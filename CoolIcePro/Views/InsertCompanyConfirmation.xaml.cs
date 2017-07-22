@@ -35,41 +35,41 @@ namespace CoolIcePro.Views
       
         private void ButtonHandler(object sender, RoutedEventArgs e)
         {
-            try{
-                var button = sender as Button;
-                if(button.Tag.ToString() == "Confirm"){
+  //          try{
+  //              var button = sender as Button;
+  //              if(button.Tag.ToString() == "Confirm"){
 
-                    Models.Customer customer = GetCustomerInformationFromUI();
+  //                  Models.Customer customer = GetCustomerInformationFromUI();
 
-                    if(!ProjectManager.Instance.CoolIceProDBHelper.InsertCustomer(customer))
-                        MessageBox.Show("NO INSERT PERFORMED");
+  //                  if(!ProjectManager.Instance.CoolIceProDBHelper.InsertCustomer(customer))
+  //                      MessageBox.Show("NO INSERT PERFORMED");
 
-                    long foreignKey = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContactForeignKey(customer);
+  //                  long foreignKey = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContactForeignKey(customer);
 
-                    if (foreignKey == null)
-                        MessageBox.Show("No Foreign Key");
+  //                  if (foreignKey == null)
+  //                      MessageBox.Show("No Foreign Key");
                     
-                    Contact contact =  GetContactUI();
-                    ProjectManager.Instance.CoolIceProDBHelper.InserCustomerContact(contact,foreignKey);
-                }
+  //                  Contact contact =  GetContactUI();
+  //                  ProjectManager.Instance.CoolIceProDBHelper.InserCustomerContact(contact,foreignKey);
+  //              }
 
-                MainWindow w = Window.GetWindow(this) as MainWindow;
-                var g = w.Content as Grid;
-                var page = w._frame.Content as InsertCustomer;
-                g.IsEnabled = true;
-  //===              page._popup.IsOpen = false;
-            }
-            catch (DbEntityValidationException dbEx){
-                foreach (var validationErrors in dbEx.EntityValidationErrors){
-                        foreach (var validationError in validationErrors.ValidationErrors)
-                            System.Diagnostics.Trace.TraceInformation("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage);
+  //              MainWindow w = Window.GetWindow(this) as MainWindow;
+  //              var g = w.Content as Grid;
+  //              var page = w._frame.Content as InsertCustomer;
+  //              g.IsEnabled = true;
+  ////===              page._popup.IsOpen = false;
+  //          }
+  //          catch (DbEntityValidationException dbEx){
+  //              foreach (var validationErrors in dbEx.EntityValidationErrors){
+  //                      foreach (var validationError in validationErrors.ValidationErrors)
+  //                          System.Diagnostics.Trace.TraceInformation("Property: {0} Error: {1}", validationError.PropertyName, validationError.ErrorMessage);
                         
-                    }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+  //                  }
+  //          }
+  //          catch(Exception ex)
+  //          {
+  //              MessageBox.Show(ex.Message);
+  //          }
         }
 
         private void LoadUI(dynamic customerView)

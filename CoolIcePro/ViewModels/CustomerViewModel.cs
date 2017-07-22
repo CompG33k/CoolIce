@@ -278,26 +278,25 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public CustomerViewModel(CoolIcePro.Models.Customer company)
+        public CustomerViewModel(CoolIcePro.Models.Customer customer)
         {
-            Id = company.Id;
+            Id = customer.Id;
             invoices = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id);
            
-            CompanyName = company.CompanyName;
-            Address = company.Address;
-            AddressExt = company.AddressExt;
-            City = company.City;
-            State = company.State;
-            Zipcode = company.Zipcode;
-            Telephone = company.Telephone;
-            CellNumber = company.CellNumber;
-            Fax = company.Fax;
-            Email = company.Email;
-            Website = company.Website; 
+            CompanyName = customer.CompanyName;
+            Address = customer.Address;
+            AddressExt = customer.AddressExt;
+            City = customer.City;
+            State = customer.State;
+            Zipcode = customer.Zipcode;
+            Telephone = customer.Telephone;
+            Fax = customer.Fax;
+            Email = customer.Email;
+            Website = customer.Website; 
             
-            if (company.Contacts == null)
+            if (customer.Contacts == null)
                 return;
-            var contact  = company.Contacts.FirstOrDefault();
+            var contact  = customer.Contacts.FirstOrDefault();
             ContactFname = contact.Fname;
             ContactLname = contact.Lname;
             ContactTelephone = contact.Telephone;
