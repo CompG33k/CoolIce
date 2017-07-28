@@ -6,13 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xceed.Wpf.Toolkit;
+using AutoMapper;
+
 
 namespace CoolIcePro.Models
 {
     public class CoolIceProHelper : SQLiteDatabase
     {
         //private static string CONNECTIONSTRING;
-                  
+        static string SELECTCUSTOMERQUERY = "select Id,CompanyName,Address,AddressExt,City,State,Zipcode,Telephone,Fax,Email,Website from company";
+        static string SELECTCONTACTQUERY = "select Id, Fname,Lname,Telephone,Cellphone,Position,fk_id from Contact";
+        static string SELECTINVOICEQUERY = "select Id,CompanyId, datetime(Date) as Date,Description,InvoiceNumber,ServicePerformanceOn,TotalAmount,Warranty,IsCheck from Invoice";
+
         /// <summary>
         /// 
         /// </summary>
@@ -37,13 +42,18 @@ namespace CoolIcePro.Models
                         {"Website" ,customer.Website}
                     });
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+                throw;
             }
             return false;
         }
-
+        
+        /// <summary>
+        /// Inserts the customer. and returns the PrimaryKey.
+        /// </summary>
+        /// <param name="customer">The customer.</param>
+        /// <returns></returns>
         public long InsertCustomer(Customer customer)
         {
             long number = -1;
@@ -64,198 +74,13 @@ namespace CoolIcePro.Models
                         {"Website" ,customer.Website}
                     });
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+                throw;
             }
             return number;
         }
-        
-     
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="customer"></param>
-        /// <returns></returns>
-        public long GetCustomerContactForeignKey(Customer customer)
-        {
-            long foreignKey = ExecuteScalar(string.Format("Select Id from 'Company' where CompanyName = '{0}' AND Address ='{1}' AND AddressExt = '{2}' AND City = '{3}' AND Telephone = '{4}' AND Fax = '{5}' AND Email = '{6}' AND Website = '{7}'",
-                   customer.CompanyName,
-                   customer.Address,
-                   customer.AddressExt,
-                   customer.City,
-                   customer.State,
-                   customer.Zipcode,
-                   customer.Telephone,
-                   customer.Fax,
-                   customer.Email,
-                   customer.Website
-                ));
-            return foreignKey;
-        }
-
-     
-        public IEnumerable<Customer> GetAllCustomers()
-        {
-            List<Customer> list = new List<Customer>();
-            using(DataTable table = this.GetDataTable("select * from company"))
-            using (DataTableReader dtr = table.CreateDataReader())
-            {
-                while (dtr.Read())
-                {
-                    list.Add(new Customer()
-                    {
-                        Id = (long)dtr["Id"],
-                        CompanyName = dtr["CompanyName"] as string,
-                        Address = dtr["Address"] as string,
-                        AddressExt = dtr["AddressExt"] as string,
-                        City = dtr["City"] as string,
-                        State = dtr["State"] as string,
-                        Zipcode = dtr["Zipcode"] as string,
-                        Telephone = dtr["Telephone"] as string,
-                        Fax = dtr["Fax"] as string,
-                        Email = dtr["Email"] as string,
-                        Website = dtr["Website"] as string
-
-                    });
-                }
-            }
-            return list;
-        }
-        public Models.Customer GetCustomer(long Id)
-        {
-            Models.Customer company = new Customer();
-            using(DataTable table = this.GetDataTable(string.Format("select * from company where id = '{0}'",Id)))
-            using (DataTableReader dtr = table.CreateDataReader())
-            {
-                while (dtr.Read())
-                {
-                    company = new Models.Customer()
-                    {
-                            Id = (long)dtr["Id"],
-                            CompanyName = dtr["CompanyName"] as string,
-                            Address = dtr["Address"] as string,
-                            AddressExt = dtr["AddressExt"] as string,
-                            City = dtr["City"] as string,
-                            State = dtr["State"] as string,
-                            Zipcode = dtr["Zipcode"] as string,
-                            Telephone = dtr["Telephone"] as string,
-                            Fax = dtr["Fax"] as string,
-                            Email = dtr["Email"] as string,
-                            Website = dtr["Website"] as string
-
-                    };
-                }
-            }            
-            return company;
-        }
-
-        public IEnumerable<Models.Customer> SearchCustomers(string searchText)
-        {
-            List<Models.Customer> list = new List<Models.Customer>();
-            using (DataTable table = this.GetDataTable(string.Format("select * from company where CompanyName like '%{0}%' or Address like '%{0}%' or AddressExt like '%{0}%' or City like '%{0}%' or State like '%{0}%'", searchText)))
-            using (DataTableReader dtr = table.CreateDataReader())
-            {
-                while (dtr.Read())
-                {
-                    list.Add( new Models.Customer()
-                    {
-                        Id = (long)dtr["Id"],
-                        CompanyName = dtr["CompanyName"] as string,
-                        Address = dtr["Address"] as string,
-                        AddressExt = dtr["AddressExt"] as string,
-                        City = dtr["City"] as string,
-                        State = dtr["State"] as string,
-                        Zipcode = dtr["Zipcode"] as string,
-                        Telephone = dtr["Telephone"] as string,
-                        Fax = dtr["Fax"] as string,
-                        Email = dtr["Email"] as string,
-                        Website = dtr["Website"] as string
-                    });
-                }
-            }
-            return list;
-        }
-
-        public IEnumerable<Invoice> GetCustomerInvoices(long companyId)
-        {
-            List<Invoice> _list = new List<Invoice>();
-            using (DataTable table = this.GetDataTable(string.Format("select Id,CompanyId, datetime(Date) as Date,Description,InvoiceNumber,ServicePerformanceOn,TotalAmount,Warranty,IsCheck from Invoice where CompanyId ='{0}'", companyId.ToString())))
-            using (DataTableReader dtr = table.CreateDataReader())
-            {
-                while (dtr.Read())
-                {
-                    _list.Add(new Invoice()
-                    {
-                        Id = (long)dtr["Id"],
-                        CompanyId = (long)dtr["CompanyId"],
-                        //   Date = DateTime.Parse( dtr["Date"])
-                        Description = dtr["Description"] as string,
-                        InvoiceNumber = dtr["InvoiceNumber"] as string,
-                        ServicePerfomanceOn = dtr["ServicePerformanceOn"] as string,
-                        TotalAmount = (double)dtr["TotalAmount"],
-                        //  Warranty = ((int)dtr["Warranty"] == 1) as int? true: false,
-                        //  Check =  ((int)dtr["IsCheck"]== 1)? true: false
-                    });
-                }
-            }
-            return _list;
-        }
-
-        public IEnumerable<Invoice> GetAllInvoices()
-        {
-            List<Invoice> _list = new List<Invoice>();
-            using(DataTable table = this.GetDataTable("select Id,CompanyId, datetime(Date) as Date,Description,InvoiceNumber,ServicePerformanceOn,TotalAmount,Warranty,IsCheck  from invoice"))
-            using(DataTableReader dtr = table.CreateDataReader())
-            {   
-                while (dtr.Read())
-                {
-                    _list.Add(new Invoice()
-                    {
-                        Id = (long)dtr["Id"],
-                        CompanyId = (long)dtr["CompanyId"],
-                      //  Date = DateTime.Parse( dtr["Date"].ToString()),
-                        Description = dtr["Description"] as string,
-                        InvoiceNumber = dtr["InvoiceNumber"] as string,
-                        ServicePerfomanceOn = dtr["ServicePerformanceOn"] as string,
-                        TotalAmount = (double)dtr["TotalAmount"],
-                      //  Warranty = (bool)dtr["Warranty"],
-                      //  Check = (bool)dtr["Check"]
-                    });
-                }
-            }
-            return _list;
-        }
-
-
-        public IEnumerable<Invoice> SearchInvoices(string searchText)
-        {
-            List<Invoice> _list = new List<Invoice>();
-            string query = string.Format("select Id,CompanyId, datetime(Date) as Date,Description,InvoiceNumber,ServicePerformanceOn,TotalAmount,Warranty,IsCheck from invoice where Date like '%{0}%' or Description like '%{0}%' or ServicePerformanceOn like '%{0}%' or TotalAmount like '%{0}%'", searchText);
-            using(DataTable table = this.GetDataTable(query))
-            using (DataTableReader dtr = table.CreateDataReader())
-            {
-                while (dtr.Read())
-                {
-                    _list.Add(new Invoice()
-                    {
-                        Id = (long)dtr["Id"],
-                        CompanyId = (long)dtr["CompanyId"],
-                        //  Date = DateTime.Parse( dtr["Date"].ToString()),
-                        Description = dtr["Description"] as string,
-                        InvoiceNumber = dtr["InvoiceNumber"] as string,
-                        ServicePerfomanceOn = dtr["ServicePerformanceOn"] as string,
-                        TotalAmount = (double)dtr["TotalAmount"],
-                        //  Warranty = (bool)dtr["Warranty"],
-                        //  Check = (bool)dtr["Check"]
-                    });
-                }
-            }
-            return _list;
-        }
-
-        public bool InsertInvoice(long companyId, Invoice invoice)
+          public bool InsertInvoice(long companyId, Invoice invoice)
         {
             try
             {
@@ -291,8 +116,8 @@ namespace CoolIcePro.Models
                 return Insert("'Contact'",
                       new Dictionary<string, string>()
                     {
-                        {"Fname" ,contact.Fname},
-                        {"Lname" ,contact.Lname},
+                        {"Fname" ,contact.FirstName},
+                        {"Lname" ,contact.LastName},
                         {"Telephone" ,contact.Telephone},
                         {"Cellphone" ,contact.Cellphone},
                         {"Position" ,contact.Position},
@@ -306,5 +131,180 @@ namespace CoolIcePro.Models
             }
             return false;
         }
+        
+        public IEnumerable<Customer> GetAllCustomers()
+        {
+            try
+            {
+                using (DataTable table = this.GetDataTable(SELECTCUSTOMERQUERY))
+                {
+                    return from DataRow row in table.Rows
+                            select GetCustomerClassInstance(row);
+                }
+            }catch
+            {
+                throw;
+            }
+        }
+        public Models.Customer GetCustomer(long Id)
+        {
+            try
+            {
+                string query = string.Format("{0} where id = '{1}'",SELECTCUSTOMERQUERY, Id);
+                using (DataTable table = this.GetDataTable(query))
+                {
+                    return (from DataRow row in table.Rows
+                           select GetCustomerClassInstance(row)).SingleOrDefault();
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
+
+        public async Task<IEnumerable<Models.Contact>> GetCustomerContacts(long customerId)
+        {
+            try
+            {
+                string query = string.Format("{0} where fk_id = '{0}'",SELECTCONTACTQUERY, customerId);
+                using (DataTable table = this.GetDataTable(query))
+                {
+                    return (from DataRow row in table.Rows
+                           select GetContactClassInstance(row));
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public IEnumerable<Invoice> GetCustomerInvoices(long companyId)
+        {
+             try
+             {
+                string query = string.Format("{0} where CompanyId ='{1}'",SELECTINVOICEQUERY, companyId.ToString());
+                using(DataTable table = this.GetDataTable(query))
+                {
+                    return (from DataRow row in table.Rows
+                       select GetInvoiceClassInstance(row));
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public IEnumerable<Invoice> GetAllInvoices()
+        {
+            try
+             {
+                using(DataTable table = this.GetDataTable(SELECTINVOICEQUERY))
+                {
+                    return (from DataRow row in table.Rows
+                       select GetInvoiceClassInstance(row));                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public IEnumerable<Models.Customer> SearchCustomers(string searchText)
+        {
+            try
+            {
+                string query = string.Format("{0} where CompanyName like '%{1}%' or Address like '%{1}%' or AddressExt like '%{1}%' or City like '%{1}%' or State like '%{1}%'",SELECTCUSTOMERQUERY, searchText);
+                using(DataTable table = this.GetDataTable(query))
+                {
+                    return (from DataRow row in table.Rows
+                       select GetCustomerClassInstance(row));
+                }
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public IEnumerable<Invoice> SearchInvoices(string searchText)
+        {
+            List<Invoice> _list = new List<Invoice>();
+            string query = string.Format("select Id,CompanyId, datetime(Date) as Date,Description,InvoiceNumber,ServicePerformanceOn,TotalAmount,Warranty,IsCheck from invoice where Date like '%{0}%' or Description like '%{0}%' or ServicePerformanceOn like '%{0}%' or TotalAmount like '%{0}%'", searchText);
+            using(DataTable table = this.GetDataTable(query))
+            using (DataTableReader dtr = table.CreateDataReader())
+            {
+                while (dtr.Read())
+                {
+                    _list.Add(new Invoice()
+                    {
+                        Id = (long)dtr["Id"],
+                        CompanyId = (long)dtr["CompanyId"],
+                        //  Date = DateTime.Parse( dtr["Date"].ToString()),
+                        Description = dtr["Description"] as string,
+                        InvoiceNumber = dtr["InvoiceNumber"] as string,
+                        ServicePerfomanceOn = dtr["ServicePerformanceOn"] as string,
+                        TotalAmount = (double)dtr["TotalAmount"],
+                        //  Warranty = (bool)dtr["Warranty"],
+                        //  Check = (bool)dtr["Check"]
+                    });
+                }
+            }
+            return _list;
+        }
+
+      
+
+        private static Contact GetContactClassInstance(DataRow row)
+        {
+            return new Models.Contact()
+            {
+                Id = row.Field<long>("Id"),
+                CompanyId = row.Field<long>("fk_Id"),
+                FirstName = row.Field<string>("Fname"),
+                LastName = row.Field<string>("Lname"),
+                Telephone = row.Field<string>("Telephone"),
+                Cellphone = row.Field<string>("Cellphone"),
+                Position = row.Field<string>("Position")
+            };
+        }
+
+        private static Models.Customer GetCustomerClassInstance(DataRow row)
+        {
+            return new Models.Customer()
+            {
+                Id = row.Field<long>("Id"),
+                CompanyName = row.Field<string>("CompanyName"),
+                Address = row.Field<string>("Address"),
+                AddressExt = row.Field<string>("AddressExt"),
+                City = row.Field<string>("City"),
+                State = row.Field<string>("State"),
+                Zipcode = row.Field<string>("Zipcode"),
+                Telephone = row.Field<string>("Telephone"),
+                Fax = row.Field<string>("Fax"),
+                Email = row.Field<string>("Email"),
+                Website = row.Field<string>("Website")
+            };
+        }
+
+        private static Models.Invoice GetInvoiceClassInstance(DataRow row)
+        {
+            return new Invoice()
+            {
+                Id = row.Field<long>("Id"),
+                CompanyId = row.Field<long>("CompanyId"),
+                //   Date = DateTime.Parse( dtr["Date"])
+                Description = row["Description"] as string,
+                InvoiceNumber = row["InvoiceNumber"] as string,
+                ServicePerfomanceOn = row["ServicePerformanceOn"] as string, 
+                TotalAmount = row.Field<double>("TotalAmount")
+                //  Warranty = ((int)dtr["Warranty"] == 1) as int? true: false,
+                //  Check =  ((int)dtr["IsCheck"]== 1)? true: false
+            };
+        }
+      
     }
 }

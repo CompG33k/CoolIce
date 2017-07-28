@@ -33,7 +33,7 @@
         <Button Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Command="{Binding EditButtonCommand}"/>
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content="Company" FontFamily="Segoe UI" FontSize="15" Height="35"/>
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="Black" Height="1" VerticalAlignment="Bottom"/>
-        
+
         <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Width="100" >
             <Label Content="Company" FontSize="14" Height="28"/>
             <Label Content="Telephone" FontSize="14" Height="28"/>
@@ -46,17 +46,17 @@
 
         <Label  Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Content="Contact" FontSize="15" Height="35"/>
         <Label  Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Background="Black" Height="1" VerticalAlignment="Bottom"/>
-        
+
         <StackPanel Grid.Column="2" Grid.Row="2">
             <TextBox Name="_companyTextBox" Text="{Binding CompanyName}"  Height="28" FontSize="14" IsReadOnly="True"/>
-            <xctk:MaskedTextBox Name="_companyNumberTextBox" Text="{Binding Telephone}"  Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>           
+            <xctk:MaskedTextBox Name="_companyNumberTextBox" Text="{Binding Telephone}"  Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>
             <TextBox Name="_address"  Height="28" FontSize="14" Text ="{Binding Address}"  IsReadOnly="True"/>
             <TextBox Name="_addressExtTextbox" Height="28" FontSize="14" Text="{Binding AddressExt}"  IsReadOnly="True"/>
             <TextBox Name="_cityTextBox" Height="28" FontSize="14" Text="{Binding City}"  IsReadOnly="True"/>
             <ComboBox Name="_stateComboBox"  HorizontalAlignment="Left"  SelectedIndex="4" ItemsSource="{Binding States}"  FontSize="14" Height="28" IsReadOnly="True"/>
             <xctk:MaskedTextBox x:Name="__zipCodeTextBox"  Height="28" Text="{Binding Zipcode}"  FontSize="14" Mask="00000" IsReadOnly="True"/>
         </StackPanel>
-        
+
         <StackPanel Grid.Column="4" Grid.Row="2">
             <Label Content="Name" Height="28" FontSize="14"/>
             <Label Content="Last name" Height="28" FontSize="14"/>
@@ -65,11 +65,11 @@
             <Label Content="Position" Height="28" FontSize="14"/>
         </StackPanel>
         <StackPanel Grid.Column="5" Grid.Row="2">
-            <TextBox Name="_fNameTextBox" Text="{Binding ContactFname}" Height="28" FontSize="14" IsReadOnly="True"/>
-            <TextBox Name="_vNameTextBox" Text="{Binding ContactLname}" Height="28" FontSize="14" IsReadOnly="True"/>
+            <TextBox x:Name="_fNameTextBox" Text="{Binding ContactFname}" Height="28" FontSize="14" IsReadOnly="True"/>
+            <TextBox x:Name="_vNameTextBox" Text="{Binding ContactLname}" Height="28" FontSize="14" IsReadOnly="True"/>
             <xctk:MaskedTextBox x:Name="_contactTextBox" Text="{Binding ContactTelephone}" Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>
             <xctk:MaskedTextBox x:Name="_cellNumberTextBox" Text="{Binding ContactCellphone}"  Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>
-            <TextBox Name="_positionTextBox" Text="{Binding ContactPosition}" Height="28" FontSize="14" IsReadOnly="True"/>
+            <TextBox x:Name="_positionTextBox" Text="{Binding ContactPosition}" Height="28" FontSize="14" IsReadOnly="True"/>
             <!--<TextBlock Name="_emailTextBox" Height="28" FontSize="14" >
                 <Hyperlink Name="_hyperLink" >
                      <TextBlock Text="{Binding Path=ContactEmail}"/>
@@ -88,6 +88,6 @@
                     <MenuItem Header="Invoice Detail" Command="{Binding InvoiceMenuItemClickCommand}" CommandParameter="{Binding PlacementTarget.SelectedItem,RelativeSource={RelativeSource FindAncestor,AncestorType={x:Type ContextMenu}}}" />
                 </ContextMenu>
             </DataGrid.ContextMenu>
-        </DataGrid>          
+        </DataGrid>
     </Grid>
 </Page>

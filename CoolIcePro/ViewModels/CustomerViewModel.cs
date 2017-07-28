@@ -11,7 +11,6 @@ namespace CoolIcePro.ViewModels
 {
     public class CustomerViewModel : INotifyPropertyChanged
     {
-        
         public event PropertyChangedEventHandler PropertyChanged;
         long id;
         string companyName;
@@ -294,11 +293,11 @@ namespace CoolIcePro.ViewModels
             Email = customer.Email;
             Website = customer.Website; 
             
-            if (customer.Contacts == null)
+            if (!customer.Contacts.Any())
                 return;
             var contact  = customer.Contacts.FirstOrDefault();
-            ContactFname = contact.Fname;
-            ContactLname = contact.Lname;
+            ContactFname = contact.FirstName;
+            ContactLname = contact.LastName;
             ContactTelephone = contact.Telephone;
             ContactCellphone = contact.Cellphone;
             ContactPosition = contact.Position;

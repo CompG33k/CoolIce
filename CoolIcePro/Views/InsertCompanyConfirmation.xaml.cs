@@ -111,13 +111,13 @@ namespace CoolIcePro.Views
         private Contact GetContactUI()
         {
             Contact contact = new Contact();
-            contact.Fname = _fNameLabel.Content as string;
-            contact.Lname = _lNameLabel.Content as string;
+            contact.FirstName = _fNameLabel.Content as string;
+            contact.LastName = _lNameLabel.Content as string;
             contact.Telephone = _contactTelephoneLabel.Content as string;
             contact.Cellphone = _cellLabel.Content as string;
             contact.Position = _positionLabel.Content as string;
 
-            if (contact.Fname == null || contact.Position == null)
+            if (contact.FirstName == null || contact.Position == null)
             {
                 MessageBox.Show("Not all required fields filled in!");
                 return null;

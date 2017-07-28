@@ -7,6 +7,8 @@ using CoolIcePro.Models;
 using System.Windows;
 using CoolIcePro.Models;
 using CoolIcePro.Windows;
+using System.Data;
+using AutoMapper;
 
 namespace CoolIcePro
 {
@@ -19,6 +21,7 @@ namespace CoolIcePro
         private ProjectManager() {
             _coolIceProDBHelper = new CoolIceProHelper();
             _windowsOpen = new List<GenericWindow>();
+           
         }
 
         public static ProjectManager Instance

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SQLite;
 using System.Data;
 using System.Windows;
+
 namespace CoolIcePro.Models
 {
 
@@ -46,7 +47,12 @@ namespace CoolIcePro.Models
             str = str.Trim().Substring(0, str.Length - 1);
             dbConnection = str;
         }
-
+        
+        //public async Task<List<Models.Contact>> GetContactsAsync<T>(string sqlQuery)
+        //{
+        //    var db = new SQLite.SQLiteAsyncConnection(dbConnection);
+        //    return await db.QueryAsync<Models.Contact>(sqlQuery);        
+        //}
         /// <summary>
         ///     Allows the programmer to run a query against the Database.
         /// </summary>
@@ -59,17 +65,13 @@ namespace CoolIcePro.Models
             {
                 using(SQLiteConnection cnn = new SQLiteConnection(dbConnection))
                 {
-
                     cnn.Open();
-                    SQLiteCommand mycommand = new SQLiteCommand(cnn)
+                    using(SQLiteCommand mycommand = new SQLiteCommand(cnn){CommandText = sql})
                     {
-                        CommandText = sql
-                    };
-                
-                    SQLiteDataReader reader = mycommand.ExecuteReader();
-                    dt.Load(reader);
-                
-                    reader.Close();
+                        SQLiteDataReader reader = mycommand.ExecuteReader();
+                        dt.Load(reader);
+                        reader.Close();
+                    }
                     cnn.Close();
                 }
             }

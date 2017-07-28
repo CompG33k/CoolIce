@@ -23,6 +23,6 @@ namespace CoolIcePro.Models
         public string Fax { get; set; }
         public string Email { get; set; }
         public string Website { get; set; }
-        public List<Contact> Contacts { get; set; }
+        public IEnumerable<Contact> Contacts { get; set; }
     }
 }

@@ -68,6 +68,10 @@
     <OutputPath>bin\x86\Release\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="DataGridExtensions, Version=1.0.13.0, Culture=neutral, PublicKeyToken=43de855f87de903a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\DataGridExtensions.1.0.13.0\lib\net40-Client\DataGridExtensions.dll</HintPath>
@@ -204,12 +208,13 @@
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\CoolIceProHelper.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DbColumnAttribute.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\SqliteDatabase.cs" />
     <Compile Include="ProjectManager.cs" />
-    <Compile Include="SqlLiteLogic\SQLite.cs" />
-    <Compile Include="SqlLiteLogic\SQLiteAsync.cs" />
+    <Compile Include="SqlLiteResources\SQLite.cs" />
+    <Compile Include="SqlLiteResources\SQLiteAsync.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\IGenericPageViewModel.cs" />

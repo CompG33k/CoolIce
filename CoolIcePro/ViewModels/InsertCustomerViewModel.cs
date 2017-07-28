@@ -331,8 +331,8 @@ namespace CoolIcePro.ViewModels
         {
             Models.Contact cContact = new Models.Contact();
             cContact.Cellphone = this.ContactCellphone;
-            cContact.Fname = this.ContactFirstName;
-            cContact.Lname = this.ContactLastName;
+            cContact.FirstName = this.ContactFirstName;
+            cContact.LastName = this.ContactLastName;
             cContact.Position = this.ContactPosition;
             cContact.Telephone = this.ContactTelephone;
             return cContact;

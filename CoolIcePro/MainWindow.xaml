@@ -7,7 +7,7 @@
         xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
         x:Class="CoolIcePro.MainWindow"
         FontSize="16"
-        Title="Cool Ice Pro" Height="825" Width="920">
+        Title="Cool Ice Pro" Height="825" Width="1180">
     <Controls:MetroWindow.DataContext>
         <VM:MainWindowViewModel/>
     </Controls:MetroWindow.DataContext>

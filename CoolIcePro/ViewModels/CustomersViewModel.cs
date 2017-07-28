@@ -87,7 +87,10 @@ namespace CoolIcePro.ViewModels
         }
         private static void CustomerWindowLogic(Models.Customer customer)
         {
+             var contacts = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContacts(customer.Id).Result;
+            customer.Contacts = contacts;
             var page = new CoolIcePro.Views.Customer(new CustomerViewModel(customer));
+           
             Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("{0}", customer.CompanyName), page);
             gw.ShowDialog();
         }
