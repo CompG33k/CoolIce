@@ -15,7 +15,23 @@
         <VM:CustomersViewModel/>
     </Page.DataContext>
     <Grid>
-        <DataGrid  Name="_dataGrid"  GridLinesVisibility="All" IsReadOnly="True" ItemsSource="{Binding List}"  SelectedItem="{Binding IModel, Mode=TwoWay}">
+        <DataGrid  Name="_dataGrid"  GridLinesVisibility="All" IsReadOnly="True" ItemsSource="{Binding List}"  SelectedItem="{Binding IModel, Mode=TwoWay}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Restaurant" Binding="{Binding CompanyName}"/>
+                <DataGridTextColumn Header="Address" Binding="{Binding Address}"/>
+                <DataGridTextColumn Header="City" Binding="{Binding City}"/>
+                <DataGridTextColumn Header="ZipCode" Binding="{Binding Zipcode}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Contact" >
+                    <DataGridTextColumn.Binding>
+                        <MultiBinding StringFormat='{}{0} {1}'>
+                            <Binding Path="Contact.FirstName" />
+                            <Binding Path="Contact.LastName" />
+                        </MultiBinding>
+                    </DataGridTextColumn.Binding>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Contact Info" Binding="{Binding Telephone}"/>
+            </DataGrid.Columns>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <cmd:EventToCommand Command="{Binding MouseDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />

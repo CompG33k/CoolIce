@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using CoolIcePro.Models;
 using System.Windows;
-using CoolIcePro.Models;
 using CoolIcePro.Windows;
 using System.Data;
 using AutoMapper;

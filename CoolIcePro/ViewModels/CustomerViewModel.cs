@@ -293,9 +293,9 @@ namespace CoolIcePro.ViewModels
             Email = customer.Email;
             Website = customer.Website; 
             
-            if (!customer.Contacts.Any())
+            if (customer.Contact == null)
                 return;
-            var contact  = customer.Contacts.FirstOrDefault();
+            var contact  = customer.Contact;
             ContactFname = contact.FirstName;
             ContactLname = contact.LastName;
             ContactTelephone = contact.Telephone;

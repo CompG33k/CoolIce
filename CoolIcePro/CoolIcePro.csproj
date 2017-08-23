@@ -208,13 +208,14 @@
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\CoolIceProHelper.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\DbColumnAttribute.cs" />
+    <Compile Include="Models\CustomerSearch.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="Models\SqliteDatabase.cs" />
     <Compile Include="ProjectManager.cs" />
     <Compile Include="SqlLiteResources\SQLite.cs" />
     <Compile Include="SqlLiteResources\SQLiteAsync.cs" />
+    <Compile Include="SqlLiteResources\Util.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\IGenericPageViewModel.cs" />

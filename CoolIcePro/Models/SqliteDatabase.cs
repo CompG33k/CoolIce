@@ -21,7 +21,7 @@ namespace CoolIcePro.Models
         {
             string location = System.Reflection.Assembly.GetEntryAssembly().Location;
             location = location.Replace(@"CoolIcePro.exe", @"Data\Database.db3");
-            dbConnection = "Data Source=" + location;
+            dbConnection = string.Format("Data Source={0};version=3;new=False;datetimeformat=CurrentCulture",location);
         }
 
         /// <summary>
@@ -63,7 +63,7 @@ namespace CoolIcePro.Models
             DataTable dt = new DataTable();
             try
             {
-                using(SQLiteConnection cnn = new SQLiteConnection(dbConnection))
+                using (SQLiteConnection cnn = new SQLiteConnection(dbConnection))
                 {
                     cnn.Open();
                     using(SQLiteCommand mycommand = new SQLiteCommand(cnn){CommandText = sql})
@@ -78,7 +78,7 @@ namespace CoolIcePro.Models
             catch (Exception e)
             {
                 MessageBox.Show(e.Message + e.StackTrace);
-                throw;
+                //throw;
             }
             return dt;
         }

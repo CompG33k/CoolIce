@@ -15,7 +15,30 @@
         <VM:InvoicesViewModel/>
     </Page.DataContext>
     <Grid>
-        <DataGrid  Name="_dataGrid" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding List}" SelectedItem="{Binding IModel, Mode=TwoWay}">
+        <DataGrid Name="_dataGrid" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding List}" SelectedItem="{Binding IModel, Mode=TwoWay}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Invoice Date" Binding="{Binding Date}"/> 
+                <DataGridTextColumn Header="Company" Binding="{Binding CompanyName}"/>
+                <DataGridTextColumn Header="Service Performed On" Binding="{Binding ServicePerformanceOn}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                            <!--<Setter Property="TextBlock.TextAlignment" Value="Center"/>-->
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+                            <!--<Setter Property="TextBlock.TextAlignment" Value="Center"/>-->    
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Contact" />
+                <DataGridTextColumn Header="Contact Info" Binding="{Binding Telephone}"/>
+                <DataGridTextColumn Header="Invoice Amount" Binding="{Binding TotalAmount}"/>
+            </DataGrid.Columns>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <cmd:EventToCommand Command="{Binding RowDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />

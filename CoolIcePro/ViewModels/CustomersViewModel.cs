@@ -18,7 +18,7 @@ namespace CoolIcePro.ViewModels
 
         public CustomersViewModel()
         {
-            _list = ProjectManager.Instance.CoolIceProDBHelper.GetAllCustomers(); 
+            _list = ProjectManager.Instance.CoolIceProDBHelper.GetAllSearchableCustomers(); 
         }
 
         public IEnumerable<Models.IModel> List
@@ -83,12 +83,12 @@ namespace CoolIcePro.ViewModels
      
         public void ResetList()
         {
-            List = ProjectManager.Instance.CoolIceProDBHelper.GetAllCustomers();
+            List = ProjectManager.Instance.CoolIceProDBHelper.GetAllSearchableCustomers();
         }
         private static void CustomerWindowLogic(Models.Customer customer)
         {
-             var contacts = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContacts(customer.Id).Result;
-            customer.Contacts = contacts;
+             var contact = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContacts(customer.Id).Result;
+            customer.Contact = contact;
             var page = new CoolIcePro.Views.Customer(new CustomerViewModel(customer));
            
             Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("{0}", customer.CompanyName), page);
