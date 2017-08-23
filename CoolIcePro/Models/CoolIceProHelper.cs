@@ -181,19 +181,41 @@ namespace CoolIcePro.Models
             }
         }
 
-        public IEnumerable<Invoice> GetAllInvoices()
+        public Models.Invoice GetInvoice(long invoiceId)
         {
-            using (DataTable table = this.GetDataTable(SELECTINVOICEQUERY))
+            string query = string.Format("{0} where Id ='{1}'", SELECTINVOICEQUERY, invoiceId.ToString());
+            using (DataTable table = this.GetDataTable(query))
             {
                 return (from DataRow row in table.Rows
-                        select GetInvoiceClassInstance(row));
+                        select GetInvoiceClassInstance(row)).FirstOrDefault();
+            }
+        }
+
+        public IEnumerable<Models.InvoiceSearch> GetAllInvoices()
+        {
+            string query = string.Format("select i.Id,i.CompanyId, i.Date, c.CompanyName ,i.Warranty,i.Description,i.InvoiceNumber,i.ServicePerformanceOn,i.TotalAmount , con.Fname,con.Lname from invoice i Left JOIN Company c ON  i.CompanyId = c.Id Left Join Contact con ON i.CompanyId = con.fk_id");
+            using (DataTable table = this.GetDataTable(query))
+            {
+                return (from DataRow row in table.Rows 
+                        select new InvoiceSearch{
+                            Id = row.Field<long>("Id"),
+                            CompanyId = row.Field<long>("CompanyId"),
+                            CompanyName = row.Field<string>("CompanyName"),
+                            ContactFName = row.Field<string>("Fname"),
+                            ContactLName = row.Field<string>("Lname"),
+                            Date = DateTime.Parse(row["Date"].ToString(), System.Globalization.CultureInfo.InvariantCulture),
+                            Description = row["Description"] as string,
+                            InvoiceNumber = row["InvoiceNumber"] as string,
+                            ServicePerfomanceOn = row["ServicePerformanceOn"] as string, 
+                            TotalAmount = row.Field<double>("TotalAmount"),
+                            Warranty = (row.Field<long>("Warranty")  == 1) ? true: false
+                        });
             }
         }
 
         public IEnumerable<Models.CustomerSearch> SearchCustomers(string searchText)
         {
             string query = string.Format("select c.Id,c.CompanyName,c.Address,c.AddressExt,c.City,c.State,c.Zipcode,c.Telephone,c.Fax,c.Email,c.Website, con.Fname, con.Lname, con.Telephone as contactTelephone, con.Position from company c LEFT JOIN Contact con ON c.Id =con.fk_id where c.CompanyName like '%{0}%' or c.Address like '%{0}%' or c.AddressExt like '%{0}%' or c.City like '%{0}%' or c.State like '%{0}%' or c.Zipcode like '%{0}%' or c.Telephone like '%{0}%' or con.Fname like '%{0}%' or con.Lname like '%{0}%' or con.Telephone like '%{0}%'", searchText);
-            //string query = string.Format("{0} where CompanyName like '%{1}%' or Address like '%{1}%' or AddressExt like '%{1}%' or City like '%{1}%' or State like '%{1}%' or Zipcode like '%{1}%' or Telephone like '%{1}%'", SELECTCUSTOMERQUERY, searchText);
             using (DataTable table = this.GetDataTable(query))
             {
                 return (from DataRow row in table.Rows
@@ -201,27 +223,44 @@ namespace CoolIcePro.Models
             }
         }
 
-        public IEnumerable<Models.Invoice> SearchInvoices(string searchText)
+        public IEnumerable<Models.InvoiceSearch> SearchInvoices(string searchText)
         {
-            string query = string.Format("select i.Id,i.CompanyId, i.Date,i.Description,i.InvoiceNumber,i.ServicePerformanceOn,i.TotalAmount,i.Warranty,i.IsCheck, c.CompanyName from invoice i JOIN Company c ON  i.CompanyId = c.Id where i.Description like '%{0}%' or i.ServicePerformanceOn like '%{0}%' or i.TotalAmount like '%{0}%' or i.Date like '%{0}%' or c.CompanyName like '%{0}%'", searchText);
+            // Break query into spaces 
+            // now loop through and add to a distinct list search result
+            //Start loop searchText.SPlit();
+            string query = string.Format("select i.Id,i.CompanyId, i.Date,c.CompanyName ,i.Warranty,i.Description,i.InvoiceNumber,i.ServicePerformanceOn,i.TotalAmount, con.Fname, con.Lname from invoice i Left JOIN Company c ON  i.CompanyId = c.Id Left Join Contact con ON i.CompanyId = con.fk_id where i.Description like '%{0}%' or i.ServicePerformanceOn like '%{0}%' or i.TotalAmount like '%{0}%' or i.Date like '%{0}%' or c.CompanyName like '%{0}%'", searchText);
+            
             using(DataTable table = this.GetDataTable(query))
             using (DataTableReader dtr = table.CreateDataReader())
             {
-                return (from DataRow row in table.Rows 
-                        select GetInvoiceClassInstance(row));
+                return (from DataRow row in table.Rows
+                        select new InvoiceSearch
+                        {
+                            Id = row.Field<long>("Id"),
+                            CompanyId = row.Field<long>("CompanyId"),
+                            CompanyName = row.Field<string>("CompanyName"),
+                            ContactFName = row.Field<string>("Fname"),
+                            ContactLName = row.Field<string>("Lname"),
+                            Date = DateTime.Parse(row["Date"].ToString(), System.Globalization.CultureInfo.InvariantCulture),
+                            Description = row["Description"] as string,
+                            InvoiceNumber = row["InvoiceNumber"] as string,
+                            ServicePerfomanceOn = row["ServicePerformanceOn"] as string,
+                            TotalAmount = row.Field<double>("TotalAmount"),
+                            Warranty = (row.Field<long>("Warranty") == 1) ? true : false
+                        });
             }
         }
-    
+
         private static Contact GetContactClassInstance(DataRow row)
         {
             return new Models.Contact()
             {
                 Id = row.Field<long>("Id"),
-               // CompanyId = row.Field<long>("fk_Id"),
+                // CompanyId = row.Field<long>("fk_Id"),
                 FirstName = row.Field<string>("Fname"),
                 LastName = row.Field<string>("Lname"),
                 Telephone = row.Field<string>("contactTelephone"),
-             //   Cellphone = row.Field<string>("Cellphone"),
+                //   Cellphone = row.Field<string>("Cellphone"),
                 Position = row.Field<string>("Position")
             };
         }
@@ -259,6 +298,6 @@ namespace CoolIcePro.Models
                 Check = (row.Field<long>("IsCheck") == 1) ? true : false
             };
         }
-      
+
     }
 }

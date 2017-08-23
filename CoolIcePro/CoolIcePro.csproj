@@ -211,6 +211,7 @@
     <Compile Include="Models\CustomerSearch.cs" />
     <Compile Include="Models\IModel.cs" />
     <Compile Include="Models\Invoice.cs" />
+    <Compile Include="Models\InvoiceSearch.cs" />
     <Compile Include="Models\SqliteDatabase.cs" />
     <Compile Include="ProjectManager.cs" />
     <Compile Include="SqlLiteResources\SQLite.cs" />

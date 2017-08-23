@@ -19,6 +19,7 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Invoice Date" Binding="{Binding Date}"/> 
                 <DataGridTextColumn Header="Company" Binding="{Binding CompanyName}"/>
+                <DataGridTextColumn Header="Contact" Binding="{Binding ContactFullName}"/>
                 <DataGridTextColumn Header="Service Performed On" Binding="{Binding ServicePerformanceOn}">
                     <DataGridTextColumn.ElementStyle>
                         <Style>
@@ -35,8 +36,7 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Contact" />
-                <DataGridTextColumn Header="Contact Info" Binding="{Binding Telephone}"/>
+                <!--<DataGridTextColumn Header="Contact Info" Binding="{Binding ContactTelephone}"/>-->
                 <DataGridTextColumn Header="Invoice Amount" Binding="{Binding TotalAmount}"/>
             </DataGrid.Columns>
             <i:Interaction.Triggers>

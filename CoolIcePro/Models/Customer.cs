@@ -11,6 +11,7 @@ namespace CoolIcePro.Models
     /// </summary>
     public class Customer: IModel
     {
+        public Customer() { Contact = new Contact(); }
         public long Id { get; set; }
         public string CompanyName { get; set; }
         public string Address { get; set; }

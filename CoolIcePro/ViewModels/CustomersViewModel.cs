@@ -46,7 +46,7 @@ namespace CoolIcePro.ViewModels
                     mouseDoubleClickCommand = new RelayCommand<Models.IModel>(
                         selectedItem =>
                         {
-                            var customer = selectedItem as Models.Customer;
+                            var customer = selectedItem as Models.CustomerSearch;
                             if (customer != null)
                             {
                                 CustomerWindowLogic(customer);
@@ -66,7 +66,7 @@ namespace CoolIcePro.ViewModels
                     customerMenuItemClickCommand = new RelayCommand<Models.IModel>(
                         selectedItem =>
                         {
-                            var customer = selectedItem as Models.Customer;
+                            var customer = selectedItem as Models.CustomerSearch;
                             if (customer != null)
                             {
                                 CustomerWindowLogic(customer);
@@ -85,13 +85,14 @@ namespace CoolIcePro.ViewModels
         {
             List = ProjectManager.Instance.CoolIceProDBHelper.GetAllSearchableCustomers();
         }
-        private static void CustomerWindowLogic(Models.Customer customer)
+        private static void CustomerWindowLogic(Models.CustomerSearch customerSearch)
         {
-             var contact = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContacts(customer.Id).Result;
+            var customer = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(customerSearch.Id);
+             var contact = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContacts(customerSearch.Id).Result;
             customer.Contact = contact;
             var page = new CoolIcePro.Views.Customer(new CustomerViewModel(customer));
            
-            Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("{0}", customer.CompanyName), page);
+            Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("{0}", customerSearch.CompanyName), page);
             gw.ShowDialog();
         }
 
