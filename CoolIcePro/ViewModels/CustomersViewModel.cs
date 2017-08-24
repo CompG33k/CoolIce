@@ -88,7 +88,7 @@ namespace CoolIcePro.ViewModels
         private static void CustomerWindowLogic(Models.CustomerSearch customerSearch)
         {
             var customer = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(customerSearch.Id);
-             var contact = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContacts(customerSearch.Id).Result;
+            var contact = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerContacts(customerSearch.Id);
             customer.Contact = contact;
             var page = new CoolIcePro.Views.Customer(new CustomerViewModel(customer));
            

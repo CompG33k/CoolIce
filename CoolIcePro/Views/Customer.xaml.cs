@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Office.Interop.Excel;
 using CoolIcePro.ViewModels;
+using System.Text.RegularExpressions;
 
 namespace CoolIcePro.Views
 {
@@ -22,10 +23,11 @@ namespace CoolIcePro.Views
     /// </summary>
     public partial class Customer : System.Windows.Controls.Page
     {
+        private readonly Regex _regex;
         public Customer(CustomerViewModel company)
         {
-
             InitializeComponent();
+            _regex = new Regex("[^0-9]+"); //regex that matches disallowed text
             if (System.ComponentModel.DesignerProperties.GetIsInDesignMode(this))
                 return;
             this.DataContext = company;
@@ -53,6 +55,24 @@ namespace CoolIcePro.Views
             //releaseObject(xlApp);
 
             MessageBox.Show("Excel file created , you can find the file c:\\csharp-Excel.xls");
+        }
+
+        private void ButtonClickedEventHandler(object sender, RoutedEventArgs e)
+        {
+            foreach (TextBlock tb in CoolIcePro.Util.UiUtil.FindVisualChildren<TextBlock>(this))
+            {
+                tb.FontStyle = new FontStyle();
+            }
+        }
+
+        private void PreviewTextInputHandler(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !IsTextAllowed(e.Text);
+        }
+
+        private bool IsTextAllowed(string text)
+        {
+            return !_regex.IsMatch(text);
         }
 
     }

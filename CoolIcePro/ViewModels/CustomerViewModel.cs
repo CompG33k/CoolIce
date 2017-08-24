@@ -239,18 +239,18 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public IEnumerable<CoolIcePro.Models.Contact> Contacts
-        { 
-            get { return contacts; }
-            set
-            {
-                if (contacts != value)
-                {
-                    contacts = value;
-                    OnPropertyChanged("Contacts");
-                }
-            }
-        }
+        //public IEnumerable<CoolIcePro.Models.Contact> Contacts
+        //{
+        //    get { return contacts; }
+        //    set
+        //    {
+        //        if (contacts != value)
+        //        {
+        //            contacts = value;
+        //            OnPropertyChanged("Contacts");
+        //        }
+        //    }
+        //}
 
         public IEnumerable<string> States
         {
@@ -295,6 +295,7 @@ namespace CoolIcePro.ViewModels
             
             if (customer.Contact == null)
                 return;
+            
             var contact  = customer.Contact;
             ContactFname = contact.FirstName;
             ContactLname = contact.LastName;

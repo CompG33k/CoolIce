@@ -6,11 +6,15 @@
       xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
       xmlns:VM="clr-namespace:CoolIcePro.ViewModels"
+      xmlns:converters="clr-namespace:CoolIcePro.Converters"
       mc:Ignorable="d" 
       FontSize="16"
       d:DesignHeight="300" d:DesignWidth="300"
       d:DataContext="{d:DesignInstance VM:InvoicesViewModel, IsDesignTimeCreatable=False}"
 	Title="Invoices">
+    <Page.Resources>
+        <converters:MoneyConverter x:Key="MoneyConverter"/>
+    </Page.Resources>
     <Page.DataContext>
         <VM:InvoicesViewModel/>
     </Page.DataContext>
@@ -37,7 +41,13 @@
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
                 <!--<DataGridTextColumn Header="Contact Info" Binding="{Binding ContactTelephone}"/>-->
-                <DataGridTextColumn Header="Invoice Amount" Binding="{Binding TotalAmount}"/>
+                <DataGridTextColumn Header="Invoice Amount" Binding="{Binding TotalAmount, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource MoneyConverter}}">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style>
+                            <Setter Property="TextBlock.TextAlignment " Value="Right"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
             </DataGrid.Columns>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">

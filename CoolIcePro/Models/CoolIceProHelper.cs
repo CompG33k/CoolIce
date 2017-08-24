@@ -15,7 +15,7 @@ namespace CoolIcePro.Models
     public class CoolIceProHelper : SQLiteDatabase
     {
         static string SELECTCUSTOMERQUERY = "select Id,CompanyName,Address,AddressExt,City,State,Zipcode,Telephone,Fax,Email,Website from company";
-        static string SELECTCONTACTQUERY = "select Id, Fname,Lname,Telephone,Cellphone,Position,fk_id from Contact";
+        static string SELECTCONTACTQUERY = "select Id, Fname,Lname,Telephone as contactTelephone,Cellphone as contactCellphone,Position,fk_id from Contact";
         static string SELECTINVOICEQUERY = "select Id,CompanyId, Date,Description,InvoiceNumber,ServicePerformanceOn,TotalAmount,Warranty,IsCheck from Invoice";
 
         /// <summary>
@@ -135,7 +135,7 @@ namespace CoolIcePro.Models
 
         public IEnumerable<CustomerSearch> GetAllSearchableCustomers()
         {
-            string query = string.Format("select c.Id,c.CompanyName,c.Address,c.AddressExt,c.City,c.State,c.Zipcode,c.Telephone,c.Fax,c.Email,c.Website, con.Fname, con.Lname, con.Telephone as contactTelephone, con.Position from company c LEFT JOIN Contact con ON c.Id =con.fk_id");
+            string query = string.Format("select c.Id,c.CompanyName,c.Address,c.AddressExt,c.City,c.State,c.Zipcode,c.Telephone,c.Fax,c.Email,c.Website, con.Fname, con.Lname, con.Telephone as contactTelephone, con.Position, con.fk_id, con.Cellphone as contactCellPhone from company c LEFT JOIN Contact con ON c.Id =con.fk_id");
             using (DataTable table = this.GetDataTable(query))
             {
                  return from DataRow row in table.Rows
@@ -161,9 +161,9 @@ namespace CoolIcePro.Models
         }
         
 
-        public async Task<Models.Contact> GetCustomerContacts(long customerId)
+        public Models.Contact GetCustomerContacts(long customerId)
         {
-            string query = string.Format("{0} where fk_id = '{0}'",SELECTCONTACTQUERY, customerId);
+            string query = string.Format("{0} where fk_id = '{1}'",SELECTCONTACTQUERY, customerId);
             using (DataTable table = this.GetDataTable(query))   
             {
                 return (from DataRow row in table.Rows
@@ -256,11 +256,11 @@ namespace CoolIcePro.Models
             return new Models.Contact()
             {
                 Id = row.Field<long>("Id"),
-                // CompanyId = row.Field<long>("fk_Id"),
+                CompanyId = row.Field<long>("fk_Id"),
                 FirstName = row.Field<string>("Fname"),
                 LastName = row.Field<string>("Lname"),
                 Telephone = row.Field<string>("contactTelephone"),
-                //   Cellphone = row.Field<string>("Cellphone"),
+                Cellphone = row.Field<string>("contactCellphone"),
                 Position = row.Field<string>("Position")
             };
         }

@@ -7,12 +7,16 @@
       xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
       xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
       xmlns:local="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
-      xmlns:telerik="clr-namespaceCoolIcePro;assempbly=CoolIcePro.Controls"
+      xmlns:converter="clr-namespace:CoolIcePro.Converters"
       mc:Ignorable="d" 
       FontSize="16"
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      
       d:DesignHeight="720" d:DesignWidth="725"
 	Title="Customer">
+    <Page.Resources>
+        <converter:StringToPhoneConverter x:Key="StringToPhoneConverter"/>
+    </Page.Resources>
     <Grid Background="White">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="45"/>
@@ -30,7 +34,7 @@
             <RowDefinition Height="180"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Command="{Binding EditButtonCommand}"/>
+        <Button Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Click="ButtonClickedEventHandler"/>
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content="Company" FontFamily="Segoe UI" FontSize="15" Height="35"/>
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="Black" Height="1" VerticalAlignment="Bottom"/>
 
@@ -48,8 +52,9 @@
         <Label  Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" Background="Black" Height="1" VerticalAlignment="Bottom"/>
 
         <StackPanel Grid.Column="2" Grid.Row="2">
-            <TextBox Name="_companyTextBox" Text="{Binding CompanyName}"  Height="28" FontSize="14" IsReadOnly="True"/>
-            <xctk:MaskedTextBox Name="_companyNumberTextBox" Text="{Binding Telephone}"  Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>
+            <TextBox Name="_companyTextBox" Text="{Binding CompanyName}" Height="28" FontSize="14" IsReadOnly="True"/>
+            <TextBox Name="_companyNumberTextBox" Text="{Binding Telephone, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverter}}" Height="28" FontSize="14" IsReadOnly="True" PreviewTextInput="PreviewTextInputHandler"/>
+            <!--<xctk:MaskedTextBox Name="_companyNumberTextBox" Text="{Binding Telephone}"  Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/ ui:Masking.Mask="^\p{Lu}*$">-->
             <TextBox Name="_address"  Height="28" FontSize="14" Text ="{Binding Address}"  IsReadOnly="True"/>
             <TextBox Name="_addressExtTextbox" Height="28" FontSize="14" Text="{Binding AddressExt}"  IsReadOnly="True"/>
             <TextBox Name="_cityTextBox" Height="28" FontSize="14" Text="{Binding City}"  IsReadOnly="True"/>
@@ -67,8 +72,12 @@
         <StackPanel Grid.Column="5" Grid.Row="2">
             <TextBox x:Name="_fNameTextBox" Text="{Binding ContactFname}" Height="28" FontSize="14" IsReadOnly="True"/>
             <TextBox x:Name="_vNameTextBox" Text="{Binding ContactLname}" Height="28" FontSize="14" IsReadOnly="True"/>
-            <xctk:MaskedTextBox x:Name="_contactTextBox" Text="{Binding ContactTelephone}" Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>
-            <xctk:MaskedTextBox x:Name="_cellNumberTextBox" Text="{Binding ContactCellphone}"  Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>
+
+
+            <TextBox Name="_contactTextBox" Text="{Binding ContactTelephone, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverter}}" Height="28" FontSize="14" IsReadOnly="True" PreviewTextInput="PreviewTextInputHandler"/>
+            <TextBox Name="_cellNumberTextBox" Text="{Binding ContactCellphone, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverter}}"  Height="28" FontSize="14" IsReadOnly="True" PreviewTextInput="PreviewTextInputHandler"/>
+            <!--<xctk:MaskedTextBox x:Name="_contactTextBox" Text="{Binding ContactTelephone}" Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>
+            <xctk:MaskedTextBox x:Name="_cellNumberTextBox" Text="{Binding ContactCellphone}"  Height="28" FontSize="14" Mask="(000) 000-0000" IsReadOnly="True"/>-->
             <TextBox x:Name="_positionTextBox" Text="{Binding ContactPosition}" Height="28" FontSize="14" IsReadOnly="True"/>
             <!--<TextBlock Name="_emailTextBox" Height="28" FontSize="14" >
                 <Hyperlink Name="_hyperLink" >

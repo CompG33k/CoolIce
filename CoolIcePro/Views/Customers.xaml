@@ -6,11 +6,15 @@
       xmlns:VM="clr-namespace:CoolIcePro.ViewModels"
       xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
+      xmlns:converters="clr-namespace:CoolIcePro.Converters"
       mc:Ignorable="d" 
       FontSize="14"
       d:DesignHeight="300" d:DesignWidth="300"
       d:DataContext="{d:DesignInstance VM:CustomersViewModel, IsDesignTimeCreatable=False}"
 	Title="Customers">
+    <Page.Resources>
+        <converters:StringToPhoneConverter x:Key="StringToPhoneConverter"/>
+    </Page.Resources>
     <Page.DataContext>
         <VM:CustomersViewModel/>
     </Page.DataContext>
@@ -30,7 +34,7 @@
                         </MultiBinding>
                     </DataGridTextColumn.Binding>
                 </DataGridTextColumn>
-                <DataGridTextColumn Header="Contact Info" Binding="{Binding Telephone}"/>
+                <DataGridTextColumn Header="Contact Info" Binding="{Binding Telephone, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverter}}"/>
             </DataGrid.Columns>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">

@@ -205,6 +205,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Converters\MainWIndowGridToolBarWidthAdjustConverter.cs" />
+    <Compile Include="Converters\MoneyConverter.cs" />
+    <Compile Include="Converters\StringToPhoneConverter.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\CoolIceProHelper.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -217,6 +219,7 @@
     <Compile Include="SqlLiteResources\SQLite.cs" />
     <Compile Include="SqlLiteResources\SQLiteAsync.cs" />
     <Compile Include="SqlLiteResources\Util.cs" />
+    <Compile Include="Util\Masking.cs" />
     <Compile Include="ViewModels\CustomerViewModel.cs" />
     <Compile Include="ViewModels\CustomersViewModel.cs" />
     <Compile Include="ViewModels\IGenericPageViewModel.cs" />
@@ -252,6 +255,7 @@
     <Compile Include="Views\Invoices.xaml.cs">
       <DependentUpon>Invoices.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Util\UiUtil.cs" />
     <Compile Include="Windows\GenericWindow.xaml.cs">
       <DependentUpon>GenericWindow.xaml</DependentUpon>
     </Compile>

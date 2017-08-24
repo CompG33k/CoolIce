@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -173,6 +174,12 @@ namespace CoolIcePro.Views
         {
             _checkNumberTxtBox.Visibility = Visibility.Visible;
             _checkNumberLabel.Visibility = Visibility.Visible;
+        }
+
+        private void PreviewTextInputEventHandler(object sender, TextCompositionEventArgs e)
+        {
+            Regex rgx = new Regex(@"^\$?(?:[0-9]+(?:\.[0-9]+)?|\.[0-9]+)$");
+            e.Handled = !rgx.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
         }
     }
 }
