@@ -290,7 +290,7 @@ namespace CoolIcePro.Models
 
         public IEnumerable<Models.CustomerSearch> SearchCustomers(string searchText)
         {
-            string query = string.Format("select c.Id,c.CompanyName,c.Address,c.AddressExt,c.City,c.State,c.Zipcode,c.Telephone,c.Fax,c.Email,c.Website, con.Fname, con.Lname, con.Telephone as contactTelephone, con.Position from company c LEFT JOIN Contact con ON c.Id =con.fk_id where c.CompanyName like '%{0}%' or c.Address like '%{0}%' or c.AddressExt like '%{0}%' or c.City like '%{0}%' or c.State like '%{0}%' or c.Zipcode like '%{0}%' or c.Telephone like '%{0}%' or con.Fname like '%{0}%' or con.Lname like '%{0}%' or con.Telephone like '%{0}%'", searchText);
+            string query = string.Format("select c.Id,c.CompanyName,c.Address,c.AddressExt,c.City,c.State,c.Zipcode,c.Telephone,c.Fax,c.Email,c.Website, con.Fname, con.Lname, con.Telephone as contactTelephone, con.Position, con.fk_Id, con.Cellphone as contactCellphone from company c LEFT JOIN Contact con ON c.Id =con.fk_id where c.CompanyName like '%{0}%' or c.Address like '%{0}%' or c.AddressExt like '%{0}%' or c.City like '%{0}%' or c.State like '%{0}%' or c.Zipcode like '%{0}%' or c.Telephone like '%{0}%' or con.Fname like '%{0}%' or con.Lname like '%{0}%' or con.Telephone like '%{0}%'", searchText);
             using (DataTable table = this.GetDataTable(query))
             {
                 return (from DataRow row in table.Rows
