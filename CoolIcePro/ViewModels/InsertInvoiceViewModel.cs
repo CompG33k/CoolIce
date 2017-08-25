@@ -18,7 +18,7 @@ namespace CoolIcePro.ViewModels
 
         string _servicePerformedOn;
         string _checkNumber;
-        string _totalAmount;
+        double _totalAmount;
         string _description;
         Models.Invoice _invoice;
         public InsertInvoiceViewModel(long companyId) 
@@ -34,7 +34,7 @@ namespace CoolIcePro.ViewModels
             this._checkNumber = vm.InvoiceNumber;
             this._description = vm.Description;
             this._servicePerformedOn = vm.ServicePerfomanceOn;
-            this._totalAmount = vm.TotalAmount.ToString();
+            this._totalAmount = vm.TotalAmount;
         }
 
         public string ServicePerformedOn
@@ -69,7 +69,7 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public string TotalAmount
+        public double TotalAmount
         {
             set
             {
@@ -115,62 +115,30 @@ namespace CoolIcePro.ViewModels
                     saveButtonClickedCommand = new RelayCommand<object>(
                         sender =>
                         {
-                            int i = 0;
-                           // sender.Close();
-                           // MessageBox.Show("Save Button Clicked");
-                            ////Company company = ProjectManager.Instance.CurrentCompany;
-
-                            ////if(company == null)
-                            ////{
-                            ////    MessageBox.Show("if(company == null) line 58  Views\\InsertInvoice.xaml.cs line 58");
-                            ////    return;
-                            ////}
-                            //////Retrieve CompanyId... from DB
-                            ////var foreignKey = ProjectManager.Instance.CoolIceProDBHelper.GetContactForeignKey(company);
-                            //var foreignKey = 20;
-                            //if (foreignKey == null)
-                            //{
-                            //    MessageBox.Show("var foreignKey = ProjectManager.Instance.CoolIceProDBHelper.GetContactForeignKey(company);  Views\\InsertInvoice.xaml.cs line 61 ");
-                            //    return;
-                            //}
-
-
-
-
-                            // Verify All UI
-                            //if (!ValidateUI())
-                            //{
-                            //     tell user
-                            //     to check the input
-                            //    return;
-                            //}
-
-                            //Invoice invoice = GetInvoiceFromUI();
-
-                            //if (invoice == null)
-                            //{
-                            //     Something went wrong
-                            //    MessageBox.Show("Invoice GETINVOICEFROMUI()  is NULL");
-                            //    return;
-                            //}
-                            // update Database
-                            //if (!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(foreignKey, invoice))
-                            //{
-                            //     somethign in the DB went wrong
-                            //    MessageBox.Show("if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(foreignKey,invoice)) Views\\InsertInvoice.xaml.cs line 82");
-                            //    return;
-                            //}
-
-
-                            //MessageBox.Show("Success!");
-                            //Window.GetWindow(this).Close();
-                            //var company = item as Models.Company;
-                            //var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
-                            //p.Show();
+                            Models.Invoice invoice = GetInvoiceInformationUI();
+                            if (!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(invoice))
+                            {
+                                 //somethign in the DB went wrong
+                                MessageBox.Show("if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(foreignKey,invoice)) Views\\InsertInvoice.xaml.cs line 82");
+                                return;
+                            }
+                         
                         });
                 }
                 return saveButtonClickedCommand;
             }
+        }
+
+        private Models.Invoice GetInvoiceInformationUI()
+        {
+            Models.Invoice invoice = new Models.Invoice();
+            invoice.Check = false;
+            invoice.CompanyId = GetInvoice().CompanyId;
+            invoice.CheckNumber = this.CheckNumber;
+            invoice.Description = this.Description;
+            invoice.ServicePerfomanceOn = this._servicePerformedOn;
+            invoice.TotalAmount = this.TotalAmount;
+            return invoice;
         }
         public ICommand CancelButtonClickedCommand
         {

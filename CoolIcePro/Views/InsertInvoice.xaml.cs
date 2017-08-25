@@ -74,8 +74,9 @@ namespace CoolIcePro.Views
                 MessageBox.Show("Invoice GETINVOICEFROMUI()  is NULL");
                 return;
             }
+            invoice.CompanyId = foreignKey;
             // update Database
-            if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(foreignKey,invoice))
+            if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(invoice))
             {
                 // somethign in the DB went wrong
                 MessageBox.Show("if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(foreignKey,invoice)) Views\\InsertInvoice.xaml.cs line 82");

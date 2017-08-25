@@ -155,7 +155,7 @@ namespace CoolIcePro.Models
         }
         
         
-        public bool InsertInvoice(long companyId, Invoice invoice)
+        public bool InsertInvoice(Invoice invoice)
         {
             try
             {
@@ -167,7 +167,7 @@ namespace CoolIcePro.Models
                         {"InvoiceNumber" ,invoice.InvoiceNumber},
                         {"ServicePerformanceOn" ,invoice.ServicePerfomanceOn},
                         {"TotalAmount" ,invoice.TotalAmount.ToString()},
-                        {"CompanyId" ,companyId.ToString()}
+                        {"CompanyId" ,invoice.CompanyId.ToString()}
                     }
                       );
             }

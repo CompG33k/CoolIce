@@ -345,6 +345,7 @@ namespace CoolIcePro.ViewModels
                                 return;
 
                             InvoiceWindowLogic(invoice);
+
                         });
                 }
                 return rowDoubleClickCommand;
@@ -385,7 +386,17 @@ namespace CoolIcePro.ViewModels
                             if (customerPage != null)
                             {
                                 customerPage._editButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
-
+                                Window parentWindow = Application.Current.MainWindow;
+                                var vm = parentWindow.DataContext as MainWindowViewModel;
+                                if (vm != null)
+                                {
+                                    var vMm = vm.MainWindowPage.DataContext as IPageViewModel;
+                                    if (vMm != null)
+                                    {
+                                        vMm.ResetList();
+                                    }
+                                }
+                                 
                             }
                         });
                 }

@@ -20,5 +20,7 @@ namespace CoolIcePro.Models
         public double TotalAmount { get; set; }
         public bool Warranty { get; set; }
         public bool Check { get; set; }
+        public string CheckNumber { get; set; }
+
     }
 }

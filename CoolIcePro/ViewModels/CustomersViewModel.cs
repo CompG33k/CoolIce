@@ -29,11 +29,9 @@ namespace CoolIcePro.ViewModels
             }
             set
             {
-                if (_list != value)
-                {
-                    _list = value;
-                    OnPropertyChanged("List");
-                }
+
+                _list = value;
+                OnPropertyChanged("List");
             }
         }
 
