@@ -15,12 +15,26 @@ namespace CoolIcePro.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
         ICommand saveButtonClickedCommand;
         ICommand cancelButtonClickedCommand;
+        ICommand createInvoiceButtonClickedCommand;
 
-        string _servicePerformedOn;
-        string _checkNumber;
+        string _servicePerformedOn = string.Empty;
+        string _checkNumber = string.Empty;
+        string _description = string.Empty;
+        string _invoiceNumber = string.Empty;
         double _totalAmount;
-        string _description;
+        bool _isCheck;
+
         Models.Invoice _invoice;
+
+        public InsertInvoiceViewModel(InsertInvoiceViewModel lhs)
+        {
+            this.ServicePerformedOn = lhs.ServicePerformedOn;
+            this.CheckNumber = lhs.CheckNumber;
+            this.TotalAmount = lhs.TotalAmount;
+            this.Description = lhs.Description;
+            this.InvoiceNumber = lhs.InvoiceNumber;
+            this._invoice = lhs.GetInvoice();
+        }
         public InsertInvoiceViewModel(long companyId) 
         {
             _invoice = new Models.Invoice();
@@ -35,6 +49,8 @@ namespace CoolIcePro.ViewModels
             this._description = vm.Description;
             this._servicePerformedOn = vm.ServicePerfomanceOn;
             this._totalAmount = vm.TotalAmount;
+            this._isCheck = vm.Check;
+            this._invoiceNumber = vm.InvoiceNumber;
         }
 
         public string ServicePerformedOn
@@ -53,14 +69,30 @@ namespace CoolIcePro.ViewModels
             }
         }
 
+        public bool IsCheck
+        {
+            set
+            {
+                if (_isCheck != value)
+                {
+                    _isCheck = value;
+                    OnPropertyChanged("IsCheck");
+                }
+            }
+            get
+            {
+                return _isCheck;
+            }
+        }
+
         public string CheckNumber
         {
             set
             {
-                if (_checkNumber != null)
+                if (_checkNumber != value)
                 {
                     _checkNumber = value;
-                    OnPropertyChanged("_checkNumber");
+                    OnPropertyChanged("CheckNumber");
                 }
             }
             get
@@ -89,7 +121,7 @@ namespace CoolIcePro.ViewModels
         {
             set
             {
-                if (_description != null)
+                if (_description != value)
                 {
                     _description = value;
                     OnPropertyChanged("Description");
@@ -100,13 +132,28 @@ namespace CoolIcePro.ViewModels
                 return _description;
             }
         }
-
+        public string InvoiceNumber
+        {
+            set
+            {
+                if (_invoiceNumber != value)
+                {
+                    _invoiceNumber = value;
+                    OnPropertyChanged("InvoiceNumber");
+                }
+            }
+            get
+            {
+                return _invoiceNumber;
+            }
+        }
+        
         public Models.Invoice GetInvoice()
         {
             return _invoice;
         }
 
-        public ICommand SaveButtonClickedCommand
+        public ICommand EditButtonClickedCommand
         {
             get
             {
@@ -116,51 +163,78 @@ namespace CoolIcePro.ViewModels
                         sender =>
                         {
                             Models.Invoice invoice = GetInvoiceInformationUI();
-                            if (!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(invoice))
+                            if (!ProjectManager.Instance.CoolIceProDBHelper.UpdateInvoice(invoice))
                             {
-                                 //somethign in the DB went wrong
+                                //somethign in the DB went wrong
                                 MessageBox.Show("if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(foreignKey,invoice)) Views\\InsertInvoice.xaml.cs line 82");
                                 return;
                             }
-                         
+
+                            var window = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+
+                            Window parentWindow = Application.Current.MainWindow;
+                            var vm = parentWindow.DataContext as MainWindowViewModel;
+                            if (vm != null)
+                            {
+                                var vMm = vm.MainWindowPage.DataContext as IPageViewModel;
+                                if (vMm != null)
+                                {
+                                    vMm.ResetList();
+                                }
+                            }
+
+                            if (window != null)
+                            {
+                                window.Close();
+                            }
                         });
                 }
                 return saveButtonClickedCommand;
             }
         }
 
-        private Models.Invoice GetInvoiceInformationUI()
-        {
-            Models.Invoice invoice = new Models.Invoice();
-            invoice.Check = false;
-            invoice.CompanyId = GetInvoice().CompanyId;
-            invoice.CheckNumber = this.CheckNumber;
-            invoice.Description = this.Description;
-            invoice.ServicePerfomanceOn = this._servicePerformedOn;
-            invoice.TotalAmount = this.TotalAmount;
-            return invoice;
-        }
-        public ICommand CancelButtonClickedCommand
+        public ICommand CreateInvoiceButtonClickedCommand
         {
             get
             {
-                if (cancelButtonClickedCommand == null)
+                if (createInvoiceButtonClickedCommand == null)
                 {
-                    cancelButtonClickedCommand = new RelayCommand<object>(
+                    createInvoiceButtonClickedCommand = new RelayCommand<object>(
                         sender =>
                         {
-                        
-                           // Window w = Window.GetWindow(this);
-                           // w.Close();
-                            //var company = item as Models.Company;
-                            //var p = new CoolIcePro.Controls.PopupWindow("Customer Details", new CoolIcePro.Views.Customer(new CompanyViewModel(company)));
-                            //p.Show();
+                            Models.Invoice invoice = GetInvoiceInformationUI();
+
+                            if (!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(invoice))
+                            {
+                                //somethign in the DB went wrong
+                                MessageBox.Show("if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(foreignKey,invoice)) Views\\InsertInvoice.xaml.cs line 82");
+                                return;
+                            }
+
+                            var window = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+                            if (window != null)
+                            {
+                                window.Close();
+                            }
                         });
                 }
-                return cancelButtonClickedCommand;
+                return createInvoiceButtonClickedCommand;
             }
         }
-        
+
+        private Models.Invoice GetInvoiceInformationUI()
+        {
+            Models.Invoice invoice = new Models.Invoice();
+            invoice.Check = this.IsCheck;
+            invoice.InvoiceNumber = this.InvoiceNumber;
+            invoice.CompanyId = GetInvoice().CompanyId;
+            invoice.CheckNumber = this.CheckNumber?? string.Empty;
+            invoice.Description = this.Description?? string.Empty;
+            invoice.ServicePerfomanceOn = this.ServicePerformedOn?? string.Empty;
+            invoice.TotalAmount = this.TotalAmount;
+            return invoice;
+        }
+      
         public void OnPropertyChanged(string propertyName)
         {
             if (PropertyChanged != null)

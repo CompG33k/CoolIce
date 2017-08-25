@@ -36,7 +36,7 @@
         </Grid.RowDefinitions>
         <Button Name="_editButton" Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Height="25" VerticalAlignment="Top" Click="ToggleUIButtonClickedEventHandler"/>
         <StackPanel Orientation="Horizontal" Grid.Column="2" Name="_buttonStackPannel" Visibility="Collapsed">
-            <Button Name="_saveButton" Width="75" HorizontalAlignment="Left" Content="Save" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Margin="0,0,1,0" Command="{Binding SaveButtonClickCommand}" CommandParameter="{Binding ElementName=CustomerDetailPage}" />
+            <Button Name="_updateButton" Width="75" HorizontalAlignment="Left" Content="Save" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Margin="0,0,1,0" Command="{Binding UpdateButtonClickCommand}" CommandParameter="{Binding ElementName=CustomerDetailPage}" />
             <Button Name="_cancelButton" Width="75" HorizontalAlignment="Left" Content="Cancel" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Click="CancelButtonClickedEventHandler"/>
         </StackPanel>
         
@@ -90,7 +90,7 @@
                 </Hyperlink>                       
             </TextBlock>-->
         </StackPanel>
-        <Button Name="_insertInvoiceButton"  Grid.Row="3" Content="New Invoice" Grid.Column="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Command="{Binding NewInvoiceButtonClickCommand}"/>
+        <Button Name="_insertInvoiceButton"  Grid.Row="3" Content="New Invoice" Grid.Column="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Command="{Binding NewInvoiceButtonClickCommand}" Margin="-10,0,10,286" Grid.RowSpan="2"/>
         <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding Invoices}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">

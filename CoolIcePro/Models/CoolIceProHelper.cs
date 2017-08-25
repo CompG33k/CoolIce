@@ -83,7 +83,6 @@ namespace CoolIcePro.Models
 
         public bool UpdateCustomer(Customer customer)
         {
-            long number = -1;
             try
             {
                 return Update("'Company'",
@@ -133,7 +132,6 @@ namespace CoolIcePro.Models
         
         public bool UpdateInvoice(Invoice invoice)
         {
-            long number = -1;
             try
             {
                 return Update("'Invoice'",
@@ -279,9 +277,9 @@ namespace CoolIcePro.Models
                             ContactFName = row.Field<string>("Fname"),
                             ContactLName = row.Field<string>("Lname"),
                             Date = DateTime.Parse(row["Date"].ToString(), System.Globalization.CultureInfo.InvariantCulture),
-                            Description = row["Description"] as string,
+                            Description =  row["Description"] as string,
                             InvoiceNumber = row["InvoiceNumber"] as string,
-                            ServicePerfomanceOn = row["ServicePerformanceOn"] as string, 
+                            ServicePerfomanceOn = row["ServicePerformanceOn"]as string, 
                             TotalAmount = row.Field<double>("TotalAmount"),
                             Warranty = (row.Field<long>("Warranty")  == 1) ? true: false
                         });
@@ -367,12 +365,11 @@ namespace CoolIcePro.Models
                 Date = DateTime.Parse(row["Date"].ToString(), System.Globalization.CultureInfo.InvariantCulture),
                 Description = row["Description"] as string,
                 InvoiceNumber = row["InvoiceNumber"] as string,
-                ServicePerfomanceOn = row["ServicePerformanceOn"] as string, 
+                ServicePerfomanceOn =  row["ServicePerformanceOn"] as string, 
                 TotalAmount = row.Field<double>("TotalAmount"),
                 Warranty = (row.Field<long>("Warranty")  == 1) ? true: false,
                 Check = (row.Field<long>("IsCheck") == 1) ? true : false
             };
         }
-
     }
 }

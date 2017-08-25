@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight.CommandWpf;
+﻿using CoolIcePro.Views;
+using GalaSoft.MvvmLight.CommandWpf;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +41,7 @@ namespace CoolIcePro.ViewModels
         private ICommand insertButtonClicked;
         private ICommand rowDoubleClickCommand;
         private ICommand invoiceMenuItemClickCommand;
-        private ICommand saveButtonClickCommand;
+        private ICommand updateButtonClickCommand;
         private ICommand newInvoiceButtonClickCommand;
         
         IEnumerable<CoolIcePro.Models.Contact> contacts;
@@ -372,13 +373,13 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public ICommand SaveButtonClickCommand
+        public ICommand UpdateButtonClickCommand
         {
             get
             {
-                if (saveButtonClickCommand == null)
+                if (updateButtonClickCommand == null)
                 {
-                    saveButtonClickCommand = new RelayCommand<Page>(
+                    updateButtonClickCommand = new RelayCommand<Page>(
                         page =>
                         {
                             UpdateCustomerLogic();
@@ -396,11 +397,10 @@ namespace CoolIcePro.ViewModels
                                         vMm.ResetList();
                                     }
                                 }
-                                 
                             }
                         });
                 }
-                return saveButtonClickCommand;
+                return updateButtonClickCommand;
             }
         }
 
@@ -413,7 +413,7 @@ namespace CoolIcePro.ViewModels
                     newInvoiceButtonClickCommand = new RelayCommand(
                         () =>
                         {
-                            var page = new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(Id));
+                            var page = new CoolIcePro.Views.InsertInvoice(PAGE_STATE.NEW,new CoolIcePro.ViewModels.InsertInvoiceViewModel(Id));
                             Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("New Invoice for {0}", CompanyName), page);
                             gw.ShowDialog();
                         });
@@ -469,7 +469,7 @@ namespace CoolIcePro.ViewModels
         }     
         private static void InvoiceWindowLogic(Models.Invoice invoice)
         {
-            var page = new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice));
+            var page = new CoolIcePro.Views.InsertInvoice(PAGE_STATE.UPDATE, new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice));
             var customer = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(invoice.CompanyId);
             Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("Invoice for {0}", customer.CompanyName), page);
             gw.ShowDialog();

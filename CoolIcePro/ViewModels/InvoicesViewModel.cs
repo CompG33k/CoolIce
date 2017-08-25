@@ -1,4 +1,5 @@
-﻿using GalaSoft.MvvmLight.Command;
+﻿using CoolIcePro.Views;
+using GalaSoft.MvvmLight.Command;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -118,7 +119,7 @@ namespace CoolIcePro.ViewModels
         private static void InvoiceWindowLogic(Models.InvoiceSearch invoiceSearch)
         {
             var invoice = ProjectManager.Instance.CoolIceProDBHelper.GetInvoice(invoiceSearch.Id);
-            var page = new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice));
+            var page = new CoolIcePro.Views.InsertInvoice(PAGE_STATE.UPDATE,new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice));
             var customer = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(invoiceSearch.CompanyId);
             Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("Invoice for {0}", customer.CompanyName), page);
             gw.ShowDialog();

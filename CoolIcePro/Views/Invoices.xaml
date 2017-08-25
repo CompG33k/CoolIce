@@ -24,14 +24,13 @@
                 <DataGridTextColumn Header="Invoice Date" Binding="{Binding Date}"/> 
                 <DataGridTextColumn Header="Company" Binding="{Binding CompanyName}"/>
                 <DataGridTextColumn Header="Contact" Binding="{Binding ContactFullName}"/>
-                <DataGridTextColumn Header="Service Performed On" Binding="{Binding ServicePerformanceOn}">
-                    <DataGridTextColumn.ElementStyle>
+                <DataGridTextColumn Header="Service Performed On" Binding="{Binding ServicePerfomanceOn}"/>
+                    <!--<DataGridTextColumn.ElementStyle>
                         <Style>
                             <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
-                            <!--<Setter Property="TextBlock.TextAlignment" Value="Center"/>-->
                         </Style>
                     </DataGridTextColumn.ElementStyle>
-                </DataGridTextColumn>
+                </DataGridTextColumn>-->
                 <DataGridTextColumn Header="Description" Binding="{Binding Description}">
                     <DataGridTextColumn.ElementStyle>
                         <Style>

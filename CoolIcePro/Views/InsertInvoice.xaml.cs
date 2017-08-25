@@ -17,77 +17,41 @@ using System.Windows.Shapes;
 
 namespace CoolIcePro.Views
 {
+    public enum PAGE_STATE { NEW, UPDATE }
     /// <summary>
     /// Interaction logic for Invoice.xaml
     /// </summary>
     public partial class InsertInvoice : Page
     {
-        public InsertInvoice()
-        {
-            InitializeComponent();
-        }
-        public InsertInvoice(ViewModels.InsertInvoiceViewModel insertVm)
+        ViewModels.InsertInvoiceViewModel _undoViewModel;
+        PAGE_STATE _currentState;
+
+        public InsertInvoice(PAGE_STATE currentState, ViewModels.InsertInvoiceViewModel insertVm)
         {
             InitializeComponent();
             DataContext = insertVm;
+            _undoViewModel = new ViewModels.InsertInvoiceViewModel(insertVm);
+            
+            PageStateUILogic(currentState);
         }
         private void CancelButtonEventHandler(object sender, RoutedEventArgs e)
         {
-            Window w = Window.GetWindow(this);
-            w.Close();
+            if (_currentState == PAGE_STATE.NEW)
+            {
+                var window = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+                if (window != null)
+                {
+                    window.Close();
+                }
+            }
+            else
+            {
+                if (_undoViewModel != null)
+                    this.DataContext = _undoViewModel;
+                ToggleUIControlSwitch();
+                //else something went wrong
+            }
         }
-
-        private void SaveButtonEventHandler(object sender, RoutedEventArgs e)
-        {
-            ////Company company = ProjectManager.Instance.CurrentCompany;
-
-            ////if(company == null)
-            ////{
-            ////    MessageBox.Show("if(company == null) line 58  Views\\InsertInvoice.xaml.cs line 58");
-            ////    return;
-            ////}
-            //////Retrieve CompanyId... from DB
-            ////var foreignKey = ProjectManager.Instance.CoolIceProDBHelper.GetContactForeignKey(company);
-            var foreignKey = 20;
-            if(foreignKey == null)
-            {
-                MessageBox.Show("var foreignKey = ProjectManager.Instance.CoolIceProDBHelper.GetContactForeignKey(company);  Views\\InsertInvoice.xaml.cs line 61 ");
-                return;
-            }
-
-           
-          
-
-             // Verify All UI
-            if(!ValidateUI())
-            {
-                // tell user
-                // to check the input
-                return;
-            }
-
-            Invoice invoice = GetInvoiceFromUI();
-
-            if (invoice == null)
-            {
-                // Something went wrong
-                MessageBox.Show("Invoice GETINVOICEFROMUI()  is NULL");
-                return;
-            }
-            invoice.CompanyId = foreignKey;
-            // update Database
-            if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(invoice))
-            {
-                // somethign in the DB went wrong
-                MessageBox.Show("if(!ProjectManager.Instance.CoolIceProDBHelper.InsertInvoice(foreignKey,invoice)) Views\\InsertInvoice.xaml.cs line 82");
-                return;
-            }
-
-
-            MessageBox.Show("Success!");
-            Window.GetWindow(this).Close();
-        }
-
 
         private Invoice GetInvoiceFromUI()
         {
@@ -101,15 +65,6 @@ namespace CoolIcePro.Views
                 _invoice.ServicePerfomanceOn = _servicePerformedOn.Text;
                 _invoice.TotalAmount = double.Parse(_totalAmountTxtBox.Text);
                 _invoice.Warranty = _warrantyCheckBox.IsChecked ?? false;
-
-                //return new Invoice(){
-                //    Check =  _checkRadioButton.IsChecked?? false,
-                //    Date = _datePicker.SelectedDate.Value,
-                //    Description = _descriptionTxtBox.Text,
-                //    ServicePerfomanceOn =_servicePerformedOn.Text,
-                //    TotalAmount = double.Parse(_totalAmountTxtBox.Text),
-                //    Warranty = _warrantyCheckBox.IsChecked ?? false
-                //};
             }
             catch (InvalidOperationException invalidOperationEx)
             {
@@ -119,6 +74,7 @@ namespace CoolIcePro.Views
         
             return _invoice;
         }
+
         private bool ValidateUI()
         {
             bool validationCheck = true;
@@ -181,6 +137,74 @@ namespace CoolIcePro.Views
         {
             Regex rgx = new Regex(@"^\$?(?:[0-9]+(?:\.[0-9]+)?|\.[0-9]+)$");
             e.Handled = !rgx.IsMatch((sender as TextBox).Text.Insert((sender as TextBox).SelectionStart, e.Text));
+        }
+
+        private void EditButtonClickedEventHandler(object sender, RoutedEventArgs e)
+        {
+            ToggleUIControlSwitch();
+        }
+
+        private void PageStateUILogic(PAGE_STATE currentState)
+        {
+            _currentState = currentState;
+            if (currentState == PAGE_STATE.NEW)
+            {
+                _buttonStackPanel.Visibility = System.Windows.Visibility.Visible;
+                _updateButton.Visibility = System.Windows.Visibility.Collapsed;
+                _createButton.Visibility = System.Windows.Visibility.Visible;
+                _editButton.Visibility = System.Windows.Visibility.Collapsed;
+                ToggleUIControlSwitch();
+            }
+        }
+
+        private void ToggleUIControlSwitch()
+        {
+            if (_datePicker.IsHitTestVisible == false)
+            {
+                _datePicker.IsHitTestVisible = true;
+                _datePicker.FontWeight = FontWeights.Bold;
+                _warrantyCheckBox.IsHitTestVisible = true;
+                _warrantyCheckBox.FontWeight = FontWeights.Bold;
+                _servicePerformedOn.IsReadOnly = false;
+                _servicePerformedOn.FontWeight = FontWeights.Bold;
+                _checkNumberTxtBox.IsReadOnly = false;
+                _checkNumberTxtBox.FontWeight = FontWeights.Bold;
+                _invoiceNumberTxtBox.IsReadOnly = false;
+                _invoiceNumberTxtBox.FontWeight = FontWeights.Bold;
+                _descriptionTxtBox.IsReadOnly = false;
+                _descriptionTxtBox.FontWeight = FontWeights.Bold;
+                _totalAmountTxtBox.IsReadOnly = false;
+                _totalAmountTxtBox.FontWeight = FontWeights.Bold;
+                _cashRadioButton.IsHitTestVisible = true;
+                _cashRadioButton.FontWeight = FontWeights.Bold;
+                _checkRadioButton.IsHitTestVisible = true;
+                _checkRadioButton.FontWeight = FontWeights.Bold;
+                _buttonStackPanel.Visibility = System.Windows.Visibility.Visible;
+                _editButton.Visibility = System.Windows.Visibility.Collapsed;
+            }
+            else
+            {
+                _datePicker.IsHitTestVisible = false;
+                _datePicker.FontWeight = FontWeights.Normal;
+                _warrantyCheckBox.IsHitTestVisible = false;
+                _warrantyCheckBox.FontWeight = FontWeights.Normal;
+                _servicePerformedOn.IsReadOnly = true;
+                _servicePerformedOn.FontWeight = FontWeights.Normal;
+                _checkNumberTxtBox.IsReadOnly = true;
+                _checkNumberTxtBox.FontWeight = FontWeights.Normal;
+                _invoiceNumberTxtBox.IsReadOnly = true;
+                _invoiceNumberTxtBox.FontWeight = FontWeights.Normal;
+                _descriptionTxtBox.IsReadOnly = true;
+                _descriptionTxtBox.FontWeight = FontWeights.Normal;
+                _totalAmountTxtBox.IsReadOnly = true;
+                _totalAmountTxtBox.FontWeight = FontWeights.Normal;
+                _cashRadioButton.IsHitTestVisible = true;
+                _cashRadioButton.FontWeight = FontWeights.Bold;
+                _checkRadioButton.IsHitTestVisible = true;
+                _checkRadioButton.FontWeight = FontWeights.Bold;
+                _buttonStackPanel.Visibility = System.Windows.Visibility.Collapsed;
+                _editButton.Visibility = System.Windows.Visibility.Visible;
+            }
         }
     }
 }

@@ -10,19 +10,10 @@
       FontSize="14"
       d:DesignHeight="520" d:DesignWidth="620"
 	Title="Invoice">
-    <!--<Page.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Fonts.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Controls.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/Blue.xaml" />
-                <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Accents/BaseLight.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Page.Resources>-->
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="65"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="35"/>
             <RowDefinition Height="35"/>
@@ -33,28 +24,32 @@
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="45"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="110"/>
             <ColumnDefinition Width="185"/>
             <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-
-        <DatePicker Grid.Row="1" Grid.Column="2" ToolTip="Select Invoice Date" Name="_datePicker"/>
-        <Label Grid.Row="1" Grid.Column="3" Content="Check Number:" Name="_checkNumberLabel"  Visibility="Collapsed"></Label>
-        <Label Grid.Row="3" Grid.Column="1" Content="Serv. Prfrmd On" />
-        <Label Grid.Row="4" Grid.Column="1" Content="Description:"></Label>
-        <Label Grid.Row="5" Grid.Column="1" Content="Total Amount:"></Label>
-        <CheckBox Grid.Column="1" Grid.Row="1" Content="Warranty" Name="_warrantyCheckBox"></CheckBox>
-        <StackPanel Grid.Column="1" Grid.Row="2" Orientation="Horizontal" Grid.ColumnSpan="2">
-            <RadioButton GroupName="Check_CashGroup" Content="Cash" Name="_cashRadioButton" VerticalAlignment="Center" Width="90" Checked="CashRadioCheckedEventHandler" IsChecked="True"/>
-            <RadioButton GroupName="Check_CashGroup" Content="Check" Name="_checkRadioButton" VerticalAlignment="Center" Checked="CheckRadioCheckedEventHandler"/>
+        <Button Name="_editButton" Grid.Row="0" Grid.Column="2" Content="Edit Invoice" Width="120" Height="45" HorizontalAlignment="Left" Click="EditButtonClickedEventHandler"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Invoice Number:" Name="_InvoiceNumberLabel"  />
+        <DatePicker Name="_datePicker" Grid.Row="2" Grid.Column="2" ToolTip="Select Invoice Date"  IsHitTestVisible="False"/>
+        <Label Grid.Row="2" Grid.Column="3" Content="Check Number:" Name="_checkNumberLabel"  Visibility="Collapsed"/>
+        <Label Grid.Row="4" Grid.Column="1" Content="Serv. Prfrmd On" />
+        <Label Grid.Row="5" Grid.Column="1" Content="Description:"/>
+        <Label Grid.Row="6" Grid.Column="1" Content="Total Amount:"/>
+        <CheckBox Grid.Column="1" Grid.Row="2" Content="Warranty" Name="_warrantyCheckBox" IsHitTestVisible="False"/>
+        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal" Grid.ColumnSpan="2">
+            <RadioButton GroupName="Check_CashGroup" Content="Cash" Name="_cashRadioButton" VerticalAlignment="Center" Width="90" Checked="CashRadioCheckedEventHandler" IsChecked="True" IsHitTestVisible="False"/>
+            <RadioButton GroupName="Check_CashGroup" Content="Check" Name="_checkRadioButton" VerticalAlignment="Center" IsChecked="{Binding IsCheck}"  Checked="CheckRadioCheckedEventHandler" IsHitTestVisible="False"/>
         </StackPanel>
-        <TextBox Grid.Row="3" Grid.Column="2" Name="_servicePerformedOn" Text="{Binding ServicePerformedOn}"/>
-        <TextBox Grid.Row="1" Grid.Column="4" Name="_checkNumberTxtBox" Visibility="Collapsed" Text="{Binding CheckNumber}"/>
-        <TextBox Grid.Row="4" Grid.Column="2" Grid.RowSpan="1" Name="_descriptionTxtBox" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Description}"/>
-        <TextBox x:Name="_totalAmountTxtBox" Grid.Row="5" Grid.Column="2"  Text="{Binding TotalAmount}" PreviewTextInput="PreviewTextInputEventHandler"/>
-        <Button Grid.Row="6" Grid.Column="2" Content="Save" Name="_saveButton" Width="120" HorizontalAlignment="Right" Command="{Binding SaveButtonClickedCommand}" CommandParameter="{Binding}" />
-        <Button Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="2" Content="Cancel" HorizontalAlignment="Left" Name="_cancelButton" Width="120" Click="CancelButtonEventHandler"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Name="_invoiceNumberTxtBox" Text="{Binding InvoiceNumber}" IsReadOnly="True"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Name="_servicePerformedOn" Text="{Binding ServicePerformedOn}" IsReadOnly="True"/>
+        <TextBox Grid.Row="3" Grid.Column="4" Name="_checkNumberTxtBox" Visibility="Collapsed" Text="{Binding CheckNumber}" IsReadOnly="True"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Grid.RowSpan="1" Name="_descriptionTxtBox" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Description}" IsReadOnly="True"/>
+        <TextBox x:Name="_totalAmountTxtBox" Grid.Row="6" Grid.Column="2"  Text="{Binding TotalAmount}" PreviewTextInput="PreviewTextInputEventHandler" IsReadOnly="True"/>
+        <StackPanel Name="_buttonStackPanel" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal" Visibility="Collapsed">
+            <Button Content="Update Invoice" Name="_updateButton" Width="120" Command="{Binding EditButtonClickedCommand}" CommandParameter="{Binding}" />
+            <Button Content="Create Invoice" Name="_createButton" Width="120" Command="{Binding CreateInvoiceButtonClickedCommand}" CommandParameter="{Binding}" Visibility="Collapsed"/>
+            <Button Content="Cancel"  Name="_cancelButton" Width="120" Click="CancelButtonEventHandler"/>
+        </StackPanel>
+        
     </Grid>
 </Page>
