@@ -5,6 +5,8 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace CoolIcePro.ViewModels
@@ -25,17 +27,21 @@ namespace CoolIcePro.ViewModels
         string email;
         string website;
 
+        long contactId;
         string contactFname;
         string contactLname;
         string contactTelephone;
         string contactCellphone;
         string contactPosition;
+
         private bool canExecute = true;
 
-        
+
         private ICommand insertButtonClicked;
         private ICommand rowDoubleClickCommand;
         private ICommand invoiceMenuItemClickCommand;
+        private ICommand saveButtonClickCommand;
+        private ICommand newInvoiceButtonClickCommand;
         
         IEnumerable<CoolIcePro.Models.Contact> contacts;
         IEnumerable<string> states;
@@ -45,8 +51,9 @@ namespace CoolIcePro.ViewModels
         public long Id
         {
             get { return id; }
-            
-            set{
+
+            set
+            {
                 if (id != value)
                 {
                     id = value;
@@ -66,7 +73,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string Address {
+        public string Address
+        {
             get { return address; }
             set
             {
@@ -77,7 +85,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string AddressExt{ 
+        public string AddressExt
+        {
             get { return addressExt; }
             set
             {
@@ -88,7 +97,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string City { 
+        public string City
+        {
             get { return city; }
             set
             {
@@ -99,7 +109,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string State{ 
+        public string State
+        {
             get { return state; }
             set
             {
@@ -110,7 +121,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string Zipcode{ 
+        public string Zipcode
+        {
             get { return zipcode; }
             set
             {
@@ -121,7 +133,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string Telephone{ 
+        public string Telephone
+        {
             get { return telephone; }
             set
             {
@@ -132,7 +145,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string CellNumber{ 
+        public string CellNumber
+        {
             get { return cellNumber; }
             set
             {
@@ -143,7 +157,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string Fax{ 
+        public string Fax
+        {
             get { return fax; }
             set
             {
@@ -154,7 +169,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string Email{ 
+        public string Email
+        {
             get { return email; }
             set
             {
@@ -165,7 +181,8 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string Website{ 
+        public string Website
+        {
             get { return website; }
             set
             {
@@ -190,7 +207,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string ContactLname 
+        public string ContactLname
         {
             get { return contactLname; }
             set
@@ -202,7 +219,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string ContactTelephone 
+        public string ContactTelephone
         {
             get { return contactTelephone; }
             set
@@ -214,7 +231,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string ContactCellphone 
+        public string ContactCellphone
         {
             get { return contactCellphone; }
             set
@@ -226,7 +243,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-        public string ContactPosition 
+        public string ContactPosition
         {
             get { return contactPosition; }
             set
@@ -276,12 +293,21 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
-
+        Models.Customer _resetViewModel;
+        public Models.Customer GetResetViewModel() { return _resetViewModel; }
+        
         public CustomerViewModel(CoolIcePro.Models.Customer customer)
         {
+            _resetViewModel = customer;
+
             Id = customer.Id;
             invoices = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id);
-           
+
+            SetViewModel(customer);
+        }
+
+        public void SetViewModel(CoolIcePro.Models.Customer customer)
+        {
             CompanyName = customer.CompanyName;
             Address = customer.Address;
             AddressExt = customer.AddressExt;
@@ -291,20 +317,20 @@ namespace CoolIcePro.ViewModels
             Telephone = customer.Telephone;
             Fax = customer.Fax;
             Email = customer.Email;
-            Website = customer.Website; 
-            
+            Website = customer.Website;
+
             if (customer.Contact == null)
                 return;
-            
-            var contact  = customer.Contact;
+
+            var contact = customer.Contact;
+            contactId = contact.Id;
             ContactFname = contact.FirstName;
             ContactLname = contact.LastName;
             ContactTelephone = contact.Telephone;
             ContactCellphone = contact.Cellphone;
             ContactPosition = contact.Position;
-           
         }
-     
+
         public ICommand RowDoubleClickCommand
         {
             get
@@ -345,6 +371,91 @@ namespace CoolIcePro.ViewModels
             }
         }
 
+        public ICommand SaveButtonClickCommand
+        {
+            get
+            {
+                if (saveButtonClickCommand == null)
+                {
+                    saveButtonClickCommand = new RelayCommand<Page>(
+                        page =>
+                        {
+                            UpdateCustomerLogic();
+                            var customerPage = (Views.Customer)page;
+                            if (customerPage != null)
+                            {
+                                customerPage._editButton.RaiseEvent(new RoutedEventArgs(Button.ClickEvent));
+
+                            }
+                        });
+                }
+                return saveButtonClickCommand;
+            }
+        }
+
+        public ICommand NewInvoiceButtonClickCommand
+        {
+            get
+            {
+                if (newInvoiceButtonClickCommand == null)
+                {
+                    newInvoiceButtonClickCommand = new RelayCommand(
+                        () =>
+                        {
+                            var page = new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(Id));
+                            Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("New Invoice for {0}", CompanyName), page);
+                            gw.ShowDialog();
+                        });
+                }
+                return newInvoiceButtonClickCommand;
+            }
+        }
+        
+
+        private void UpdateCustomerLogic()
+        {
+            Models.Customer customer = GetCutomerLogic();
+            Models.Contact contact = GetCustomerContactLogic();
+
+            if (ProjectManager.Instance.CoolIceProDBHelper.UpdateCustomer(customer))
+            {
+                ProjectManager.Instance.CoolIceProDBHelper.UpdateCustomerContact(contact);
+                MessageBox.Show("Success");
+                return;
+            }
+            
+        }
+
+        private Models.Contact GetCustomerContactLogic()
+        {
+            Models.Contact cContact = new Models.Contact();
+            cContact.Id = this.contactId;
+            cContact.Cellphone = this.contactCellphone;
+            cContact.FirstName = this.contactFname;
+            cContact.LastName = this.ContactLname;
+            cContact.Position = this.contactPosition;
+            cContact.Telephone =  ContactTelephone;
+            cContact.Cellphone =  ContactCellphone;
+            cContact.CompanyId = this.Id;
+            return cContact;
+        }
+
+        private Models.Customer GetCutomerLogic()
+        {
+            Models.Customer c = new Models.Customer();
+            c.Id = this.Id;
+            c.Address = this.Address;
+            c.AddressExt = this.AddressExt;
+            c.City = this.City;
+            c.CompanyName = this.CompanyName;
+            c.Email = this.Email;
+            c.Fax = this.Fax;
+            c.State = this.State;
+            c.Telephone = this.Telephone;
+            c.Website = this.Website;
+            c.Zipcode = this.Zipcode;
+            return c;
+        }     
         private static void InvoiceWindowLogic(Models.Invoice invoice)
         {
             var page = new CoolIcePro.Views.InsertInvoice(new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice));
@@ -352,7 +463,7 @@ namespace CoolIcePro.ViewModels
             Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("Invoice for {0}", customer.CompanyName), page);
             gw.ShowDialog();
         }
-     
+
         public void OnPropertyChanged(string propertyName)
         {
             if (this.PropertyChanged != null)

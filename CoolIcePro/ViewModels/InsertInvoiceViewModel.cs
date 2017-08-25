@@ -20,12 +20,17 @@ namespace CoolIcePro.ViewModels
         string _checkNumber;
         string _totalAmount;
         string _description;
-        
-        public InsertInvoiceViewModel() { }
+        Models.Invoice _invoice;
+        public InsertInvoiceViewModel(long companyId) 
+        {
+            _invoice = new Models.Invoice();
+            _invoice.CompanyId = companyId;
+        }
 
         public InsertInvoiceViewModel(Models.Invoice vm) {
             if (vm == null)
                 return;
+            this._invoice = vm;
             this._checkNumber = vm.InvoiceNumber;
             this._description = vm.Description;
             this._servicePerformedOn = vm.ServicePerfomanceOn;
@@ -94,6 +99,11 @@ namespace CoolIcePro.ViewModels
             {
                 return _description;
             }
+        }
+
+        public Models.Invoice GetInvoice()
+        {
+            return _invoice;
         }
 
         public ICommand SaveButtonClickedCommand

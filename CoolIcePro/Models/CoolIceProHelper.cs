@@ -81,6 +81,80 @@ namespace CoolIcePro.Models
             return number;
         }
 
+        public bool UpdateCustomer(Customer customer)
+        {
+            long number = -1;
+            try
+            {
+                return Update("'Company'",
+                       new Dictionary<string, string>()
+                    {
+                        {"CompanyName" ,customer.CompanyName},
+                        {"Address" ,customer.Address},
+                        {"AddressExt" ,customer.AddressExt},
+                        {"City" ,customer.City},
+                        {"State" ,customer.State},
+                        {"Zipcode" ,customer.Zipcode},
+                        {"Telephone" ,customer.Telephone},
+                        {"Fax" ,customer.Fax},
+                        {"Email" ,customer.Email},
+                        {"Website" ,customer.Website}
+                    },
+                    string.Format("Id='{0}'",customer.Id.ToString())
+                    );
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public bool UpdateCustomerContact(Contact contact)
+        {
+            try
+            {
+                return Update("'Contact'",
+                      new Dictionary<string, string>()
+                    {
+                        {"Fname" ,contact.FirstName},
+                        {"Lname" ,contact.LastName},
+                        {"Telephone" ,contact.Telephone},
+                        {"Cellphone" ,contact.Cellphone},
+                        {"Position" ,contact.Position}
+                    }
+                    , string.Format("fk_id='{0}'", contact.CompanyId.ToString()));
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
+        
+        public bool UpdateInvoice(Invoice invoice)
+        {
+            long number = -1;
+            try
+            {
+                return Update("'Invoice'",
+                       new Dictionary<string, string>()
+                    {
+                        {"Date" ,invoice.Date.ToShortDateString()},
+                        {"Description" ,invoice.Description},
+                        {"InvoiceNumber" ,invoice.InvoiceNumber},
+                        {"ServicePerformanceOn" ,invoice.ServicePerfomanceOn},
+                        {"TotalAmount" ,invoice.TotalAmount.ToString()},
+                        {"CompanyId" ,invoice.CompanyId.ToString()}
+                    }
+                    ,string.Format("CompanyId='{0}'",invoice.CompanyId.ToString()));
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        
+        
         public bool InsertInvoice(long companyId, Invoice invoice)
         {
             try
@@ -103,6 +177,7 @@ namespace CoolIcePro.Models
             }
             return false;
         }
+     
 
         /// <summary>
         /// 

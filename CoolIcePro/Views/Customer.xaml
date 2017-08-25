@@ -11,7 +11,7 @@
       mc:Ignorable="d" 
       FontSize="16"
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
-      
+      Name="CustomerDetailPage"
       d:DesignHeight="720" d:DesignWidth="725"
 	Title="Customer">
     <Page.Resources>
@@ -34,7 +34,12 @@
             <RowDefinition Height="180"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Click="ButtonClickedEventHandler"/>
+        <Button Name="_editButton" Grid.Column="1" Width="65" HorizontalAlignment="Left" Content="Edit" Height="25" VerticalAlignment="Top" Click="ToggleUIButtonClickedEventHandler"/>
+        <StackPanel Orientation="Horizontal" Grid.Column="2" Name="_buttonStackPannel" Visibility="Collapsed">
+            <Button Name="_saveButton" Width="75" HorizontalAlignment="Left" Content="Save" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Margin="0,0,1,0" Command="{Binding SaveButtonClickCommand}" CommandParameter="{Binding ElementName=CustomerDetailPage}" />
+            <Button Name="_cancelButton" Width="75" HorizontalAlignment="Left" Content="Cancel" Grid.ColumnSpan="3" Height="25" VerticalAlignment="Top" Click="CancelButtonClickedEventHandler"/>
+        </StackPanel>
+        
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Content="Company" FontFamily="Segoe UI" FontSize="15" Height="35"/>
         <Label  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="Black" Height="1" VerticalAlignment="Bottom"/>
 
@@ -58,7 +63,7 @@
             <TextBox Name="_address"  Height="28" FontSize="14" Text ="{Binding Address}"  IsReadOnly="True"/>
             <TextBox Name="_addressExtTextbox" Height="28" FontSize="14" Text="{Binding AddressExt}"  IsReadOnly="True"/>
             <TextBox Name="_cityTextBox" Height="28" FontSize="14" Text="{Binding City}"  IsReadOnly="True"/>
-            <ComboBox Name="_stateComboBox"  HorizontalAlignment="Left"  SelectedIndex="4" ItemsSource="{Binding States}"  FontSize="14" Height="28" IsReadOnly="True"/>
+            <ComboBox Name="_stateComboBox"  HorizontalAlignment="Left"  SelectedIndex="4" ItemsSource="{Binding States}"  FontSize="14" Height="28" IsHitTestVisible="false" Focusable="false"/>
             <xctk:MaskedTextBox x:Name="__zipCodeTextBox"  Height="28" Text="{Binding Zipcode}"  FontSize="14" Mask="00000" IsReadOnly="True"/>
         </StackPanel>
 
@@ -85,7 +90,7 @@
                 </Hyperlink>                       
             </TextBlock>-->
         </StackPanel>
-        <Button Grid.Row="3" Content="Insert Invoice" Grid.Column="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Command="{Binding InsertButtonClicked}"/>
+        <Button Name="_insertInvoiceButton"  Grid.Row="3" Content="New Invoice" Grid.Column="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Command="{Binding NewInvoiceButtonClickCommand}"/>
         <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding Invoices}">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">

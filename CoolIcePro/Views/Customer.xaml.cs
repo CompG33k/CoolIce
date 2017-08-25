@@ -57,11 +57,54 @@ namespace CoolIcePro.Views
             MessageBox.Show("Excel file created , you can find the file c:\\csharp-Excel.xls");
         }
 
-        private void ButtonClickedEventHandler(object sender, RoutedEventArgs e)
+        private void ToggleUIButtonClickedEventHandler(object sender, RoutedEventArgs e)
         {
-            foreach (TextBlock tb in CoolIcePro.Util.UiUtil.FindVisualChildren<TextBlock>(this))
+            ToggleUIControlSwitch();
+        }
+
+        private void ToggleUIControlSwitch()
+        {
+            FontWeight fw;
+            bool isReadOnly;
+            GetUI(out fw, out isReadOnly);
+            
+            foreach (var currentTextbox in CoolIcePro.Util.UiUtil.FindVisualChildren<System.Windows.Controls.TextBox>(this))
             {
-                tb.FontStyle = new FontStyle();
+                currentTextbox.FontWeight = fw;
+                currentTextbox.IsReadOnly = isReadOnly;
+            }
+
+            if (_editButton.IsEnabled == true)
+            {
+                _editButton.IsEnabled = false;
+                _insertInvoiceButton.IsEnabled = false;
+                _dataGrid.IsEnabled = false;
+                _stateComboBox.IsHitTestVisible = true;
+                _stateComboBox.Focusable = true;
+                _buttonStackPannel.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                _editButton.IsEnabled = true; ;
+                _insertInvoiceButton.IsEnabled = true;
+                _dataGrid.IsEnabled = true;
+                _stateComboBox.IsHitTestVisible = false;
+                _stateComboBox.Focusable = false;
+                _buttonStackPannel.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void GetUI(out FontWeight fw, out bool isReadOnly)
+        {
+            if (_companyTextBox.FontWeight == FontWeights.Bold)
+            {
+                fw = FontWeights.Normal;
+                isReadOnly = true;
+            }
+            else
+            {
+                fw = FontWeights.Bold;
+                isReadOnly = false;
             }
         }
 
@@ -73,6 +116,14 @@ namespace CoolIcePro.Views
         private bool IsTextAllowed(string text)
         {
             return !_regex.IsMatch(text);
+        }
+
+        private void CancelButtonClickedEventHandler(object sender, RoutedEventArgs e)
+        {
+            var vm = this.DataContext as CustomerViewModel;
+            var customer = vm.GetResetViewModel();
+            vm.SetViewModel(customer);
+            ToggleUIControlSwitch();
         }
 
     }
