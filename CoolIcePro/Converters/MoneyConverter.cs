@@ -32,7 +32,7 @@ namespace CoolIcePro.Converters
         }
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value != null)
+           if (value != null)
             {
                 double d;
                 string temp = value.ToString();

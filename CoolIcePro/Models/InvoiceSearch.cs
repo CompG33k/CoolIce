@@ -44,7 +44,7 @@ namespace CoolIcePro.Models
         public DateTime Date { get { return _invoice.Date; } set { _invoice.Date = value; } }
 
         public string InvoiceNumber { get { return _invoice.InvoiceNumber; } set { _invoice.InvoiceNumber = value; } }
-        public string ServicePerfomanceOn { get { return _invoice.ServicePerfomanceOn; } set { _invoice.ServicePerfomanceOn = value; } }
+        public string ServicePerformanceOn { get { return _invoice.ServicePerformanceOn; } set { _invoice.ServicePerformanceOn = value; } }
         public string Description { get { return _invoice.Description; } set { _invoice.Description = value; } }
         public double TotalAmount { get { return _invoice.TotalAmount; } set { _invoice.TotalAmount = value; } }
         public bool Warranty { get { return _invoice.Warranty; } set { _invoice.Warranty = value; } }

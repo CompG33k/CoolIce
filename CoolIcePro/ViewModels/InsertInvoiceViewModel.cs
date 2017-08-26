@@ -21,18 +21,20 @@ namespace CoolIcePro.ViewModels
         string _checkNumber = string.Empty;
         string _description = string.Empty;
         string _invoiceNumber = string.Empty;
-        double _totalAmount;
+        string _totalAmount;
         bool _isCheck;
+        DateTime _date;
 
         Models.Invoice _invoice;
 
         public InsertInvoiceViewModel(InsertInvoiceViewModel lhs)
         {
-            this.ServicePerformedOn = lhs.ServicePerformedOn;
+            this.ServicePerformanceOn = lhs.ServicePerformanceOn;
             this.CheckNumber = lhs.CheckNumber;
             this.TotalAmount = lhs.TotalAmount;
             this.Description = lhs.Description;
             this.InvoiceNumber = lhs.InvoiceNumber;
+            this.Date = lhs.Date;
             this._invoice = lhs.GetInvoice();
         }
         public InsertInvoiceViewModel(long companyId) 
@@ -45,22 +47,23 @@ namespace CoolIcePro.ViewModels
             if (vm == null)
                 return;
             this._invoice = vm;
-            this._checkNumber = vm.InvoiceNumber;
-            this._description = vm.Description;
-            this._servicePerformedOn = vm.ServicePerfomanceOn;
-            this._totalAmount = vm.TotalAmount;
-            this._isCheck = vm.Check;
-            this._invoiceNumber = vm.InvoiceNumber;
+            this.Date = vm.Date;
+            this.CheckNumber = vm.CheckNumber;
+            this.Description = vm.Description;
+            this.ServicePerformanceOn = vm.ServicePerformanceOn;
+            this.TotalAmount = String.Format("{0:C}",vm.TotalAmount.ToString());//;String.Format("{0:C}
+            this.IsCheck = vm.Check;
+            this.InvoiceNumber = vm.InvoiceNumber;
         }
 
-        public string ServicePerformedOn
+        public string ServicePerformanceOn
         {
             set
             {
                 if (_servicePerformedOn != value)
                 {
                     _servicePerformedOn = value;
-                    OnPropertyChanged("ServicePerformedOn");
+                    OnPropertyChanged("ServicePerformanceOn");
                 }
             }
             get
@@ -101,7 +104,7 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public double TotalAmount
+        public string TotalAmount
         {
             set
             {
@@ -145,6 +148,22 @@ namespace CoolIcePro.ViewModels
             get
             {
                 return _invoiceNumber;
+            }
+        }
+
+        public DateTime Date
+        {
+            set
+            {
+                if (_date != value)
+                {
+                    _date = value;
+                    OnPropertyChanged("Date");
+                }
+            }
+            get
+            {
+                return _date;
             }
         }
         
@@ -225,13 +244,15 @@ namespace CoolIcePro.ViewModels
         private Models.Invoice GetInvoiceInformationUI()
         {
             Models.Invoice invoice = new Models.Invoice();
+            invoice.Id = _invoice.Id;
+            invoice.Date = this.Date;
             invoice.Check = this.IsCheck;
             invoice.InvoiceNumber = this.InvoiceNumber;
             invoice.CompanyId = GetInvoice().CompanyId;
             invoice.CheckNumber = this.CheckNumber?? string.Empty;
             invoice.Description = this.Description?? string.Empty;
-            invoice.ServicePerfomanceOn = this.ServicePerformedOn?? string.Empty;
-            invoice.TotalAmount = this.TotalAmount;
+            invoice.ServicePerformanceOn = this.ServicePerformanceOn ?? string.Empty;
+            invoice.TotalAmount = double.Parse(this.TotalAmount, System.Globalization.NumberStyles.Currency); 
             return invoice;
         }
       

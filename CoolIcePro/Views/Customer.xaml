@@ -7,7 +7,7 @@
       xmlns:cmd="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
       xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions"
       xmlns:local="clr-namespace:GalaSoft.MvvmLight.Command;assembly=GalaSoft.MvvmLight.Platform"
-      xmlns:converter="clr-namespace:CoolIcePro.Converters"
+      xmlns:converters="clr-namespace:CoolIcePro.Converters"
       mc:Ignorable="d" 
       FontSize="16"
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
@@ -15,7 +15,8 @@
       d:DesignHeight="720" d:DesignWidth="725"
 	Title="Customer">
     <Page.Resources>
-        <converter:StringToPhoneConverter x:Key="StringToPhoneConverter"/>
+        <converters:StringToPhoneConverter x:Key="StringToPhoneConverter"/>
+        <converters:MoneyConverter x:Key="MoneyConverter"/>
     </Page.Resources>
     <Grid Background="White">
         <Grid.ColumnDefinitions>
@@ -91,7 +92,17 @@
             </TextBlock>-->
         </StackPanel>
         <Button Name="_insertInvoiceButton"  Grid.Row="3" Content="New Invoice" Grid.Column="0" Grid.ColumnSpan="2" Height="25" VerticalAlignment="Bottom" Command="{Binding NewInvoiceButtonClickCommand}" Margin="-10,0,10,286" Grid.RowSpan="2"/>
-        <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding Invoices}">
+        <DataGrid Grid.Row="4" Name="_dataGrid" Grid.ColumnSpan="8" GridLinesVisibility="ALL" IsReadOnly="True" ItemsSource="{Binding Invoices}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Invoice #" Binding="{Binding InvoiceNumber}"/>
+                <DataGridTextColumn Header="Invoice Date" Binding="{Binding Date}"/>
+                <DataGridTextColumn Header="Service Performed On" Binding="{Binding ServicePerformanceOn}"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Description}"/>
+                <DataGridTextColumn Header="Is Check" Binding="{Binding Check}"/>
+                <DataGridTextColumn Header="Has Warranty" Binding="{Binding Warranty}"/>
+                <DataGridTextColumn Header="Check #" Binding="{Binding CheckNumber}"/>
+                <DataGridTextColumn Header="Total Amount" Binding="{Binding TotalAmount, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource MoneyConverter}}"/>
+            </DataGrid.Columns>
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseDoubleClick">
                     <cmd:EventToCommand Command="{Binding RowDoubleClickCommand}" CommandParameter="{Binding ElementName=_dataGrid, Path=SelectedItem}"  PassEventArgsToCommand="True" />

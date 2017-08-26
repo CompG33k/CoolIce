@@ -187,7 +187,7 @@ namespace CoolIcePro.Models
             }
             try
             {
-                this.ExecuteNonQuery(String.Format("update {0} set {1} where {2};", tableName, vals, where));
+                var buffer = this.ExecuteNonQuery(String.Format("update {0} set {1} where {2};", tableName, vals, where));
             }
             catch
             {

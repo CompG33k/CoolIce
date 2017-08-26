@@ -1,6 +1,7 @@
 ﻿using CoolIcePro.Views;
 using GalaSoft.MvvmLight.CommandWpf;
 using System;
+using System.Collections.Specialized;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using System.Collections.ObjectModel;
 
 namespace CoolIcePro.ViewModels
 {
@@ -46,7 +48,7 @@ namespace CoolIcePro.ViewModels
         
         IEnumerable<CoolIcePro.Models.Contact> contacts;
         IEnumerable<string> states;
-        IEnumerable<Models.Invoice> invoices;
+        ObservableCollection<Models.Invoice> invoices;
 
 
         public long Id
@@ -110,6 +112,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string State
         {
             get { return state; }
@@ -122,6 +125,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string Zipcode
         {
             get { return zipcode; }
@@ -134,6 +138,7 @@ namespace CoolIcePro.ViewModels
                 }
             }
         }
+
         public string Telephone
         {
             get { return telephone; }
@@ -282,7 +287,7 @@ namespace CoolIcePro.ViewModels
             }
         }
 
-        public IEnumerable<Models.Invoice> Invoices
+        public ObservableCollection<Models.Invoice> Invoices
         {
             get { return invoices; }
             set
@@ -302,7 +307,14 @@ namespace CoolIcePro.ViewModels
             _resetViewModel = customer;
 
             Id = customer.Id;
-            invoices = ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id);
+            invoices = new ObservableCollection<Models.Invoice>(ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id));
+            //    Observable.Create<Models.Invoice>(current =>{
+            //    foreach (var cur in ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id))
+            //    {
+            //        current.OnNext(cur);
+            //    }
+            //    return Disposable.Create(() => { });
+            //});
 
             SetViewModel(customer);
         }
@@ -416,6 +428,7 @@ namespace CoolIcePro.ViewModels
                             var page = new CoolIcePro.Views.InsertInvoice(PAGE_STATE.NEW,new CoolIcePro.ViewModels.InsertInvoiceViewModel(Id));
                             Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("New Invoice for {0}", CompanyName), page);
                             gw.ShowDialog();
+                            this.Invoices = new ObservableCollection<Models.Invoice>(ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id));
                         });
                 }
                 return newInvoiceButtonClickCommand;
@@ -467,12 +480,13 @@ namespace CoolIcePro.ViewModels
             c.Zipcode = this.Zipcode;
             return c;
         }     
-        private static void InvoiceWindowLogic(Models.Invoice invoice)
+        private void InvoiceWindowLogic(Models.Invoice invoice)
         {
             var page = new CoolIcePro.Views.InsertInvoice(PAGE_STATE.UPDATE, new CoolIcePro.ViewModels.InsertInvoiceViewModel(invoice));
             var customer = ProjectManager.Instance.CoolIceProDBHelper.GetCustomer(invoice.CompanyId);
             Windows.GenericWindow gw = new Windows.GenericWindow(685, 625, string.Format("Invoice for {0}", customer.CompanyName), page);
             gw.ShowDialog();
+            this.Invoices = new ObservableCollection<Models.Invoice>(ProjectManager.Instance.CoolIceProDBHelper.GetCustomerInvoices(Id));
         }
 
         public void OnPropertyChanged(string propertyName)

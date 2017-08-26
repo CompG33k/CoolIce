@@ -37,7 +37,7 @@ namespace CoolIcePro.Models
         public DateTime Date { get { return _invoice.Date; } }
         public long InvoiceId { get { return _invoice.Id; } }
         public string InvoiceNumber { get { return _invoice.InvoiceNumber; } }
-        public string ServicePerfomanceOn { get { return _invoice.ServicePerfomanceOn; } }
+        public string ServicePerfomanceOn { get { return _invoice.ServicePerformanceOn; } }
         public string Description { get { return _invoice.Description; } }
         public double TotalAmount { get { return _invoice.TotalAmount; } }
         public bool Warranty { get { return _invoice.Warranty; } }

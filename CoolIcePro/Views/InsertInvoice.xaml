@@ -6,10 +6,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:s="clr-namespace:System;assembly=mscorlib"
       mc:Ignorable="d" 
+      xmlns:converters="clr-namespace:CoolIcePro.Converters"
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       FontSize="14"
       d:DesignHeight="520" d:DesignWidth="620"
 	Title="Invoice">
+    <Page.Resources>
+        <converters:MoneyConverter x:Key="MoneyConverter"/>
+    </Page.Resources>
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="65"/>
@@ -30,7 +34,7 @@
         </Grid.ColumnDefinitions>
         <Button Name="_editButton" Grid.Row="0" Grid.Column="2" Content="Edit Invoice" Width="120" Height="45" HorizontalAlignment="Left" Click="EditButtonClickedEventHandler"/>
         <Label Grid.Row="1" Grid.Column="1" Content="Invoice Number:" Name="_InvoiceNumberLabel"  />
-        <DatePicker Name="_datePicker" Grid.Row="2" Grid.Column="2" ToolTip="Select Invoice Date"  IsHitTestVisible="False"/>
+        <DatePicker Name="_datePicker" Grid.Row="2" Grid.Column="2" ToolTip="Select Invoice Date"  IsHitTestVisible="False" SelectedDate="{Binding Date, Mode=TwoWay}"/>
         <Label Grid.Row="2" Grid.Column="3" Content="Check Number:" Name="_checkNumberLabel"  Visibility="Collapsed"/>
         <Label Grid.Row="4" Grid.Column="1" Content="Serv. Prfrmd On" />
         <Label Grid.Row="5" Grid.Column="1" Content="Description:"/>
@@ -41,10 +45,10 @@
             <RadioButton GroupName="Check_CashGroup" Content="Check" Name="_checkRadioButton" VerticalAlignment="Center" IsChecked="{Binding IsCheck}"  Checked="CheckRadioCheckedEventHandler" IsHitTestVisible="False"/>
         </StackPanel>
         <TextBox Grid.Row="1" Grid.Column="2" Name="_invoiceNumberTxtBox" Text="{Binding InvoiceNumber}" IsReadOnly="True"/>
-        <TextBox Grid.Row="4" Grid.Column="2" Name="_servicePerformedOn" Text="{Binding ServicePerformedOn}" IsReadOnly="True"/>
+        <TextBox Grid.Row="4" Grid.Column="2" Name="_servicePerformedOn" Text="{Binding ServicePerformanceOn}" IsReadOnly="True"/>
         <TextBox Grid.Row="3" Grid.Column="4" Name="_checkNumberTxtBox" Visibility="Collapsed" Text="{Binding CheckNumber}" IsReadOnly="True"/>
         <TextBox Grid.Row="5" Grid.Column="2" Grid.RowSpan="1" Name="_descriptionTxtBox" TextWrapping="Wrap" AcceptsReturn="True" Text="{Binding Description}" IsReadOnly="True"/>
-        <TextBox x:Name="_totalAmountTxtBox" Grid.Row="6" Grid.Column="2"  Text="{Binding TotalAmount}" PreviewTextInput="PreviewTextInputEventHandler" IsReadOnly="True"/>
+        <TextBox x:Name="_totalAmountTxtBox" Grid.Row="6" Grid.Column="2"  Text="{Binding TotalAmount, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource MoneyConverter}}"  PreviewTextInput="PreviewTextInputEventHandler" IsReadOnly="True"/>
         <StackPanel Name="_buttonStackPanel" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" Orientation="Horizontal" Visibility="Collapsed">
             <Button Content="Update Invoice" Name="_updateButton" Width="120" Command="{Binding EditButtonClickedCommand}" CommandParameter="{Binding}" />
             <Button Content="Create Invoice" Name="_createButton" Width="120" Command="{Binding CreateInvoiceButtonClickedCommand}" CommandParameter="{Binding}" Visibility="Collapsed"/>

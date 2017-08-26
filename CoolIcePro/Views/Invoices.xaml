@@ -24,7 +24,7 @@
                 <DataGridTextColumn Header="Invoice Date" Binding="{Binding Date}"/> 
                 <DataGridTextColumn Header="Company" Binding="{Binding CompanyName}"/>
                 <DataGridTextColumn Header="Contact" Binding="{Binding ContactFullName}"/>
-                <DataGridTextColumn Header="Service Performed On" Binding="{Binding ServicePerfomanceOn}"/>
+                <DataGridTextColumn Header="Service Performed On" Binding="{Binding ServicePerformanceOn}"/>
                     <!--<DataGridTextColumn.ElementStyle>
                         <Style>
                             <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>

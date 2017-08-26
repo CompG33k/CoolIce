@@ -15,7 +15,7 @@ namespace CoolIcePro.Models
         public long Id { get; set; }
         public long CompanyId { get; set; }
         public string InvoiceNumber { get; set; }
-        public string ServicePerfomanceOn { get;  set; }
+        public string ServicePerformanceOn { get; set; }
         public string Description { get; set; }
         public double TotalAmount { get; set; }
         public bool Warranty { get; set; }

@@ -140,11 +140,11 @@ namespace CoolIcePro.Models
                         {"Date" ,invoice.Date.ToShortDateString()},
                         {"Description" ,invoice.Description},
                         {"InvoiceNumber" ,invoice.InvoiceNumber},
-                        {"ServicePerformanceOn" ,invoice.ServicePerfomanceOn},
+                        {"ServicePerformanceOn" ,invoice.ServicePerformanceOn},
                         {"TotalAmount" ,invoice.TotalAmount.ToString()},
                         {"CompanyId" ,invoice.CompanyId.ToString()}
                     }
-                    ,string.Format("CompanyId='{0}'",invoice.CompanyId.ToString()));
+                    ,string.Format("CompanyId='{0}' AND Id = '{1}'",invoice.CompanyId.ToString(),invoice.Id.ToString()));
             }
             catch
             {
@@ -163,7 +163,7 @@ namespace CoolIcePro.Models
                         {"Date" ,invoice.Date.ToShortDateString()},
                         {"Description" ,invoice.Description},
                         {"InvoiceNumber" ,invoice.InvoiceNumber},
-                        {"ServicePerformanceOn" ,invoice.ServicePerfomanceOn},
+                        {"ServicePerformanceOn" ,invoice.ServicePerformanceOn},
                         {"TotalAmount" ,invoice.TotalAmount.ToString()},
                         {"CompanyId" ,invoice.CompanyId.ToString()}
                     }
@@ -279,7 +279,7 @@ namespace CoolIcePro.Models
                             Date = DateTime.Parse(row["Date"].ToString(), System.Globalization.CultureInfo.InvariantCulture),
                             Description =  row["Description"] as string,
                             InvoiceNumber = row["InvoiceNumber"] as string,
-                            ServicePerfomanceOn = row["ServicePerformanceOn"]as string, 
+                            ServicePerformanceOn = row["ServicePerformanceOn"] as string, 
                             TotalAmount = row.Field<double>("TotalAmount"),
                             Warranty = (row.Field<long>("Warranty")  == 1) ? true: false
                         });
@@ -317,7 +317,7 @@ namespace CoolIcePro.Models
                             Date = DateTime.Parse(row["Date"].ToString(), System.Globalization.CultureInfo.InvariantCulture),
                             Description = row["Description"] as string,
                             InvoiceNumber = row["InvoiceNumber"] as string,
-                            ServicePerfomanceOn = row["ServicePerformanceOn"] as string,
+                            ServicePerformanceOn = row["ServicePerformanceOn"] as string,
                             TotalAmount = row.Field<double>("TotalAmount"),
                             Warranty = (row.Field<long>("Warranty") == 1) ? true : false
                         });
@@ -365,7 +365,7 @@ namespace CoolIcePro.Models
                 Date = DateTime.Parse(row["Date"].ToString(), System.Globalization.CultureInfo.InvariantCulture),
                 Description = row["Description"] as string,
                 InvoiceNumber = row["InvoiceNumber"] as string,
-                ServicePerfomanceOn =  row["ServicePerformanceOn"] as string, 
+                ServicePerformanceOn = row["ServicePerformanceOn"] as string, 
                 TotalAmount = row.Field<double>("TotalAmount"),
                 Warranty = (row.Field<long>("Warranty")  == 1) ? true: false,
                 Check = (row.Field<long>("IsCheck") == 1) ? true : false

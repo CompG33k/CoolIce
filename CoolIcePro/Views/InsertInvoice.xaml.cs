@@ -62,8 +62,8 @@ namespace CoolIcePro.Views
                 _invoice.Check = _checkRadioButton.IsChecked ?? false;
                 _invoice.Date = _datePicker.SelectedDate.Value;
                 _invoice.Description = _descriptionTxtBox.Text;
-                _invoice.ServicePerfomanceOn = _servicePerformedOn.Text;
-                _invoice.TotalAmount = double.Parse(_totalAmountTxtBox.Text);
+                _invoice.ServicePerformanceOn = _servicePerformedOn.Text;
+                _invoice.TotalAmount = double.Parse(_totalAmountTxtBox.Text, System.Globalization.NumberStyles.Currency);  //double.Parse(_totalAmountTxtBox.Text);
                 _invoice.Warranty = _warrantyCheckBox.IsChecked ?? false;
             }
             catch (InvalidOperationException invalidOperationEx)
