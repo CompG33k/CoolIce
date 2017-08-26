@@ -28,12 +28,29 @@ namespace CoolIcePro.ViewModels
         string _contactCellphone;
         string _contactPosition;
         IEnumerable<string> _states;
+        string[] _positions = { "MANAGER", "OWNER", "EMPLOYEE" };
         ICommand saveButtonPressedCommand;
 
         public event PropertyChangedEventHandler PropertyChanged;
         public InsertCustomerViewModel()
         {
             States = ProjectManager.Instance.States;
+        }
+
+        public String[] Positions
+        {
+            get
+            {
+                return _positions;
+            }
+            set
+            {
+                if (_positions != value)
+                {
+                    _positions = value;
+                    OnPropertyChanged("Positions");
+                }
+            }
         }
 
         public string CustomerName
@@ -303,6 +320,18 @@ namespace CoolIcePro.ViewModels
                         {
                             InsertCustomerLogic();
                             var window = Application.Current.Windows.OfType<Window>().SingleOrDefault(x => x.IsActive);
+                            
+                            Window parentWindow = Application.Current.MainWindow;
+                            var vm = parentWindow.DataContext as MainWindowViewModel;
+                            if (vm != null)
+                            {
+                                var vMm = vm.MainWindowPage.DataContext as IPageViewModel;
+                                if (vMm != null)
+                                {
+                                    vMm.ResetList();
+                                }
+                            }
+
                             if (window != null)
                             {
                                 window.Close();

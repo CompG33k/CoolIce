@@ -5,9 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
       xmlns:VM="clr-namespace:CoolIcePro.ViewModels"
+      xmlns:converters="clr-namespace:CoolIcePro.Converters"
       mc:Ignorable="d" 
       FontSize="14"
       d:DesignHeight="825" d:DesignWidth="920">
+    <Page.Resources>
+        <converters:StringToPhoneConverter x:Key="StringToPhoneConverter"/>
+        <converters:MoneyConverter x:Key="MoneyConverter"/>
+    </Page.Resources>
     <Page.DataContext>
         <VM:InsertCustomerViewModel/>
     </Page.DataContext>
@@ -54,9 +59,9 @@
                 <TextBox Grid.Row="2" Grid.Column="1" Name="_addressExtTxtBox" Text="{Binding CustomerAddressExt}"/>
                 <TextBox Grid.Row="3" Grid.Column="1" Name="_cityTxtBox" Text="{Binding CustomerCity}"/>
                 <ComboBox Grid.Row="4" Grid.Column="1" Name="_stateTxtBox" SelectedIndex="4" SelectedItem="{Binding CustomerState}" ItemsSource="{Binding States}"/>
-                <xctk:MaskedTextBox x:Name="_telephoneTxtBox"  Grid.Row="6" Grid.Column="1" Mask="(000) 000-0000" Text="{Binding CustomerTelephone}"/>
-                <xctk:MaskedTextBox Grid.Row="5" Grid.Column="1" x:Name="_zipcodeTxtBox" Mask="00000" Text="{Binding CustomerZipCode}" Margin="5,0,-5,0"/>
-                <xctk:MaskedTextBox Grid.Row="7" Grid.Column="1" x:Name="_faxTxtBox" Mask="(000) 000-0000" Text="{Binding CustomerFax}"/>
+                <TextBox x:Name="_telephoneTxtBox"  Grid.Row="6" Grid.Column="1"  Text="{Binding CustomerTelephone, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverter}}"/>
+                <TextBox Grid.Row="5" Grid.Column="1" x:Name="_zipcodeTxtBox" Text="{Binding CustomerZipCode}" PreviewTextInput="PreviewTextInputEventHandler"/>
+                <TextBox Grid.Row="7" Grid.Column="1" x:Name="_faxTxtBox" Text="{Binding CustomerFax, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverter}}"/>
                 <TextBox Grid.Row="8" Grid.Column="1" Name="_emailTxtBox" Text="{Binding CustomerEmail}"/>
                 <TextBox Grid.Row="9" Grid.Column="1" Name="_websiteTxtBox" Text="{Binding CustomerWebsite}"/>
 
@@ -84,12 +89,12 @@
                         
                         <TextBox Grid.Row="0" Grid.Column="1" Name="_fNameTxtBox" Text="{Binding ContactFirstName}"/>
                         <TextBox Grid.Row="1" Grid.Column="1" Name="_lNameTxtBox" Text="{Binding ContactLastName}"/>
-                        <xctk:MaskedTextBox Grid.Row="2" Grid.Column="1" Name="_contactTelephoneTxtBox" Mask="(000) 000-0000" Text="{Binding ContactTelephone}"/>
-                        <xctk:MaskedTextBox Grid.Row="3" Grid.Column="1" Name="_cellTxtBox" Mask="(000) 000-0000" Text="{Binding ContactCellphone}"/>
-                        <ComboBox Grid.Row="4" Grid.Column="1" Name="_positionComboBox" SelectedIndex="0" SelectedItem="{Binding ContactPosition, Mode=TwoWay}">
-                            <ComboBoxItem Content="Owner"/>
+                        <TextBox Grid.Row="2" Grid.Column="1" Name="_contactTelephoneTxtBox" Text="{Binding ContactTelephone, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverter}}"/>
+                        <TextBox Grid.Row="3" Grid.Column="1" Name="_cellTxtBox" Text="{Binding ContactCellphone, UpdateSourceTrigger=PropertyChanged, Converter={StaticResource StringToPhoneConverter}}"/>
+                        <ComboBox Grid.Row="4" Grid.Column="1" Name="_positionComboBox" SelectedIndex="0" SelectedItem="{Binding ContactPosition, Mode=TwoWay}" ItemsSource="{Binding Positions}">
+                            <!--<ComboBoxItem Content="Owner"/>
                             <ComboBoxItem Content="Manager"/>
-                            <ComboBoxItem Content="Employee"/>
+                            <ComboBoxItem Content="Employee"/>-->
                         </ComboBox>
                     </Grid>
                 </GroupBox>
